@@ -1,4 +1,8 @@
 
+<%@page import="org.Curso"%>
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Enumeration"%>
 <html> 
     <body> 
         <table width="100%" border=1>
@@ -16,14 +20,27 @@
                 <td><%= request.getAttribute("duracion")%></td>
                 <td><a href="<%= request.getAttribute("video")%>">Video</a></td>
             </tr>
-            <% if (request.getParameter("cursos") != null)%>
+
+            <% if (session.getAttribute("cursos") != null) {%>
             <tr>
-                <td><%= request.getAttribute("titulo1")%></td>
-                <td><%= request.getAttribute("autor1")%></td>
-                <td><%= request.getAttribute("asignatura1")%></td>
-                <td><%= request.getAttribute("duracion1")%></td>
-                <td><a href="<%= request.getAttribute("video1")%>">Video</a></td>
+                <% ArrayList cursos = (ArrayList) session.getAttribute("cursos");
+                    Iterator i = cursos.iterator();
+                    while (i.hasNext()) {
+                        int current = 0;
+                        Curso cursoActual = (Curso) i.next();
+                %>
+                <td><%= request.getAttribute("titulo" + current)%></td>
+                <td><%= request.getAttribute("autor" + current)%></td>
+                <td><%= request.getAttribute("asignatura" + current)%></td>
+                <td><%= request.getAttribute("duracion" + current)%></td>
+                <td><a href="<%= request.getAttribute("video" + current)%>">Video</a></td>
+                <%
+                        current++;
+                    }
+                %>
             </tr>
+            <br/>
+            <% }%>
         </table>
     </body> 
 </html>

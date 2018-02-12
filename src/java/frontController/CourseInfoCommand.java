@@ -7,6 +7,8 @@ package frontController;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -78,36 +80,37 @@ public class CourseInfoCommand extends FrontCommand {
     @Override
     public void process(HttpServletRequest request) {
         HttpSession session = request.getSession();
+        ArrayList cursos = (ArrayList) session.getAttribute("cursos");
 
-        if (session.getAttribute("cursos") != null) {
-            Curso[] curso = (Curso[]) session.getAttribute("cursos");
-            
+        if (cursos != null) {
+            Iterator i = cursos.iterator();
+            while (i.hasNext()) {
+                int current = 0;
+                Curso cursoActual = (Curso) i.next();
 
-            String titulo1 = curso[1].getTitulo();
-            request.setAttribute("titulo1",titulo1);
-            String autor1 = curso[1].getAutor();
-            request.setAttribute("autor1",autor1);
-            String asignatura1 = curso[1].getAsignatura();
-            request.setAttribute("asignatura1",asignatura1);
-            String duracion1 = curso[1].getDuracion();
-            request.setAttribute("duracion1",duracion1);
-            String video1 = curso[1].getVideo();
-            request.setAttribute("video1",video1);
+                request.setAttribute("titulo" + current, cursoActual.getTitulo());
+                request.setAttribute("autor" + current, cursoActual.getAutor());
+                request.setAttribute("asignatura" + current, cursoActual.getAsignatura());
+                request.setAttribute("duracion" + current, cursoActual.getDuracion());
+                request.setAttribute("video" + current, cursoActual.getVideo());
+
+                current++;
+            }
+        } else {
+
+            Curso curso = (Curso) session.getAttribute("curso");
+
+            String titulo = curso.getTitulo();
+            request.setAttribute("titulo", titulo);
+            String autor = curso.getAutor();
+            request.setAttribute("autor", autor);
+            String asignatura = curso.getAsignatura();
+            request.setAttribute("asignatura", asignatura);
+            String duracion = curso.getDuracion();
+            request.setAttribute("duracion", duracion);
+            String video = curso.getVideo();
+            request.setAttribute("video", video);
         }
-
-        Curso curso = (Curso) session.getAttribute("curso");
-
-        String titulo = curso.getTitulo();
-        request.setAttribute("titulo",titulo);
-        String autor = curso.getAutor();
-        request.setAttribute("autor",autor);
-        String asignatura = curso.getAsignatura();
-        request.setAttribute("asignatura",asignatura);
-        String duracion = curso.getDuracion();
-        request.setAttribute("duracion",duracion);
-        String video = curso.getVideo();
-        request.setAttribute("video",video);
-
         try {
             forward("/CourseInfo.jsp");
         } catch (ServletException ex) {
