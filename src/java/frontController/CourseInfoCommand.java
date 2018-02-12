@@ -84,8 +84,8 @@ public class CourseInfoCommand extends FrontCommand {
 
         if (cursos != null) {
             Iterator i = cursos.iterator();
+            int current = 0;
             while (i.hasNext()) {
-                int current = 0;
                 Curso cursoActual = (Curso) i.next();
 
                 request.setAttribute("titulo" + current, cursoActual.getTitulo());
