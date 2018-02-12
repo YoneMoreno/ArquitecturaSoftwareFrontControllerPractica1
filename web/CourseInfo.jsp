@@ -10,19 +10,19 @@
                 <th style="padding: 8px">Video</th>
             </tr>
             <tr>
-                <td><%= request.getParameter("titulo")%></td>
-                <td><%= request.getParameter("autor")%></td>
-                <td><%= request.getParameter("asignatura")%></td>
-                <td><%= request.getParameter("duracion")%></td>
-                <td><a href="<%= request.getParameter("video")%>">Video</a></td>
+                <td><%= request.getAttribute("titulo")%></td>
+                <td><%= request.getAttribute("autor")%></td>
+                <td><%= request.getAttribute("asignatura")%></td>
+                <td><%= request.getAttribute("duracion")%></td>
+                <td><a href="<%= request.getAttribute("video")%>">Video</a></td>
             </tr>
             <% if (request.getParameter("cursos") != null)%>
             <tr>
-                <td><%= request.getParameter("titulo")%></td>
-                <td><%= request.getParameter("autor")%></td>
-                <td><%= request.getParameter("asignatura")%></td>
-                <td><%= request.getParameter("duracion")%></td>
-                <td><a href="<%= request.getParameter("video")%>">Video</a></td>
+                <td><%= request.getAttribute("titulo1")%></td>
+                <td><%= request.getAttribute("autor1")%></td>
+                <td><%= request.getAttribute("asignatura1")%></td>
+                <td><%= request.getAttribute("duracion1")%></td>
+                <td><a href="<%= request.getAttribute("video1")%>">Video</a></td>
             </tr>
         </table>
     </body> 

@@ -78,13 +78,35 @@ public class CourseInfoCommand extends FrontCommand {
     @Override
     public void process(HttpServletRequest request) {
         HttpSession session = request.getSession();
+
+        if (session.getAttribute("cursos") != null) {
+            Curso[] curso = (Curso[]) session.getAttribute("cursos");
+            
+
+            String titulo1 = curso[1].getTitulo();
+            request.setAttribute("titulo1",titulo1);
+            String autor1 = curso[1].getAutor();
+            request.setAttribute("autor1",autor1);
+            String asignatura1 = curso[1].getAsignatura();
+            request.setAttribute("asignatura1",asignatura1);
+            String duracion1 = curso[1].getDuracion();
+            request.setAttribute("duracion1",duracion1);
+            String video1 = curso[1].getVideo();
+            request.setAttribute("video1",video1);
+        }
+
         Curso curso = (Curso) session.getAttribute("curso");
 
         String titulo = curso.getTitulo();
+        request.setAttribute("titulo",titulo);
         String autor = curso.getAutor();
+        request.setAttribute("autor",autor);
         String asignatura = curso.getAsignatura();
+        request.setAttribute("asignatura",asignatura);
         String duracion = curso.getDuracion();
+        request.setAttribute("duracion",duracion);
         String video = curso.getVideo();
+        request.setAttribute("video",video);
 
         try {
             forward("/CourseInfo.jsp");
