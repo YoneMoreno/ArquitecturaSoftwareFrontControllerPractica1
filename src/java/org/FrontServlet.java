@@ -35,15 +35,15 @@ public class FrontServlet extends HttpServlet {
             Curso curso = (Curso) session.getAttribute("curso");
             if (curso != null) {
                 cursos.add(curso);
-                session.setAttribute("cursos",cursos);
-            } else {
+                session.setAttribute("cursos", cursos);
+            } else if (isCourseCreatedWithRequiredParams(request)) {
                 curso = new Curso(request.getParameter("titulo"),
                         request.getParameter("autor"),
                         request.getParameter("asignatura"),
                         request.getParameter("duracion"),
                         request.getParameter("video"));
                 cursos.add(curso);
-                session.setAttribute("cursos",cursos);
+                session.setAttribute("cursos", cursos);
             }
 
             FrontCommand command = getCommand(request);
@@ -52,6 +52,10 @@ public class FrontServlet extends HttpServlet {
         } catch (Exception ex) {
             Logger.getLogger(FrontServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    private static boolean isCourseCreatedWithRequiredParams(HttpServletRequest request) {
+        return request.getParameter("titulo") != null && request.getParameter("autor") != null;
     }
 
     @Override
