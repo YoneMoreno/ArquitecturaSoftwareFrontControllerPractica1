@@ -29,6 +29,16 @@ public class FrontServlet extends HttpServlet {
         try {
             HttpSession session = request.getSession(true);
             Curso curso = (Curso) session.getAttribute("curso");
+            if (curso != null) {
+
+            } else {
+                curso = new Curso(request.getParameter("titulo"),
+                        request.getParameter("autor"),
+                        request.getParameter("asignatura"),
+                        request.getParameter("duracion"),
+                        request.getParameter("video"));
+                session.setAttribute("curso", curso);
+            }
 
             FrontCommand command = getCommand(request);
             command.init(getServletContext(), request, response);
