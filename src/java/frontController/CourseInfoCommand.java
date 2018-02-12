@@ -96,20 +96,6 @@ public class CourseInfoCommand extends FrontCommand {
 
                 current++;
             }
-        } else {
-
-            Curso curso = (Curso) session.getAttribute("curso");
-
-            String titulo = curso.getTitulo();
-            request.setAttribute("titulo", titulo);
-            String autor = curso.getAutor();
-            request.setAttribute("autor", autor);
-            String asignatura = curso.getAsignatura();
-            request.setAttribute("asignatura", asignatura);
-            String duracion = curso.getDuracion();
-            request.setAttribute("duracion", duracion);
-            String video = curso.getVideo();
-            request.setAttribute("video", video);
         }
         try {
             forward("/CourseInfo.jsp");
