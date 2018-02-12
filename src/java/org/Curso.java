@@ -9,7 +9,7 @@ package org;
  *
  * @author YonePC
  */
-class Curso {
+public class Curso {
     String titulo,autor,asignatura,duracion,video;
 
     public Curso(String titulo, String autor, String asignatura, String duracion, String video) {

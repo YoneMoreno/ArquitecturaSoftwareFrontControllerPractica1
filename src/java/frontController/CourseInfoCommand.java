@@ -14,6 +14,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import org.Curso;
 
 /**
  *
@@ -75,11 +77,14 @@ public class CourseInfoCommand extends FrontCommand {
 
     @Override
     public void process(HttpServletRequest request) {
-        String titulo = request.getParameter("titulo");
-        String autor = request.getParameter("autor");
-        String asignatura = request.getParameter("asignatura");
-        String duracion = request.getParameter("duracion");
-        String video = request.getParameter("video");
+        HttpSession session = request.getSession();
+        Curso curso = (Curso) session.getAttribute("curso");
+
+        String titulo = curso.getTitulo();
+        String autor = curso.getAutor();
+        String asignatura = curso.getAsignatura();
+        String duracion = curso.getDuracion();
+        String video = curso.getVideo();
 
         try {
             forward("/CourseInfo.jsp");
