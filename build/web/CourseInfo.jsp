@@ -20,13 +20,14 @@
                 int current = 0;
                 while (i.hasNext()) {
                     Curso cursoActual = (Curso) i.next();
+
             %>
             <tr>
-                <td><%= request.getAttribute("titulo" + current)%></td>
-                <td><%= request.getAttribute("autor" + current)%></td>
-                <td><%= request.getAttribute("asignatura" + current)%></td>
-                <td><%= request.getAttribute("duracion" + current)%></td>
-                <td><a href="<%= request.getAttribute("video" + current)%>">Video</a></td>
+                <td><%= cursoActual.getTitulo()%></td>
+                <td><%= cursoActual.getAutor()%></td>
+                <td><%= cursoActual.getAsignatura()%></td>
+                <td><%= cursoActual.getDuracion()%></td>
+                <td><a href="<%= cursoActual.getVideo()%>">Video</a></td>
             </tr>
 
             <%
