@@ -116,9 +116,9 @@ and open the template in the editor.
                 </summary>
                 <form action="FrontServlet">
                     <h2>Nombre del alumno: </h2>
-                    <input type="text" required/>
+                    <input type="text" name="evaluacionAlumnno" required/>
                     <h2>Nombre del curso: </h2>
-                    <input type="text" required>
+                    <input type="text" name="evaluacionCurso" required>
                     <h2>Indique la puntuación: </h2>
                     <div style="display: flex">
                         <h4>0</h4><input type="radio" name="evaluacion" value="0"  />
@@ -134,7 +134,7 @@ and open the template in the editor.
                         <h4>10</h4><input type="radio" name="evaluacion" value="10"  />
                     </div>
                     <h2>Añada un comentario para justificar la nota: </h2>
-                    <textarea> 
+                    <textarea name="evaluacionComentario"> 
                     </textarea>
                     <br/>
                     <input type="submit" value="Enviar evaluacion">
