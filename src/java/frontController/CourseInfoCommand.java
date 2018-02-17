@@ -79,24 +79,6 @@ public class CourseInfoCommand extends FrontCommand {
 
     @Override
     public void process(HttpServletRequest request) {
-        HttpSession session = request.getSession();
-        ArrayList cursos = (ArrayList) session.getAttribute("cursos");
-
-        if (cursos != null) {
-            Iterator i = cursos.iterator();
-            int current = 0;
-            while (i.hasNext()) {
-                Curso cursoActual = (Curso) i.next();
-
-                request.setAttribute("titulo" + current, cursoActual.getTitulo());
-                request.setAttribute("autor" + current, cursoActual.getAutor());
-                request.setAttribute("asignatura" + current, cursoActual.getAsignatura());
-                request.setAttribute("duracion" + current, cursoActual.getDuracion());
-                request.setAttribute("video" + current, cursoActual.getVideo());
-
-                current++;
-            }
-        }
         try {
             forward("/CourseInfo.jsp");
         } catch (ServletException ex) {
