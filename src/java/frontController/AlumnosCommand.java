@@ -5,6 +5,7 @@
  */
 package frontController;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -14,6 +15,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
 
 /**
  *
@@ -34,6 +41,9 @@ public class AlumnosCommand extends FrontCommand {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        PrintWriter writer = response.getWriter();
+        writer.println("<h1>Hi</h1>");
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -75,10 +85,21 @@ public class AlumnosCommand extends FrontCommand {
     @Override
     public void process(HttpServletRequest request) {
         try {
+
+            TransformerFactory factory = TransformerFactory.newInstance();
+            StreamSource xls = new StreamSource(new File("Alumnos.xsl"));
+            Transformer newTransformer = factory.newTransformer(xls);
+
+            StreamSource xml = new StreamSource(new File("Alumnos.xml"));
+            newTransformer.transform(xml, new StreamResult(new File("output.xml")));
+
             forward("/Alumnos.jsp");
+
         } catch (ServletException ex) {
             Logger.getLogger(AlumnosCommand.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
+            Logger.getLogger(AlumnosCommand.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (TransformerException ex) {
             Logger.getLogger(AlumnosCommand.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

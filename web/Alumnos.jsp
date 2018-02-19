@@ -1,6 +1,6 @@
 <%-- 
     Document   : Alumnos
-    Created on : 19-feb-2018, 15:28:28
+    Created on : 19-feb-2018, 15:55:08
     Author     : YonePC
 --%>
 
@@ -9,9 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Lista de alumnos</title>
     </head>
     <body>
         <h1>Hello World!</h1>
+        
     </body>
 </html>
