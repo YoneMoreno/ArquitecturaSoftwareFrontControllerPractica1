@@ -21,7 +21,7 @@
         </thead>
         <tbody>
             <tr>
-                <td><%= request.getParameter("evaluacionAlumnno")%></td>
+                <td><%= request.getParameter("evaluacionAlumno")%></td>
                 <td><%= request.getParameter("evaluacionCurso")%></td>
                 <td><%= request.getParameter("evaluacion")%></td>
             </tr>

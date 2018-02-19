@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ALUMNO>
+    <NOMBRE>Luis</NOMBRE>
+    <APPELLIDO1>Navarro</APPELLIDO1>
+    <APPELLIDO2>Morote</APPELLIDO2>
+    <ASIGNATURAS>
+        <ASIGNATURA>PR4</ASIGNATURA>
+        <NOTA>5</NOTA>
+        <ASIGNATURA>BD2</ASIGNATURA>
+        <NOTA>8</NOTA>
+        <ASIGNATURA>IR</ASIGNATURA>
+        <NOTA>10</NOTA>
+    </ASIGNATURAS>
+</ALUMNO>
