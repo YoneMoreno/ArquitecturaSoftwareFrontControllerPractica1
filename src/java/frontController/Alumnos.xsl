@@ -5,18 +5,53 @@
     version="1.0"
 >
     
-    <xsl:template match="ALUMNO">
-        <HTML>
-            <BODY bgcolor="gray">
-                <xsl:apply-templates/>
-            </BODY>
-        </HTML>
+    <xsl:template match="/">
+        <html>
+            <head>
+                <title>LISTA DE ALUMNOS</title>
+            </head>
+            <body>
+                <table>
+                    <tr>
+                        <th colspan="4">Nombre</th>
+                        <th colspan="3">Primer apellido</th>
+                        <th colspan="3">Segundo apellido</th>
+                        <th colspan="2">Asignatura</th>
+                        <th colspan="2">Nota</th>
+                    </tr>
+                    <xsl:apply-templates />
+                </table>
+            </body>
+        </html>
     </xsl:template>
+        
+    <xsl:template match="ALUMNO">
+        <tr>
+            <td colspan="4">
+                <xsl:value-of select="NOMBRE" />
+            </td>
+            <td colspan="3">
+                <xsl:value-of select="APELLIDO1" />
+            </td>
+            <td colspan="3">
+                <xsl:value-of select="APELLIDO2" />
+            </td>
+            <td colspan="2">
+                <xsl:value-of select="ASIGNATURAS/ASIGNATURA" />
+            </td>
+            <td colspan="2">
+                <xsl:value-of select="ASIGNATURAS/NOTA" />
+            </td>
+        </tr>
+    </xsl:template>
+
     
     <xsl:template match="NOMBRE">
         <P>
             <B>Nombre: </B>
-            <xsl:apply-templates/>
+            <TR>
+                <xsl:apply-templates/>
+            </TR>
         </P>
     </xsl:template>
     
