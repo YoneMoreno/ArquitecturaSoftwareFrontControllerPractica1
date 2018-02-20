@@ -31,13 +31,23 @@ public class FrontServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
+
             HttpSession session = request.getSession(true);
             Curso curso = (Curso) session.getAttribute("curso");
+            Cuestionario cuestionario = (Cuestionario) session.getAttribute("cuestionario");
+
             if (curso != null) {
                 addToSession(curso, session);
             } else if (isCourseCreatedWithRequiredParams(request)) {
                 curso = courseHelper(request);
                 addToSession(curso, session);
+            }
+
+            if (cuestionario != null) {
+
+            } else {
+                cuestionario = cuestionarioHelper(request);
+                session.setAttribute("cuestionario", cuestionario);
             }
 
             FrontCommand command = getCommand(request);
@@ -106,5 +116,16 @@ public class FrontServlet extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    private Cuestionario cuestionarioHelper(HttpServletRequest request) {
+        Cuestionario cuestionario;
+        cuestionario = new Cuestionario(request.getParameter("pregunta1"), request.getParameter("respuestaTexto11"),
+                request.getParameter("respuestaVerdad11"),
+                request.getParameter("respuestaTexto12"),
+                request.getParameter("respuestaVerdad12"),
+                request.getParameter("respuestaTexto13"),
+                request.getParameter("respuestaVerdad13"));
+        return cuestionario;
+    }
 
 }

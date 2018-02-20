@@ -5,6 +5,7 @@
  */
 package frontController;
 
+import org.Cuestionario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -75,6 +76,8 @@ public class CuestionarioCommand extends FrontCommand {
 
     @Override
     public void process(HttpServletRequest request) {
+        
+
         String pregunta1 = request.getParameter("pregunta1");
         String respuestaTexto11 = request.getParameter("respuestaTexto11");
         String respuestaVerdad11 = request.getParameter("respuestaVerdad11");
