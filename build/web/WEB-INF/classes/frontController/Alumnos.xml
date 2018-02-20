@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <ALUMNO>
     <NOMBRE>Luis</NOMBRE>
-    <APPELLIDO1>Navarro</APPELLIDO1>
-    <APPELLIDO2>Morote</APPELLIDO2>
+    <APPELLIDO>Navarro</APPELLIDO>
+    <APPELLIDO>Morote</APPELLIDO>
     <ASIGNATURAS>
         <ASIGNATURA>PR4</ASIGNATURA>
         <NOTA>5</NOTA>

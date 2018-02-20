@@ -15,6 +15,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.transform.Result;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -40,13 +41,10 @@ public class AlumnosCommand extends FrontCommand {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter writer = response.getWriter();
-        writer.println("<h1>Hi</h1>");
 
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -87,20 +85,20 @@ public class AlumnosCommand extends FrontCommand {
         try {
 
             TransformerFactory factory = TransformerFactory.newInstance();
-            StreamSource xls = new StreamSource(new File("Alumnos.xsl"));
-            Transformer newTransformer = factory.newTransformer(xls);
+            StreamSource xsl = new StreamSource(new File("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\frontController\\Alumnos.xsl"));
+            Transformer newTransformer = factory.newTransformer(xsl);
 
-            StreamSource xml = new StreamSource(new File("Alumnos.xml"));
-            newTransformer.transform(xml, new StreamResult(new File("output.xml")));
+            StreamSource xml = new StreamSource(new File("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\frontController\\Alumnos.xml"));
+            PrintWriter writer = response.getWriter();
+            Result result = new StreamResult(writer);
+            newTransformer.transform(xml, result);
+            writer.println(writer.toString());
 
-            forward("/Alumnos.jsp");
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        } catch (TransformerException te) {
+            te.printStackTrace();
 
-        } catch (ServletException ex) {
-            Logger.getLogger(AlumnosCommand.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(AlumnosCommand.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (TransformerException ex) {
-            Logger.getLogger(AlumnosCommand.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

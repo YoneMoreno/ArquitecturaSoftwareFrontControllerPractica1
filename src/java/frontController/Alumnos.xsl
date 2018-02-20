@@ -20,8 +20,20 @@
         </P>
     </xsl:template>
     
+    <xsl:template match="APPELLIDO">
+        <P>
+            <B>Apellidos: </B>
+            <xsl:apply-templates/>
+        </P>
+    </xsl:template>
+    
     <xsl:template match="ASIGNATURA">
         <h1>Aginatura: </h1>
+        <xsl:apply-templates/>
+    </xsl:template>
+    
+    <xsl:template match="NOTA">
+        <h2>Nota: </h2>
         <xsl:apply-templates/>
     </xsl:template>
 
