@@ -5,12 +5,41 @@
  */
 package org;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author YonePC
  */
+@XmlRootElement
 public class Curso {
-    String titulo,autor,asignatura,duracion,video;
+
+    @XmlElement
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    @XmlElement
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    @XmlElement
+    public void setAsignatura(String asignatura) {
+        this.asignatura = asignatura;
+    }
+
+    @XmlElement
+    public void setDuracion(String duracion) {
+        this.duracion = duracion;
+    }
+
+    @XmlElement
+    public void setVideo(String video) {
+        this.video = video;
+    }
+    String titulo, autor, asignatura, duracion, video;
 
     public Curso(String titulo, String autor, String asignatura, String duracion, String video) {
         this.titulo = titulo;
@@ -39,6 +68,5 @@ public class Curso {
     public String getVideo() {
         return video;
     }
-    
-    
+
 }
