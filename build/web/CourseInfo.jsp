@@ -4,6 +4,10 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Enumeration"%>
 <html> 
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+
+    </head>
     <body> 
         <table width="100%" border=1>
             <tr>
