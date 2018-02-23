@@ -10,7 +10,7 @@
             <head>
                 <title>LISTA DE ALUMNOS</title>
             </head>
-            <body>
+            <body bgColor="black" text="white">
                 <table>
                     <tr>
                         <th colspan="4">Nombre</th>
