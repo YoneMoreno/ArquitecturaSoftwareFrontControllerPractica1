@@ -33,28 +33,41 @@ public class FrontServlet extends HttpServlet {
         try {
 
             HttpSession session = request.getSession(true);
-            Curso curso = (Curso) session.getAttribute("curso");
-            Cuestionario cuestionario = (Cuestionario) session.getAttribute("cuestionario");
+            Curso curso = getCourseListFromSession(session);
+            getCuestionarioFromSession(session);
 
-            if (curso != null) {
-                addToSession(curso, session);
-            } else if (isCourseCreatedWithRequiredParams(request)) {
-                curso = courseHelper(request);
-                addToSession(curso, session);
-            }
-
-            if (cuestionario != null) {
-
-            } else {
-                cuestionario = cuestionarioHelper(request);
-                session.setAttribute("cuestionario", cuestionario);
-            }
+            setCourseInSession(curso, session, request);
+            setCuestionarioInSession(request, session);
 
             FrontCommand command = getCommand(request);
             command.init(getServletContext(), request, response);
             command.process(request);
         } catch (Exception ex) {
             Logger.getLogger(FrontServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    private void getCuestionarioFromSession(HttpSession session) {
+        Cuestionario cuestionario = (Cuestionario) session.getAttribute("cuestionario");
+    }
+
+    private Curso getCourseListFromSession(HttpSession session) {
+        Curso curso = (Curso) session.getAttribute("curso");
+        return curso;
+    }
+
+    private void setCuestionarioInSession(HttpServletRequest request, HttpSession session) {
+        Cuestionario cuestionario;
+        cuestionario = cuestionarioHelper(request);
+        session.setAttribute("cuestionario", cuestionario);
+    }
+
+    private void setCourseInSession(Curso curso, HttpSession session, HttpServletRequest request) {
+        if (curso != null) {
+            addToSession(curso, session);
+        } else if (isCourseCreatedWithRequiredParams(request)) {
+            curso = courseHelper(request);
+            addToSession(curso, session);
         }
     }
 
