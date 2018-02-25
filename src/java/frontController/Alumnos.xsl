@@ -25,28 +25,28 @@
         </html>
     </xsl:template>
         
-    <xsl:template match="ALUMNO">
+    <xsl:template match="table">
         <tr>
             <td colspan="4">
-                <xsl:value-of select="NOMBRE" />
+                <xsl:value-of select="firstCell" />
             </td>
             <td colspan="3">
-                <xsl:value-of select="APELLIDO1" />
+                <xsl:value-of select="secondCell" />
             </td>
             <td colspan="3">
-                <xsl:value-of select="APELLIDO2" />
+                <xsl:value-of select="thirdCell" />
             </td>
             <td colspan="2">
-                <xsl:value-of select="ASIGNATURAS/ASIGNATURA" />
+                <xsl:value-of select="fourthCell" />
             </td>
             <td colspan="2">
-                <xsl:value-of select="ASIGNATURAS/NOTA" />
+                <xsl:value-of select="fifthCell" />
             </td>
         </tr>
     </xsl:template>
 
     
-    <xsl:template match="NOMBRE">
+    <xsl:template match="firstCell">
         <P>
             <B>Nombre: </B>
             <TR>
@@ -55,19 +55,12 @@
         </P>
     </xsl:template>
     
-    <xsl:template match="APPELLIDO">
-        <P>
-            <B>Apellidos: </B>
-            <xsl:apply-templates/>
-        </P>
-    </xsl:template>
-    
-    <xsl:template match="ASIGNATURA">
+    <xsl:template match="fourthCell">
         <h1>Aginatura: </h1>
         <xsl:apply-templates/>
     </xsl:template>
     
-    <xsl:template match="NOTA">
+    <xsl:template match="fifthCell">
         <h2>Nota: </h2>
         <xsl:apply-templates/>
     </xsl:template>

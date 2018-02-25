@@ -6,7 +6,9 @@
 package frontController;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -85,13 +87,19 @@ public class AlumnosCommand extends FrontCommand {
         try {
 
             TransformerFactory factory = TransformerFactory.newInstance();
-            StreamSource xsl = new StreamSource(new File("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\frontController\\Alumnos.xsl"));
-            Transformer newTransformer = factory.newTransformer(xsl);
+            StreamSource xslFirstStage = new StreamSource(new File("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\frontController\\FirstStageAlumnos.xsl"));
+            StreamSource xslSecondStage = new StreamSource(new File("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\frontController\\Alumnos.xsl"));
+            Transformer firstTransformer = factory.newTransformer(xslFirstStage);
+            Transformer secondTransformer = factory.newTransformer(xslSecondStage);
 
             StreamSource xml = new StreamSource(new File("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\frontController\\Alumnos.xml"));
             PrintWriter writer = response.getWriter();
             Result result = new StreamResult(writer);
-            newTransformer.transform(xml, result);
+            
+            
+            OutputStream afterFirstStage = new FileOutputStream("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\frontController\\afterFirstStage.xsl");
+            firstTransformer.transform(xml, new StreamResult(afterFirstStage));
+            secondTransformer.transform(afterFirstStage, xslSecondStage);
             writer.println(writer.toString());
 
         } catch (IOException ioe) {
