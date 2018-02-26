@@ -5,6 +5,7 @@
  */
 package org;
 
+import frontController.UnknownCommand;
 import frontController.FrontCommand;
 import java.io.IOException;
 import java.io.PrintWriter;
