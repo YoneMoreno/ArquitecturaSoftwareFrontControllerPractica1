@@ -19,31 +19,31 @@
                         <th colspan="2">Asignatura</th>
                         <th colspan="2">Nota</th>
                     </tr>
-                    <xsl:apply-templates />
+                    <xsl:for-each select="ALUMNOS/ALUMNO">
+                        <tr>
+                            <td colspan="4">
+                                <xsl:value-of select="NOMBRE" />
+                            </td>
+                            <td colspan="3">
+                                <xsl:value-of select="APELLIDO1" />
+                            </td>
+                            <td colspan="3">
+                                <xsl:value-of select="APELLIDO2" />
+                            </td>
+                            <td colspan="2">
+                                <xsl:value-of select="ASIGNATURAS/ASIGNATURA" />
+                            </td>
+                            <td colspan="2">
+                                <xsl:value-of select="ASIGNATURAS/NOTA" />
+                            </td>
+                        </tr>
+                    </xsl:for-each>
                 </table>
             </body>
         </html>
     </xsl:template>
         
-    <xsl:template match="ALUMNO">
-        <tr>
-            <td colspan="4">
-                <xsl:value-of select="NOMBRE" />
-            </td>
-            <td colspan="3">
-                <xsl:value-of select="APELLIDO1" />
-            </td>
-            <td colspan="3">
-                <xsl:value-of select="APELLIDO2" />
-            </td>
-            <td colspan="2">
-                <xsl:value-of select="ASIGNATURAS/ASIGNATURA" />
-            </td>
-            <td colspan="2">
-                <xsl:value-of select="ASIGNATURAS/NOTA" />
-            </td>
-        </tr>
-    </xsl:template>
+    
 
     
     <xsl:template match="NOMBRE">

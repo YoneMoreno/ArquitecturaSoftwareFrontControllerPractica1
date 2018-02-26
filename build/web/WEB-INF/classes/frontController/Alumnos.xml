@@ -1,14 +1,45 @@
 <?xml version="1.0"?>
-<ALUMNO>
-    <NOMBRE>Luis</NOMBRE>
-    <APELLIDO1>Navarro</APELLIDO1>
-    <APELLIDO2>Morote</APELLIDO2>
-    <ASIGNATURAS>
-        <ASIGNATURA>PR4</ASIGNATURA>
-        <NOTA>5</NOTA>
-        <ASIGNATURA>BD2</ASIGNATURA>
-        <NOTA>8</NOTA>
-        <ASIGNATURA>IR</ASIGNATURA>
-        <NOTA>10</NOTA>
-    </ASIGNATURAS>
-</ALUMNO>
+<ALUMNOS>
+
+    <ALUMNO>
+        <NOMBRE>Luis</NOMBRE>
+        <APELLIDO1>Navarro</APELLIDO1>
+        <APELLIDO2>Morote</APELLIDO2>
+        <ASIGNATURAS>
+            <ASIGNATURA>PR4</ASIGNATURA>
+            <NOTA>5</NOTA>
+            <ASIGNATURA>BD2</ASIGNATURA>
+            <NOTA>8</NOTA>
+            <ASIGNATURA>IR</ASIGNATURA>
+            <NOTA>10</NOTA>
+        </ASIGNATURAS>
+    </ALUMNO>
+
+    <ALUMNO>
+        <NOMBRE>Naura</NOMBRE>
+        <APELLIDO1>Juarez</APELLIDO1>
+        <APELLIDO2>Nina</APELLIDO2>
+        <ASIGNATURAS>
+            <ASIGNATURA>PR4</ASIGNATURA>
+            <NOTA>6</NOTA>
+            <ASIGNATURA>BD2</ASIGNATURA>
+            <NOTA>1</NOTA>
+            <ASIGNATURA>IR</ASIGNATURA>
+            <NOTA>1</NOTA>
+        </ASIGNATURAS>
+    </ALUMNO>
+    
+    <ALUMNO>
+        <NOMBRE>Laura</NOMBRE>
+        <APELLIDO1>Dina</APELLIDO1>
+        <APELLIDO2>Rubio</APELLIDO2>
+        <ASIGNATURAS>
+            <ASIGNATURA>PR4</ASIGNATURA>
+            <NOTA>1</NOTA>
+            <ASIGNATURA>BD2</ASIGNATURA>
+            <NOTA>10</NOTA>
+            <ASIGNATURA>IR</ASIGNATURA>
+            <NOTA>No presentado</NOTA>
+        </ASIGNATURAS>
+    </ALUMNO>
+</ALUMNOS>
