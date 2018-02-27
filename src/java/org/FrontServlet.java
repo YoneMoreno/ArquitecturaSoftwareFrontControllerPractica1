@@ -27,8 +27,6 @@ import javax.servlet.http.HttpSession;
 @WebServlet(name = "FrontServlet", urlPatterns = {"/FrontServlet"})
 public class FrontServlet extends HttpServlet {
 
-    
-
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
@@ -66,7 +64,7 @@ public class FrontServlet extends HttpServlet {
 
     private void setCourseInSession(Curso curso, HttpSession session, HttpServletRequest request) {
         if (curso != null) {
-            
+
             addToSession(curso, session);
         } else if (isCourseCreatedWithRequiredParams(request)) {
             curso = courseHelper(request);
@@ -75,9 +73,13 @@ public class FrontServlet extends HttpServlet {
     }
 
     private void addToSession(Curso curso, HttpSession session) {
-        ArrayList cursos = new ArrayList();
+        ArrayList cursos = (ArrayList) session.getAttribute("cursos");
+        if (cursos == null) {
+            cursos = new ArrayList();
+            session.setAttribute("cursos", cursos);
+        }
         cursos.add(curso);
-        session.setAttribute("cursos", cursos);
+
     }
 
     private Curso courseHelper(HttpServletRequest request) {
