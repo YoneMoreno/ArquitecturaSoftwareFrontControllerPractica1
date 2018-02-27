@@ -27,15 +27,15 @@ import javax.servlet.http.HttpSession;
 @WebServlet(name = "FrontServlet", urlPatterns = {"/FrontServlet"})
 public class FrontServlet extends HttpServlet {
 
-    ArrayList cursos = new ArrayList();
+    
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
 
             HttpSession session = request.getSession(true);
-            Curso curso = getCourseListFromSession(session);
-            getCuestionarioFromSession(session);
+            Curso curso = getCourseFromSession(session);
+            Cuestionario cuestionario = getCuestionarioFromSession(session);
 
             setCourseInSession(curso, session, request);
             setCuestionarioInSession(request, session);
@@ -48,11 +48,12 @@ public class FrontServlet extends HttpServlet {
         }
     }
 
-    private void getCuestionarioFromSession(HttpSession session) {
+    private Cuestionario getCuestionarioFromSession(HttpSession session) {
         Cuestionario cuestionario = (Cuestionario) session.getAttribute("cuestionario");
+        return cuestionario;
     }
 
-    private Curso getCourseListFromSession(HttpSession session) {
+    private Curso getCourseFromSession(HttpSession session) {
         Curso curso = (Curso) session.getAttribute("curso");
         return curso;
     }
@@ -65,6 +66,7 @@ public class FrontServlet extends HttpServlet {
 
     private void setCourseInSession(Curso curso, HttpSession session, HttpServletRequest request) {
         if (curso != null) {
+            
             addToSession(curso, session);
         } else if (isCourseCreatedWithRequiredParams(request)) {
             curso = courseHelper(request);
@@ -73,6 +75,7 @@ public class FrontServlet extends HttpServlet {
     }
 
     private void addToSession(Curso curso, HttpSession session) {
+        ArrayList cursos = new ArrayList();
         cursos.add(curso);
         session.setAttribute("cursos", cursos);
     }
