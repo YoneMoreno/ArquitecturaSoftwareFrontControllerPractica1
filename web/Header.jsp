@@ -14,7 +14,7 @@
             <a class="nav-link" href="#">Active</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="Public/CourseInfo.jsp">Lista de cursos</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
