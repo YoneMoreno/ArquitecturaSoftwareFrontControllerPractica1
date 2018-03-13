@@ -31,4 +31,6 @@
             <input type="reset" value="Enviar respuesta" />
         </form>
     </body>
+    <%@include file="Footer.jsp" %>
+
 </html>

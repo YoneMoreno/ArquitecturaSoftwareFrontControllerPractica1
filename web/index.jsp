@@ -157,5 +157,6 @@ and open the template in the editor.
             </div>
         </div>
     </body>
+    <%@include file="Footer.jsp" %>
 </html>
 

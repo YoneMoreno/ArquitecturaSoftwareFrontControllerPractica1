@@ -49,4 +49,6 @@
             <% }%>
         </table>
     </body> 
+        <%@include file="../Footer.jsp" %>
+
 </html>

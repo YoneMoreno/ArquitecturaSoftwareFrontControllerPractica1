@@ -19,4 +19,5 @@
             out.print("El recurso no se ha encontrado 😖");
         %>
     </body>
+        <%@include file="Footer.jsp" %>
 </html>

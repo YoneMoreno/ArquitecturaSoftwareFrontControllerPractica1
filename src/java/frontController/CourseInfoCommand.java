@@ -80,7 +80,7 @@ public class CourseInfoCommand extends FrontCommand {
     @Override
     public void process(HttpServletRequest request) {
         try {
-            forward("/CourseInfo.jsp");
+            forward("/Public/CourseInfo.jsp");
         } catch (ServletException ex) {
             Logger.getLogger(CourseInfoCommand.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
