@@ -11,16 +11,13 @@
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
     <ul class="navbar-nav">
         <li class="nav-item active">
-            <a class="nav-link" href="#">Active</a>
+            <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1">Inicio</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="Public/CourseInfo.jsp">Lista de cursos</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="FrontServlet?command=AlumnosCommand">Lista de alumnos</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
         </li>
     </ul>
 </nav>
