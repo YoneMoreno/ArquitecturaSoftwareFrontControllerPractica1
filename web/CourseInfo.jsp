@@ -1,4 +1,8 @@
 
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Connection"%>
 <%@page import="org.Curso"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.ArrayList"%>

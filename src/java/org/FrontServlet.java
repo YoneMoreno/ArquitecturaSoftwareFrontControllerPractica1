@@ -30,7 +30,7 @@ public class FrontServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-
+            //TODO: SEPARAR la sesión en nel FrontCommand
             HttpSession session = request.getSession(true);
             Curso curso = getCourseFromSession(session);
             Cuestionario cuestionario = getCuestionarioFromSession(session);

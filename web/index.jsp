@@ -6,6 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
+        <%@include file="Header.jsp" %>
         <title>CursosApp</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
         <meta charset="UTF-8">
@@ -14,7 +15,7 @@ and open the template in the editor.
     <body>
         <div class="container">
             <div class="jumbotron">
-                <h1>Bienvenido a CursosApp, eliga una opciÃ³n del panel para comenzar:</h1>
+                <h1>Bienvenido a CursosApp, eliga una opción del panel para comenzar:</h1>
                 <div>
                     <details>
                         <summary>Crear curso</summary>
@@ -61,7 +62,7 @@ and open the template in the editor.
                             </h3>
                             <input style="width:100%"  type="text" name="respuestaTexto11" value="" />
                             <h4>
-                                Â¿Es correcta?:
+                                ¿Es correcta?:
                             </h4>
                             <input type="checkbox" name="respuestaVerdad11" value="cierta" />
                             <h3>
@@ -69,7 +70,7 @@ and open the template in the editor.
                             </h3>
                             <input style="width:100%" type="text" name="respuestaTexto12" value="" />
                             <h4>
-                                Â¿Es correcta?:
+                                ¿Es correcta?:
                             </h4>
                             <input type="checkbox" name="respuestaVerdad12" value="cierta" />
                             <h3>
@@ -77,7 +78,7 @@ and open the template in the editor.
                             </h3>
                             <input style="width:100%" type="text" name="respuestaTexto13" value="" />
                             <h4>
-                                Â¿Es correcta?:
+                                ¿Es correcta?:
                             </h4>
                             <input type="hidden" name="command" value="CuestionarioCommand"/>
                             <input type="checkbox" name="respuestaVerdad13" value="cierta" />
@@ -123,7 +124,7 @@ and open the template in the editor.
                             <input type="text" name="evaluacionAlumno" required/>
                             <h2>Nombre del curso: </h2>
                             <input type="text" name="evaluacionCurso" required>
-                            <h2>Indique la puntuaciÃ³n: </h2>
+                            <h2>Indique la puntuación: </h2>
                             <div style="display: flex">
                                 <h4>0</h4><input type="radio" name="evaluacion" value="0"  />
                                 <h4>1</h4><input type="radio" name="evaluacion" value="1" />
@@ -137,7 +138,7 @@ and open the template in the editor.
                                 <h4>9</h4><input type="radio" name="evaluacion" value="9" />
                                 <h4>10</h4><input type="radio" name="evaluacion" value="10"  />
                             </div>
-                            <h2>AÃ±ada un comentario para justificar la nota: </h2>
+                            <h2>Añada un comentario para justificar la nota: </h2>
                             <textarea name="evaluacionComentario"> 
                             </textarea>
                             <br/>
@@ -157,3 +158,4 @@ and open the template in the editor.
         </div>
     </body>
 </html>
+
