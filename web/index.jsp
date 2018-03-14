@@ -19,7 +19,7 @@ and open the template in the editor.
                 <div>
                     <details>
                         <summary>Crear curso</summary>
-                        <form action="FrontServlet">
+                        <form action="FrontServlet" method="POST">
                             <h2 style="font-weight: 700">Titulo:</h2>
                             <input style="width:100%" type="text" name="titulo" required/>
                             <h2 style="font-weight: 700">Autor:</h2>
