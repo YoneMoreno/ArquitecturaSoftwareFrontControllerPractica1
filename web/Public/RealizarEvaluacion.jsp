@@ -13,6 +13,17 @@
         <title>Realizar Evaluación</title>
     </head>
     <body>
+
+        <h1><%= request.getParameter("name")%></h1>
+        <h1><%= request.getParameter("value")%></h1>
+
+
+        <%
+            if (request.getParameter("name").toString().equals("command")) {
+                if (request.getParameter("value").toString().equals("numero")) {
+
+
+        %>
         <form action="../FrontServlet">
             <h2>Nombre del alumno: </h2>
             <input type="text" name="evaluacionAlumno" required/>
@@ -39,5 +50,8 @@
             <input type="submit" value="Enviar evaluacion">
             <input type="hidden" name="command" value="EvaluacionCommand"/>
         </form>
+        <%  }
+           }
+        %>
     </body>
 </html>
