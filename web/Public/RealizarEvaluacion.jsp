@@ -13,11 +13,6 @@
         <title>Realizar Evaluación</title>
     </head>
     <body>
-
-        <h1><%= request.getParameter("name")%></h1>
-        <h1><%= request.getParameter("value")%></h1>
-
-
         <%
             if (request.getParameter("name").toString().equals("command")) {
                 if (request.getParameter("value").toString().equals("numero")) {
@@ -43,6 +38,40 @@
                 <h4>9</h4><input type="radio" name="evaluacion" value="9" />
                 <h4>10</h4><input type="radio" name="evaluacion" value="10"  />
             </div>
+            <input type="submit" value="Enviar evaluacion">
+            <input type="hidden" name="command" value="EvaluacionCommand"/>
+        </form>
+        <%  } else if (request.getParameter("value").toString().equals("letra")) {
+
+        %>
+        <form action="../FrontServlet">
+            <h2>Nombre del alumno: </h2>
+            <input type="text" name="evaluacionAlumno" required/>
+            <h2>Nombre del curso: </h2>
+            <input type="text" name="evaluacionCurso" required>
+            <h2>Indique la puntuación mediante una letra: </h2>
+            <div style="display: flex">
+                <h4>A</h4><input type="radio" name="evaluacion" value="A"  />
+                <h4>B</h4><input type="radio" name="evaluacion" value="B" />
+                <h4>C</h4><input type="radio" name="evaluacion" value="C" />
+                <h4>D</h4><input type="radio" name="evaluacion" value="D" />
+                <h4>E</h4><input type="radio" name="evaluacion" value="E" />
+            </div>
+            <input type="submit" value="Enviar evaluacion">
+            <input type="hidden" name="command" value="EvaluacionCommand"/>
+        </form>
+        <%                } else if (request.getParameter("value").toString().equals("comentario")) {
+        %>
+        <form action="../FrontServlet">
+            <h2>Nombre del alumno: </h2>
+            <input type="text" name="evaluacionAlumno" required/>
+            <h2>Nombre del curso: </h2>
+            <input type="text" name="evaluacionCurso" required>
+            <h2>Indique la puntuación mediante una letra: </h2>
+            <div style="display: flex">
+                <h4>Apto</h4><input type="radio" name="evaluacion" value="Apto"  />
+                <h4>No Apto</h4><input type="radio" name="evaluacion" value="NoApto" />
+            </div>
             <h2>Añada un comentario para justificar la nota: </h2>
             <textarea name="evaluacionComentario"> 
             </textarea>
@@ -50,8 +79,11 @@
             <input type="submit" value="Enviar evaluacion">
             <input type="hidden" name="command" value="EvaluacionCommand"/>
         </form>
-        <%  }
-           }
+
+
+        <%
+                }
+            }
         %>
     </body>
 </html>
