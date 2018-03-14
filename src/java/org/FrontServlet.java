@@ -34,9 +34,13 @@ public class FrontServlet extends HttpServlet {
             HttpSession session = request.getSession(true);
             Curso curso = getCourseFromSession(session);
             Cuestionario cuestionario = getCuestionarioFromSession(session);
+            Evaluacion evaluacion = getEvaluacionFromSession(session);
 
             setCourseInSession(curso, session, request);
+            
             setCuestionarioInSession(request, session);
+            
+            setEvaluacionInSession(evaluacion, session, request);
 
             FrontCommand command = getCommand(request);
             command.init(getServletContext(), request, response);
@@ -49,6 +53,11 @@ public class FrontServlet extends HttpServlet {
     private Cuestionario getCuestionarioFromSession(HttpSession session) {
         Cuestionario cuestionario = (Cuestionario) session.getAttribute("cuestionario");
         return cuestionario;
+    }
+
+    private Evaluacion getEvaluacionFromSession(HttpSession session) {
+        Evaluacion evaluacion = (Evaluacion) session.getAttribute("evaluacion");
+        return evaluacion;
     }
 
     private Curso getCourseFromSession(HttpSession session) {
@@ -72,6 +81,27 @@ public class FrontServlet extends HttpServlet {
         }
     }
 
+    private void setEvaluacionInSession(Evaluacion evaluacion, HttpSession session, HttpServletRequest request) {
+        if (evaluacion != null) {
+            ArrayList evaluaciones = (ArrayList) session.getAttribute("evaluaciones");
+            if (evaluaciones == null) {
+                evaluaciones = new ArrayList();
+                session.setAttribute("evaluaciones", evaluaciones);
+            }
+            evaluaciones.add(evaluacion);
+
+        } else {
+            evaluacion = evaluacionHelper(request);
+            ArrayList evaluaciones = (ArrayList) session.getAttribute("evaluaciones");
+            if (evaluaciones == null) {
+                evaluaciones = new ArrayList();
+                session.setAttribute("evaluaciones", evaluaciones);
+            }
+            evaluaciones.add(evaluacion);
+
+        }
+    }
+
     private void addToSession(Curso curso, HttpSession session) {
         ArrayList cursos = (ArrayList) session.getAttribute("cursos");
         if (cursos == null) {
@@ -91,6 +121,14 @@ public class FrontServlet extends HttpServlet {
                 request.getParameter("video"),
                 request.getParameter("imagen"));
         return curso;
+    }
+
+    private Evaluacion evaluacionHelper(HttpServletRequest request) {
+        Evaluacion evaluacion;
+        evaluacion = new Evaluacion(request.getParameter("evaluacionAlumno"),
+                request.getParameter("evaluacionCurso"),
+                request.getParameter("evaluacion"));
+        return evaluacion;
     }
 
     private static boolean isCourseCreatedWithRequiredParams(HttpServletRequest request) {

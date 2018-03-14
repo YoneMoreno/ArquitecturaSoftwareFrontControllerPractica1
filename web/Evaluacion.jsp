@@ -3,7 +3,9 @@
     Created on : 17-feb-2018, 8:47:46
     Author     : YonePC
 --%>
-
+<%@page import="org.Evaluacion"%>
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -23,12 +25,27 @@
             <th>Puntuacion</th>
         </thead>
         <tbody>
+            <%
+                if (session.getAttribute("evaluaciones") != null) {
+                    ArrayList evaluaciones = (ArrayList) session.getAttribute("evaluaciones");
+                    Iterator i = evaluaciones.iterator();
+                    int current = 0;
+                    while (i.hasNext()) {
+                        Evaluacion evaluacionActual = (Evaluacion) i.next();
+
+            %>
             <tr>
-                <td><%= request.getParameter("evaluacionAlumno")%></td>
-                <td><%= request.getParameter("evaluacionCurso")%></td>
-                <td><%= request.getParameter("evaluacion")%></td>
+                <td><%= evaluacionActual.getEvaluacionAlumno()%></td>
+                <td><%= evaluacionActual.getEvaluacionCurso()%></td>
+                <td><%= evaluacionActual.getEvaluacion()%></td>
             </tr>
         </tbody>
+        <%
+                    current++;
+
+                }
+            }
+        %>
     </table>
 </body>
 <%@include file="Footer.jsp" %>
