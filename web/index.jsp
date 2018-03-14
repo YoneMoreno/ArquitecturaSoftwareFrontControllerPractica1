@@ -121,7 +121,7 @@ and open the template in the editor.
                         <summary>
                             Evaluar alumno
                         </summary>
-                        <%@include file="RealizarEvaluacion.jsp" %>
+                        <%@include file="/Public/RealizarEvaluacion.jsp" %>
                     </details>
                     <details>
                         <summary>Ver lista de alumnos</summary>

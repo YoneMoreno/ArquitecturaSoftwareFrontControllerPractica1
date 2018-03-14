@@ -55,9 +55,9 @@
                                 <li><a href="#">Evaluación</a>
                                     <!-- First Tier Drop Down -->
                                     <ul>
-                                        <li><a href="#">Mediante numero</a></li>
-                                        <li><a href="#">Con letra</a></li>
-                                        <li><a href="#">Escribiendo comentario</a></li>
+                                        <li><a href="RealizarEvaluacion.jsp">Mediante numero</a></li>
+                                        <li><a href="RealizarEvaluacion.jsp">Con letra</a></li>
+                                        <li><a href="RealizarEvaluacion.jsp">Escribiendo comentario</a></li>
                                     </ul>        
                                 </li>  
                             </ul>
