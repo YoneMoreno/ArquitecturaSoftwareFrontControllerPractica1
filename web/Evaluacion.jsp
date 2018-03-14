@@ -3,6 +3,7 @@
     Created on : 17-feb-2018, 8:47:46
     Author     : YonePC
 --%>
+<%@page import="beans.ComentarioNota"%>
 <%@page import="beans.LetraNota"%>
 <%@page import="beans.ConviertePuntosNota"%>
 <%@page import="javax.ejb.EJB"%>
@@ -17,6 +18,7 @@
 
     ConviertePuntosNota conviertePuntosNota = new ConviertePuntosNota();
     LetraNota letraNota = new LetraNota();
+    ComentarioNota comentarioNota = new ComentarioNota();
 %>
 
 <html>
@@ -62,7 +64,12 @@
 
 
                 <%
-                } else {
+                } else if (evaluacionActual.getEvaluacion().equals("A")
+                        || evaluacionActual.getEvaluacion().equals("B")
+                        || evaluacionActual.getEvaluacion().equals("C")
+                        || evaluacionActual.getEvaluacion().equals("D")
+                        || evaluacionActual.getEvaluacion().equals("E")) {
+
 
                 %>
 
@@ -73,6 +80,17 @@
 
 
                 <%
+                            } else {
+%>
+
+                <td><%= evaluacionActual.getEvaluacionAlumno()%></td>
+                <td><%= evaluacionActual.getEvaluacionCurso()%></td>
+                <td><%= evaluacionActual.getEvaluacion()%></td>
+                <td><%= comentarioNota.convierteComentarioNota(evaluacionActual.getEvaluacion(), evaluacionActual.getEvaluacionComentario())%></td>
+                <td>   Comentario del profesor: "<%= evaluacionActual.getEvaluacionComentario() %>"</td>
+                
+
+<%
                             }
                             current++;
 

@@ -37,9 +37,9 @@ public class FrontServlet extends HttpServlet {
             Evaluacion evaluacion = getEvaluacionFromSession(session);
 
             setCourseInSession(curso, session, request);
-            
+
             setCuestionarioInSession(request, session);
-            
+
             setEvaluacionInSession(evaluacion, session, request);
 
             FrontCommand command = getCommand(request);
@@ -127,7 +127,8 @@ public class FrontServlet extends HttpServlet {
         Evaluacion evaluacion;
         evaluacion = new Evaluacion(request.getParameter("evaluacionAlumno"),
                 request.getParameter("evaluacionCurso"),
-                request.getParameter("evaluacion"));
+                request.getParameter("evaluacion"),
+                request.getParameter("evaluacionComentario"));
         return evaluacion;
     }
 

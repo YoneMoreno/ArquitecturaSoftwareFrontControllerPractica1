@@ -11,7 +11,14 @@ package org;
  */
 public class Evaluacion {
 
- String evaluacionAlumno, evaluacionCurso, evaluacion;
+ String evaluacionAlumno, evaluacionCurso, evaluacion, evaluacionComentario;
+
+    public Evaluacion(String evaluacionAlumno, String evaluacionCurso, String evaluacion, String evaluacionComentario) {
+        this.evaluacionAlumno = evaluacionAlumno;
+        this.evaluacionCurso = evaluacionCurso;
+        this.evaluacion = evaluacion;
+        this.evaluacionComentario = evaluacionComentario;
+    }
 
     public String getEvaluacionAlumno() {
         return evaluacionAlumno;
@@ -37,10 +44,13 @@ public class Evaluacion {
         this.evaluacion = evaluacion;
     }
 
-    public Evaluacion(String evaluacionAlumno, String evaluacionCurso, String evaluacion) {
-        this.evaluacionAlumno = evaluacionAlumno;
-        this.evaluacionCurso = evaluacionCurso;
-        this.evaluacion = evaluacion;
+    public String getEvaluacionComentario() {
+        return evaluacionComentario;
     }
+
+    public void setEvaluacionComentario(String evaluacionComentario) {
+        this.evaluacionComentario = evaluacionComentario;
+    }
+
     
 }
