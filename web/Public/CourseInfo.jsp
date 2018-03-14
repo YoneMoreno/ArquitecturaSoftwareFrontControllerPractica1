@@ -25,12 +25,20 @@
                 <th style="padding: 8px">Imagen</th>
             </tr>
 
-            <% if (session.getAttribute("cursos") != null) {%>
-            <% ArrayList cursos = (ArrayList) session.getAttribute("cursos");
-                Iterator i = cursos.iterator();
-                int current = 0;
-                while (i.hasNext()) {
-                    Curso cursoActual = (Curso) i.next();
+            <%
+
+                if (session.getAttribute("cursos") == null) {
+                    ArrayList cursos = new ArrayList();
+                    session.setAttribute("cursos", cursos);
+                    Curso curso = new Curso("AS", "Javier", "Gestion SW", "100h", "", "https://image.slidesharecdn.com/the-recovered-architect-140318152419-phpapp02/95/the-modern-software-architect-13-638.jpg?cb=1395216721");
+                    cursos.add(curso);
+                }
+                if (session.getAttribute("cursos") != null) {
+                    ArrayList cursos = (ArrayList) session.getAttribute("cursos");
+                    Iterator i = cursos.iterator();
+                    int current = 0;
+                    while (i.hasNext()) {
+                        Curso cursoActual = (Curso) i.next();
 
             %>
             <tr>
@@ -44,7 +52,7 @@
 
             <%
                         current++;
-                        
+
                     }
                 }
             %>
