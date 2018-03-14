@@ -49,19 +49,17 @@
                 <td><a href="<%= cursoActual.getVideo()%>">Video</a></td>
                 <td style="display:flex">
                     <img width="75" height="50" src="<%= cursoActual.getImagen()%>" alt="<%= cursoActual.getTitulo()%>"/>
-                    <div id="container">
-                        <nav>
-                            <ul>
-                                <li><a href="#">Evaluación</a>
-                                    <!-- First Tier Drop Down -->
-                                    <ul>
-                                        <li><a href="RealizarEvaluacion.jsp">Mediante numero</a></li>
-                                        <li><a href="RealizarEvaluacion.jsp">Con letra</a></li>
-                                        <li><a href="RealizarEvaluacion.jsp">Escribiendo comentario</a></li>
-                                    </ul>        
-                                </li>  
-                            </ul>
-                        </nav>
+                    <div id="container" class="dropdown">
+                        <ul>
+                            <li><a href="#">Evaluación</a>
+                                <!-- First Tier Drop Down -->
+                                <ul>
+                                    <li><a href="RealizarEvaluacion.jsp">Mediante numero</a></li>
+                                    <li><a href="RealizarEvaluacion.jsp">Con letra</a></li>
+                                    <li><a href="RealizarEvaluacion.jsp">Escribiendo comentario</a></li>
+                                </ul>        
+                            </li>  
+                        </ul>
                     </div>
                 </td>
 

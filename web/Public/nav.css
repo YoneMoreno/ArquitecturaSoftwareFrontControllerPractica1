@@ -11,43 +11,45 @@
 
 
 
-nav ul {
+.dropdown ul {
     padding: 0;
     margin: 0;
     list-style: none;
     position: relative;
 }
 
-nav ul li {
+.dropdown ul li {
     display:inline-block;
+    background-color: #E64A19;
 }
 
-nav a {
+.dropdown a {
     display:block;
     padding:0 10px;	
     font-size:20px;
+    color: #FFF;
     line-height: 60px;
     text-decoration:none;
 }
 
-nav a:hover { 
+.dropdown a:hover { 
     background-color: #000000; 
 }
 
 /* Hide Dropdowns by Default */
-nav ul ul {
+.dropdown ul ul {
     display: none;
     position: absolute; 
     top: 60px; /* the height of the main nav */
 }
 
 /* Display Dropdowns on Hover */
-nav ul li:hover > ul {
+.dropdown ul li:hover > ul {
     display:inherit;
 }
 
 /* Fisrt Tier Dropdown */
-nav ul ul li {
+.dropdown ul ul li {
     width:170px;
     float:none;
     display:list-item;
@@ -55,7 +57,7 @@ nav ul ul li {
 }
 
 /* Second, Third and more Tiers	*/
-nav ul ul ul li {
+.dropdown ul ul ul li {
     position: relative;
     top:-60px; 
     left:170px;
