@@ -11,8 +11,8 @@
     <head>
         <%@include file="../Header.jsp" %>
         <title>Lista de cursos</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link href="nav.css" rel="stylesheet" type="text/css"/>
     </head>
     <body> 
         <table width="100%" border=1>
@@ -47,7 +47,24 @@
                 <td><%= cursoActual.getAsignatura()%></td>
                 <td><%= cursoActual.getDuracion()%></td>
                 <td><a href="<%= cursoActual.getVideo()%>">Video</a></td>
-                <td><img width="75" height="50" src="<%= cursoActual.getImagen()%>" alt="<%= cursoActual.getTitulo()%>"/></td>
+                <td style="display:flex">
+                    <img width="75" height="50" src="<%= cursoActual.getImagen()%>" alt="<%= cursoActual.getTitulo()%>"/>
+                    <div id="container">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Evaluación</a>
+                                    <!-- First Tier Drop Down -->
+                                    <ul>
+                                        <li><a href="#">Mediante numero</a></li>
+                                        <li><a href="#">Con letra</a></li>
+                                        <li><a href="#">Escribiendo comentario</a></li>
+                                    </ul>        
+                                </li>  
+                            </ul>
+                        </nav>
+                    </div>
+                </td>
+
             </tr>
 
             <%
@@ -57,7 +74,10 @@
                 }
             %>
         </table>
+
+
     </body> 
+
     <%@include file="../Footer.jsp" %>
 
 </html>
