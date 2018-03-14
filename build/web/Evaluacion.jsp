@@ -3,6 +3,7 @@
     Created on : 17-feb-2018, 8:47:46
     Author     : YonePC
 --%>
+<%@page import="beans.LetraNota"%>
 <%@page import="beans.ConviertePuntosNota"%>
 <%@page import="javax.ejb.EJB"%>
 <%@page import="org.Evaluacion"%>
@@ -15,6 +16,7 @@
 <%
 
     ConviertePuntosNota conviertePuntosNota = new ConviertePuntosNota();
+    LetraNota letraNota = new LetraNota();
 %>
 
 <html>
@@ -47,22 +49,38 @@
 
             %>
             <tr>
-                <% 
-                    String nota = evaluacionActual.getEvaluacion();
-                    int evaluacionInt = Integer.parseInt(nota);
+                <%                    String nota = evaluacionActual.getEvaluacion();
+                    int evaluacionInt = -1;
+                    String pattern = "-?\\d+";
+                    if (nota.matches("-?\\d+")) {
+                        evaluacionInt = Integer.parseInt(nota);
                 %>
                 <td><%= evaluacionActual.getEvaluacionAlumno()%></td>
                 <td><%= evaluacionActual.getEvaluacionCurso()%></td>
                 <td><%= evaluacionActual.getEvaluacion()%></td>
                 <td><%= conviertePuntosNota.convertidor(evaluacionInt)%></td>
+
+
+                <%
+                } else {
+
+                %>
+
+                <td><%= evaluacionActual.getEvaluacionAlumno()%></td>
+                <td><%= evaluacionActual.getEvaluacionCurso()%></td>
+                <td><%= evaluacionActual.getEvaluacion()%></td>
+                <td><%= letraNota.convierteLetraNota(evaluacionActual.getEvaluacion())%></td>
+
+
+                <%
+                            }
+                            current++;
+
+                        }
+                    }
+                %>
             </tr>
         </tbody>
-        <%
-                    current++;
-
-                }
-            }
-        %>
     </table>
 </body>
 <%@include file="Footer.jsp" %>
