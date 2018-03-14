@@ -14,7 +14,7 @@
             <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1">Inicio</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="Public/CourseInfo.jsp">Lista de cursos</a>
+            <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/CourseInfo.jsp">Lista de cursos</a>
         </li>
     </ul>
 </nav>
