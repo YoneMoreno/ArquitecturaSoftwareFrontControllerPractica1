@@ -13,7 +13,7 @@
         <title>Realizar Evaluación</title>
     </head>
     <body>
-        <form action="FrontServlet">
+        <form action="../FrontServlet">
             <h2>Nombre del alumno: </h2>
             <input type="text" name="evaluacionAlumno" required/>
             <h2>Nombre del curso: </h2>

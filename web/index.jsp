@@ -118,12 +118,6 @@ and open the template in the editor.
                         </form>
                     </details>
                     <details>
-                        <summary>
-                            Evaluar alumno
-                        </summary>
-                        <%@include file="/Public/RealizarEvaluacion.jsp" %>
-                    </details>
-                    <details>
                         <summary>Ver lista de alumnos</summary>
                         <form action="FrontServlet">
                             <input type="submit" value="Ver mis alummnos"/>
