@@ -3,11 +3,20 @@
     Created on : 17-feb-2018, 8:47:46
     Author     : YonePC
 --%>
+<%@page import="beans.ConviertePuntosNota"%>
+<%@page import="javax.ejb.EJB"%>
 <%@page import="org.Evaluacion"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
+<%@page import ="beans.ConviertePuntosNota"%>
+<%
+
+    ConviertePuntosNota conviertePuntosNota = new ConviertePuntosNota();
+%>
+
 <html>
     <head>
         <%@include file="Header.jsp" %>
@@ -18,11 +27,14 @@
     </head>
     <body>
         <h1>Evaluacion:</h1>
+
+
         <table>
             <thead>
             <th>Alumno</th>
             <th>Curso</th>
             <th>Puntuacion</th>
+            <th>Acta</th>
         </thead>
         <tbody>
             <%
@@ -35,9 +47,14 @@
 
             %>
             <tr>
+                <% 
+                    String nota = evaluacionActual.getEvaluacion();
+                    int evaluacionInt = Integer.parseInt(nota);
+                %>
                 <td><%= evaluacionActual.getEvaluacionAlumno()%></td>
                 <td><%= evaluacionActual.getEvaluacionCurso()%></td>
                 <td><%= evaluacionActual.getEvaluacion()%></td>
+                <td><%= conviertePuntosNota.convertidor(evaluacionInt)%></td>
             </tr>
         </tbody>
         <%
