@@ -88,7 +88,8 @@ public class FrontServlet extends HttpServlet {
                 request.getParameter("autor"),
                 request.getParameter("asignatura"),
                 request.getParameter("duracion"),
-                request.getParameter("video"));
+                request.getParameter("video"),
+                request.getParameter("imagen"));
         return curso;
     }
 

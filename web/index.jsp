@@ -41,6 +41,8 @@ and open the template in the editor.
                             <input style="width:100%" type="number" name="duracion"/>
                             <h2 style="font-weight:700">Enlace al curso en video:</h2>
                             <input style="width:100%" type="url" name="video" pattern="https?://.+" title="video">
+                            <h2 style="font-weight:700">Enlace a la imagen del curso:</h2>
+                            <input style="width:100%" type="url" name="imagen" pattern="https?://.+" title="imagen">
 
                             <input type="hidden" name="command" value="CourseInfoCommand">
                             <input type="submit" value="Crear curso">

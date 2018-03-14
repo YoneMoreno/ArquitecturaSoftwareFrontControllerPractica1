@@ -22,6 +22,7 @@
                 <th style="padding: 8px">Asignatura</th>
                 <th style="padding: 8px">Duracion</th>
                 <th style="padding: 8px">Video</th>
+                <th style="padding: 8px">Imagen</th>
             </tr>
 
             <% if (session.getAttribute("cursos") != null) {%>
@@ -38,6 +39,7 @@
                 <td><%= cursoActual.getAsignatura()%></td>
                 <td><%= cursoActual.getDuracion()%></td>
                 <td><a href="<%= cursoActual.getVideo()%>">Video</a></td>
+                <td><img width="75" height="50" src="<%= cursoActual.getImagen()%>" alt="<%= cursoActual.getTitulo()%>"/></td>
             </tr>
 
             <%
@@ -49,6 +51,6 @@
             <% }%>
         </table>
     </body> 
-        <%@include file="../Footer.jsp" %>
+    <%@include file="../Footer.jsp" %>
 
 </html>
