@@ -10,16 +10,16 @@
 <%@page import="org.Evaluacion"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.ArrayList"%>
+<%@page import="javax.naming.InitialContext"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <%@page import ="beans.ConviertePuntosNota"%>
 <%
-    
 
-    ConviertePuntosNota conviertePuntosNota = new ConviertePuntosNota();
-    LetraNota letraNota = new LetraNota();
-    ComentarioNota comentarioNota = new ComentarioNota();
+    ConviertePuntosNota conviertePuntosNota = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/ConviertePuntosNota");
+    LetraNota letraNota = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/LetraNota!beans.LetraNota");
+    ComentarioNota comentarioNota = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/ComentarioNota!beans.ComentarioNota");
 %>
 
 <html>
@@ -81,17 +81,17 @@
 
 
                 <%
-                            } else {
-%>
+                } else {
+                %>
 
                 <td><%= evaluacionActual.getEvaluacionAlumno()%></td>
                 <td><%= evaluacionActual.getEvaluacionCurso()%></td>
                 <td><%= evaluacionActual.getEvaluacion()%></td>
                 <td><%= comentarioNota.convierteComentarioNota(evaluacionActual.getEvaluacion(), evaluacionActual.getEvaluacionComentario())%></td>
-                <td>   Comentario del profesor: "<%= evaluacionActual.getEvaluacionComentario() %>"</td>
-                
+                <td>   Comentario del profesor: "<%= evaluacionActual.getEvaluacionComentario()%>"</td>
 
-<%
+
+                <%
                             }
                             current++;
 

@@ -17,7 +17,7 @@ public class ComentarioNota {
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
     public String convierteComentarioNota(String evaluacion, String comentario) {
-        if (evaluacion.equals("Apto") && comentario != null && comentario.length() > 5) {
+        if (evaluacion.trim().equals("Apto") && comentario != null && comentario.length() > 5) {
             return "Apto";
         } else {
             return "No Apto";
