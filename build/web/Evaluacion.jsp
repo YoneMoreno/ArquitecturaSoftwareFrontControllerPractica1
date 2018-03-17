@@ -61,7 +61,7 @@
                 <td><%= evaluacionActual.getEvaluacionAlumno()%></td>
                 <td><%= evaluacionActual.getEvaluacionCurso()%></td>
                 <td><%= evaluacionActual.getEvaluacion()%></td>
-                <td><%= conviertePuntosNota.convertidor(evaluacionInt)%></td>
+                <td><%= conviertePuntosNota.convierteNota(evaluacionActual.getEvaluacion())%></td>
 
 
                 <%
@@ -77,7 +77,7 @@
                 <td><%= evaluacionActual.getEvaluacionAlumno()%></td>
                 <td><%= evaluacionActual.getEvaluacionCurso()%></td>
                 <td><%= evaluacionActual.getEvaluacion()%></td>
-                <td><%= letraNota.convierteLetraNota(evaluacionActual.getEvaluacion())%></td>
+                <td><%= letraNota.convierteNota(evaluacionActual.getEvaluacion())%></td>
 
 
                 <%
@@ -87,7 +87,7 @@
                 <td><%= evaluacionActual.getEvaluacionAlumno()%></td>
                 <td><%= evaluacionActual.getEvaluacionCurso()%></td>
                 <td><%= evaluacionActual.getEvaluacion()%></td>
-                <td><%= comentarioNota.convierteComentarioNota(evaluacionActual.getEvaluacion(), evaluacionActual.getEvaluacionComentario())%></td>
+                <td><%= comentarioNota.convierteNota(evaluacionActual.getEvaluacion(), evaluacionActual.getEvaluacionComentario())%></td>
                 <td>   Comentario del profesor: "<%= evaluacionActual.getEvaluacionComentario()%>"</td>
 
 
