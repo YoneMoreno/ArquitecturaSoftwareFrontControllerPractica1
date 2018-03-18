@@ -1,1 +1,3 @@
 ConviertePuntosNota::convertidor::el usuario introdujo: 10
+ConviertePuntosNota::convertidor::el usuario introdujo: 10
+ConviertePuntosNota::convertidor::el usuario introdujo: 10

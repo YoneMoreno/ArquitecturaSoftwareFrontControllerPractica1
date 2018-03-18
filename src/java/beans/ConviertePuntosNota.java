@@ -16,6 +16,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.Stateless;
 import java.io.File;
+import java.nio.file.StandardOpenOption;
 
 /**
  *
@@ -32,7 +33,7 @@ public class ConviertePuntosNota {
 
             List<String> lines = Arrays.asList("ConviertePuntosNota::convertidor::el usuario introdujo: " + evaluacion);
             Path file = Paths.get("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\beans\\ConviertePuntosNota.log.txt");
-            Files.write(file, lines, Charset.forName("UTF-8"));
+            Files.write(file, lines, Charset.forName("UTF-8"), StandardOpenOption.APPEND);
 
             return evaluacion >= 5 ? "Apto" : "No apto";
 
