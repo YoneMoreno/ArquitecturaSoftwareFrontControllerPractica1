@@ -5,10 +5,13 @@
  */
 package frontController;
 
+import beans.Encuesta;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -75,13 +78,22 @@ public class EncuestaCommand extends FrontCommand {
 
     @Override
     public void process(HttpServletRequest request) {
-        String cuestion1 = request.getParameter("cuestion1");
-        request.setAttribute("encuesta", cuestion1);
         try {
-            forward("/Encuesta.jsp");
-        } catch (ServletException ex) {
-            Logger.getLogger(EncuestaCommand.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
+            String cuestion1 = request.getParameter("cuestion1");
+            
+            Encuesta encuesta = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Encuesta!beans.Encuesta");
+            encuesta.setCuestion1(cuestion1);
+            
+            
+            request.setAttribute("encuesta", encuesta);
+            try {
+                forward("/Encuesta.jsp");
+            } catch (ServletException ex) {
+                Logger.getLogger(EncuestaCommand.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                Logger.getLogger(EncuestaCommand.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (NamingException ex) {
             Logger.getLogger(EncuestaCommand.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

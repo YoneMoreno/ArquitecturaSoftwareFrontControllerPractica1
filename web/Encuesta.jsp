@@ -4,6 +4,7 @@
     Author     : YonePC
 --%>
 
+<%@page import="beans.Encuesta"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,9 +17,12 @@
     </head>
     <body>
         <%
-            out.print(request.getAttribute("encuesta"));
+            Encuesta encuesta = (Encuesta) request.getAttribute("encuesta");
+            
+
         %>
 
+        <h1><%= encuesta.getCuestion1()%></h1>
         <form >
             <div style="display:flex">
                 <h4>0</h4><input type="radio" name="encuesta1" value="0"  />
