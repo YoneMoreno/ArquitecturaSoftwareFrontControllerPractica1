@@ -5,6 +5,7 @@
  */
 package org;
 
+import beans.Cuestionario;
 import frontController.UnknownCommand;
 import frontController.FrontCommand;
 import java.io.IOException;

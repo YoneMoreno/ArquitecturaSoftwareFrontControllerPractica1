@@ -3,16 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org;
+package beans;
+
+import javax.ejb.Stateful;
 
 /**
  *
  * @author YonePC
  */
+ @Stateful
 public class Cuestionario {
 
     String pregunta1, respuestaTexto11, respuestaVerdad11, respuestaTexto12, respuestaVerdad12,
             respuestaTexto13, respuestaVerdad13;
+
+    public Cuestionario() {
+    }
 
     public Cuestionario(String pregunta1, String respuestaTexto11, String respuestaVerdad11, String respuestaTexto12, String respuestaVerdad12, String respuestaTexto13, String respuestaVerdad13) {
         this.pregunta1 = pregunta1;

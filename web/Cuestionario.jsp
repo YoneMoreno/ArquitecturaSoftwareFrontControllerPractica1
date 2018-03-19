@@ -3,7 +3,8 @@
     Created on : 10-feb-2018, 9:36:15
     Author     : YonePC
 --%>
-<%@page import="org.Cuestionario"%>
+<%@page import="javax.naming.InitialContext"%>
+<%@page import="beans.Cuestionario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,7 +17,9 @@
     </head>
     <body>
 
-        <% Cuestionario cuestionario = (Cuestionario) session.getAttribute("cuestionario");%>
+        <% Cuestionario cuestionario = (Cuestionario) request.getAttribute("cuestionario");
+       
+        %>
 
         <h1><%= cuestionario.getPregunta1()%></h1>
         <form>
