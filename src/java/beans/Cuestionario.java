@@ -31,16 +31,31 @@ public class Cuestionario {
             respuestaTexto13, respuestaVerdad13;
 
     public Cuestionario() {
+        try {
+            String text = "\n Cuestionario::constructor por defecto::este metodo es VOID + \n";
+            writeLogToFile(text, file);
+        } catch (IOException ex) {
+            Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public Cuestionario(String pregunta1, String respuestaTexto11, String respuestaVerdad11, String respuestaTexto12, String respuestaVerdad12, String respuestaTexto13, String respuestaVerdad13) {
-        this.pregunta1 = pregunta1;
-        this.respuestaTexto11 = respuestaTexto11;
-        this.respuestaVerdad11 = respuestaVerdad11;
-        this.respuestaTexto12 = respuestaTexto12;
-        this.respuestaVerdad12 = respuestaVerdad12;
-        this.respuestaTexto13 = respuestaTexto13;
-        this.respuestaVerdad13 = respuestaVerdad13;
+        try {
+            String text = "\n Cuestionario::constructor::este metodo es crea el cuestionario con: "
+                    + pregunta1 + respuestaTexto11 + respuestaVerdad11 + respuestaTexto12 + respuestaVerdad12
+                    + respuestaTexto13 + respuestaVerdad13
+                    + "\n";
+            writeLogToFile(text, file);
+            this.pregunta1 = pregunta1;
+            this.respuestaTexto11 = respuestaTexto11;
+            this.respuestaVerdad11 = respuestaVerdad11;
+            this.respuestaTexto12 = respuestaTexto12;
+            this.respuestaVerdad12 = respuestaVerdad12;
+            this.respuestaTexto13 = respuestaTexto13;
+            this.respuestaVerdad13 = respuestaVerdad13;
+        } catch (IOException ex) {
+            Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public String getPregunta1() {
@@ -187,7 +202,7 @@ public class Cuestionario {
     @PostConstruct
     public void postConstruct() {
         try {
-            String text = "\n Cuestionario::postConstruct::nuestro PostConstruct es void \n";
+            String text = "Cuestionario::postConstruct::nuestro PostConstruct es void \n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
