@@ -1,0 +1,8 @@
+ConvierteComentarioNota::postConstruct::el metodo postConstruct es void 
+ConvierteComentarioNota::convierteComentarioNota::el usuario introdujo la evaluacion: Apto y el comentario:  
+            
+ConvierteComentarioNota::preDestroy::el metodo preDestroy es void!!! 
+ConvierteComentarioNota::postConstruct::el metodo postConstruct es void 
+ConvierteComentarioNota::convierteComentarioNota::el usuario introdujo la evaluacion: Apto y el comentario:  
+            
+ConvierteComentarioNota::preDestroy::el metodo preDestroy es void!!! 
