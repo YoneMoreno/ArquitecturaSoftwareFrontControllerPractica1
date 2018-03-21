@@ -6,3 +6,6 @@ ConvierteComentarioNota::postConstruct::el metodo postConstruct es void
 ConvierteComentarioNota::convierteComentarioNota::el usuario introdujo la evaluacion: Apto y el comentario:  
             
 ConvierteComentarioNota::preDestroy::el metodo preDestroy es void!!! 
+LetraNota::postConstruct:: nuestro metodo PostConstruct es void!!!!!!!! 
+LetraNota::convierteLetraNota::el usuario introdujo la LETRA: E
+LetraNota::preDestroy:: el metodo PreDestroy es void!!!!!!!!!!! 
