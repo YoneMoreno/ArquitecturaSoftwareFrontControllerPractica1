@@ -12,6 +12,10 @@
         <%            SingletonFuncionLog singletonFuncionLog = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
 
             String log = singletonFuncionLog.getFuncionLog();
+
+            Estadisticas estadisticasVerSingletonLog = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+
+            estadisticasVerSingletonLog.nuevaVisitaVerSingletonLog();
         %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Singleton Log</title>
