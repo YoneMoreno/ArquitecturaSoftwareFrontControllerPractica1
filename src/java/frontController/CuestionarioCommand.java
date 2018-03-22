@@ -44,6 +44,8 @@ public class CuestionarioCommand extends FrontCommand {
 
             singletonFuncionLog5.funcionLog("CuestionarioCommand", "processRequest");
         } catch (NamingException ex) {
+            singletonFuncionLog5.funcionLog("CuestionarioCommand", "NamingException ex");
+
             Logger.getLogger(CuestionarioCommand.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -113,11 +115,17 @@ public class CuestionarioCommand extends FrontCommand {
             try {
                 forward("/Cuestionario.jsp");
             } catch (ServletException ex) {
+                singletonFuncionLog5.funcionLog("CuestionarioCommand", "ServletException ex");
+
                 Logger.getLogger(CourseInfoCommand.class.getName()).log(Level.SEVERE, null, ex);
             } catch (IOException ex) {
+                singletonFuncionLog5.funcionLog("CuestionarioCommand", "IOException ex");
+
                 Logger.getLogger(CourseInfoCommand.class.getName()).log(Level.SEVERE, null, ex);
             }
         } catch (NamingException ex) {
+            singletonFuncionLog5.funcionLog("CuestionarioCommand", "NamingException ex");
+
             Logger.getLogger(CuestionarioCommand.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
