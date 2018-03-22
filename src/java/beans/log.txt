@@ -672,3 +672,5 @@ Cuestionario::getRespuestaTexto13::nuestra funcioncita, OBTIENE, la respuesta de
 Cuestionario::getRespuestaVerdad13::nuestro metodo, COGE, la el valor boolean de la respuesta 13: null
 ConviertePuntosNota::postConstruct::el metodo es void 
 ConviertePuntosNota::convertidor::el usuario introdujo: 6
+ConviertePuntosNota::postConstruct::el metodo es void 
+ConviertePuntosNota::convertidor::el usuario introdujo: 10

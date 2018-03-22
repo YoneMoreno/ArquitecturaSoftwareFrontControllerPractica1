@@ -25,6 +25,10 @@
     SingletonFuncionLog singletonFuncionLog = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
 
     singletonFuncionLog.funcionLog("Evaluacion", "processRequest");
+
+    Estadisticas estadisticasEvaluacion = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+
+    estadisticasEvaluacion.nuevaVisitaEvaluacion();
 %>
 
 <html>
@@ -47,8 +51,7 @@
             <th>Acta</th>
         </thead>
         <tbody>
-            <%
-                if (session.getAttribute("evaluaciones") != null) {
+            <%                if (session.getAttribute("evaluaciones") != null) {
                     ArrayList evaluaciones = (ArrayList) session.getAttribute("evaluaciones");
                     Iterator i = evaluaciones.iterator();
                     int current = 0;

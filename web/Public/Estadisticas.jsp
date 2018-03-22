@@ -12,6 +12,7 @@
     int numeroSesionesNuevas = estadisticas2.getCuentaNuevaSesion();
     int visitasIndex = estadisticas2.getNuevaVisitaIndex();
     int visitasUnknown = estadisticas2.getNuevaVisitaUnknown();
+    int visitasEvaluacion = estadisticas2.getNuevaVisitaEvaluacion();
 %>
 <!DOCTYPE html>
 <html>
@@ -24,6 +25,7 @@
         <h1>Numero de sesiones nuevas: <%= numeroSesionesNuevas%></h1>
         <h2>Numero de visitas index: <%= visitasIndex%></h2>
         <h2>Numero de visitas unknown: <%= visitasUnknown%></h2>
+        <h2>Numero de visitas evaluacion <%= visitasEvaluacion%></h2>
 
     </body>
 </html>

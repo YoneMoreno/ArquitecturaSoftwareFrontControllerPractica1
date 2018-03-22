@@ -14,33 +14,44 @@ import javax.servlet.http.HttpSession;
  */
 @Singleton
 public class Estadisticas {
+
     int cuenta = 0;
     int index = 0;
     int unknown = 0;
+    int evaluacion = 0;
 
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
-    
-    public void cuentaNuevaSesion(){
+    public void cuentaNuevaSesion() {
         System.out.println("El numero de sesiones nuevas es: " + ++cuenta);
     }
-    
-    public int getCuentaNuevaSesion(){
+
+    public int getCuentaNuevaSesion() {
         return cuenta;
     }
-    
-    public void nuevaVisitaIndex(){
+
+    public void nuevaVisitaIndex() {
         ++index;
     }
-    public int getNuevaVisitaIndex(){
+
+    public int getNuevaVisitaIndex() {
         return index;
     }
-    
-     public void nuevaVisitaUnknown(){
+
+    public void nuevaVisitaUnknown() {
         ++unknown;
     }
-    public int getNuevaVisitaUnknown(){
+
+    public int getNuevaVisitaUnknown() {
         return unknown;
     }
-    
+
+    public void nuevaVisitaEvaluacion() {
+        ++evaluacion;
+    }
+
+    public int getNuevaVisitaEvaluacion() {
+        return evaluacion;
+    }
+
 }
