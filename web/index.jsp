@@ -7,12 +7,17 @@ and open the template in the editor.
 -->
 
 <%
+    
+    
+    
     SingletonFuncionLog singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
 
     singletonFuncionLog5.funcionLog("Index", "processRequest");
     
+     Estadisticas estadisticasIndex = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
 
-
+     
+     estadisticasIndex.nuevaVisitaPaginaActual();
 %>
 
 <html>

@@ -15,6 +15,7 @@ import javax.servlet.http.HttpSession;
 @Singleton
 public class Estadisticas {
     int cuenta = 0;
+    int index = 0;
 
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
@@ -26,4 +27,12 @@ public class Estadisticas {
     public int getCuentaNuevaSesion(){
         return cuenta;
     }
+    
+    public void nuevaVisitaPaginaActual(){
+        ++index;
+    }
+    public int getNuevaVisitaPaginaActual(){
+        return index;
+    }
+    
 }
