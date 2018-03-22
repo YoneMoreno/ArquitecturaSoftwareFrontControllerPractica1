@@ -88,11 +88,17 @@ public class CourseInfoCommand extends FrontCommand {
             try {
                 forward("/Public/CourseInfo.jsp");
             } catch (ServletException ex) {
+                singletonFuncionLog5.funcionLog("CourseInfoCommand", "ServletException ex");
+
                 Logger.getLogger(CourseInfoCommand.class.getName()).log(Level.SEVERE, null, ex);
             } catch (IOException ex) {
+                singletonFuncionLog5.funcionLog("CourseInfoCommand", "IOException ex");
+
                 Logger.getLogger(CourseInfoCommand.class.getName()).log(Level.SEVERE, null, ex);
             }
         } catch (NamingException ex) {
+            singletonFuncionLog5.funcionLog("CourseInfoCommand", "NamingException ex");
+
             Logger.getLogger(CourseInfoCommand.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
