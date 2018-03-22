@@ -26,9 +26,10 @@ public abstract class FrontCommand {
     protected ServletContext context;
     protected HttpServletRequest request;
     protected HttpServletResponse response;
+    private SingletonFuncionLog singletonFuncionLog5;
 
     public void init(ServletContext context, HttpServletRequest request, HttpServletResponse response) throws NamingException {
-        SingletonFuncionLog singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+        singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
 
         singletonFuncionLog5.funcionLog("FrontCommand", "init");
         this.context = context;
@@ -40,12 +41,14 @@ public abstract class FrontCommand {
 
     public void forward(String target) throws ServletException, IOException {
         try {
-            SingletonFuncionLog singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
-            
+            singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+
             singletonFuncionLog5.funcionLog("FrontCommand", "forward");
             RequestDispatcher dp = context.getRequestDispatcher(target);
             dp.forward(request, response);
         } catch (NamingException ex) {
+            singletonFuncionLog5.funcionLog("FrontCommand", "NamingException ex");
+
             Logger.getLogger(FrontCommand.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
