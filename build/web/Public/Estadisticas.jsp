@@ -31,6 +31,7 @@
     int visitasAlumnosCommand = estadisticas2.getNuevoAccesoAlumnosCommand();
     int visitasSingletonFuncionLog = estadisticas2.getNuevoAccesoSingletonFuncionLog();
     int visitasProfesorClase = estadisticas2.getNuevoAccesoProfesorClase();
+    int visitasEstadisticasClase = estadisticas2.getNuevoAccesoEstadisticas();
 %>
 <!DOCTYPE html>
 <html>
@@ -62,6 +63,7 @@
         <h2>Numero de accesos AlumnosCommand <%= visitasAlumnosCommand%></h2>
         <h2>->Numero de accesos SingletonFuncionLog (Log de clases y funciones) <%= visitasSingletonFuncionLog%></h2>
         <h2>->Numero de accesos Profesor.java <%= visitasProfesorClase%></h2>
+        <h2>->Numero de accesos Estadisticas.java <%= visitasEstadisticasClase%></h2>
 
     </body>
 </html>
