@@ -44,6 +44,8 @@ public class EncuestaCommand extends FrontCommand {
 
             singletonFuncionLog5.funcionLog("EncuestaCommand", "processRequest");
         } catch (NamingException ex) {
+            singletonFuncionLog5.funcionLog("EncuestaCommand", "NamingException ex");
+
             Logger.getLogger(EncuestaCommand.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -97,11 +99,16 @@ public class EncuestaCommand extends FrontCommand {
             try {
                 forward("/Encuesta.jsp");
             } catch (ServletException ex) {
+                singletonFuncionLog5.funcionLog("EncuestaCommand", "ServletException ex");
+
                 Logger.getLogger(EncuestaCommand.class.getName()).log(Level.SEVERE, null, ex);
             } catch (IOException ex) {
+                singletonFuncionLog5.funcionLog("EncuestaCommand", "IOException ex");
                 Logger.getLogger(EncuestaCommand.class.getName()).log(Level.SEVERE, null, ex);
             }
         } catch (NamingException ex) {
+            singletonFuncionLog5.funcionLog("EncuestaCommand", "NamingException ex");
+
             Logger.getLogger(EncuestaCommand.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
