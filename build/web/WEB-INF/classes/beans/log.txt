@@ -703,3 +703,66 @@ Cuestionario::getRespuestaTexto12::esta funcoon DEVUELVE la respuesta al texto 1
 Cuestionario::getRespuestaVerdad12::esta FUNCIONCITA Obtiene la respuesta al valor boolean de la respuesta 12: null
 Cuestionario::getRespuestaTexto13::nuestra funcioncita, OBTIENE, la respuesta de texto 13: 
 Cuestionario::getRespuestaVerdad13::nuestro metodo, COGE, la el valor boolean de la respuesta 13: null
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+Profesor::postConstruct::nuestro PostConstruct es void 
+
+ Profesor::getNombre::este metodo devuelve el nombre: Cory
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getValoracion::este metodo Devuelve la valoracion: 4.7 !!!
+
+ Profesor::getValoracion::este metodo Devuelve la valoracion: 4.7 !!!
+
+ Profesor::getCorreo::este metodo COGE el correo: coryHouse@gmail.com 
+
+ Profesor::getTelefono::este metodo DEVUELVE el telefono: 636404142 
+
+ Profesor::getTelefono::este metodo DEVUELVE el despacho: S6 
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+Profesor::postConstruct::nuestro PostConstruct es void 
+
+ Profesor::getNombre::este metodo devuelve el nombre: Cory
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getValoracion::este metodo Devuelve la valoracion: 4.7 !!!
+
+ Profesor::getValoracion::este metodo Devuelve la valoracion: 4.7 !!!
+
+ Profesor::getCorreo::este metodo COGE el correo: coryHouse@gmail.com 
+
+ Profesor::getTelefono::este metodo DEVUELVE el telefono: 636404142 
+
+ Profesor::getTelefono::este metodo DEVUELVE el despacho: S6 
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+Profesor::postConstruct::nuestro PostConstruct es void 
+
+ Profesor::getNombre::este metodo devuelve el nombre: Cory
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getValoracion::este metodo Devuelve la valoracion: 4.7 !!!
+
+ Profesor::getValoracion::este metodo Devuelve la valoracion: 4.7 !!!
+
+ Profesor::getCorreo::este metodo COGE el correo: coryHouse@gmail.com 
+
+ Profesor::getTelefono::este metodo DEVUELVE el telefono: 636404142 
+
+ Profesor::getTelefono::este metodo DEVUELVE el despacho: S6 

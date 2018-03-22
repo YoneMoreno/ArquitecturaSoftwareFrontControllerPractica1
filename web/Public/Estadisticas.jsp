@@ -17,7 +17,8 @@
     int visitasCuestionario = estadisticas2.getNuevaVisitaCuestionario();
     int visitasVerSingletonLog = estadisticas2.getNuevaVisitaVerSingletonLog();
     int visitasRealizarEvaluacion = estadisticas2.getNuevaVisitaRealizarEvaluacion();
-%>erSingletonLog
+    int visitasProfesor = estadisticas2.getNuevaVisitaProfesor();
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -34,6 +35,7 @@
         <h2>Numero de visitas cuestionario <%= visitasCuestionario%></h2>
         <h2>Numero de visitas LOG <%= visitasVerSingletonLog%></h2>
         <h2>Numero de visitas Realizar Evaluacion <%= visitasRealizarEvaluacion%></h2>
+        <h2>Numero de visitas Profesor <%= visitasProfesor%></h2>
 
     </body>
 </html>

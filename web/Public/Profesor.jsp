@@ -19,6 +19,10 @@
     SingletonFuncionLog singletonFuncionLog = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
 
     singletonFuncionLog.funcionLog("Profesor", "processRequest");
+
+    Estadisticas estadisticasProfesor = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+
+    estadisticasProfesor.nuevaVisitaProfesor();
 %>
 
 <html>
