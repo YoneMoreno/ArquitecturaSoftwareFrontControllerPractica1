@@ -38,6 +38,8 @@ public class LetraNota {
 
             return letra.equals("F") ? "No apto" : letra.equals("E") ? "No apto" : "Apto";
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("LetraNota", "IOException ex");
+
             Logger.getLogger(LetraNota.class.getName()).log(Level.SEVERE, null, ex);
         }
         return "ERROR";
@@ -52,6 +54,7 @@ public class LetraNota {
             String text = "LetraNota::postConstruct:: nuestro metodo PostConstruct es void!!!!!!!! \n";
             writeLogToFile(text, file);
         } catch (IOException | NamingException ex) {
+            singletonFuncionLog5.funcionLog("LetraNota", "IOException | NamingException ex");
             Logger.getLogger(LetraNota.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -64,6 +67,8 @@ public class LetraNota {
             String text = "LetraNota::preDestroy:: el metodo PreDestroy es void!!!!!!!!!!! \n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("LetraNota", "IOException ex");
+
             Logger.getLogger(LetraNota.class.getName()).log(Level.SEVERE, null, ex);
         }
 
