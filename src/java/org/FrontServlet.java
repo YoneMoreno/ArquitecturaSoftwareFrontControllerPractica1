@@ -48,18 +48,16 @@ public class FrontServlet extends HttpServlet {
 
             setCourseInSession(curso, session, request);
 
-
             setEvaluacionInSession(evaluacion, session, request);
 
             FrontCommand command = getCommand(request);
             command.init(getServletContext(), request, response);
             command.process(request);
         } catch (Exception ex) {
+            singletonFuncionLog5.funcionLog("FrontServlet", "Exception ex");
             Logger.getLogger(FrontServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
-
 
     private Evaluacion getEvaluacionFromSession(HttpSession session) throws NamingException {
         this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
@@ -74,8 +72,6 @@ public class FrontServlet extends HttpServlet {
         Curso curso = (Curso) session.getAttribute("curso");
         return curso;
     }
-
-
 
     private void setCourseInSession(Curso curso, HttpSession session, HttpServletRequest request) throws NamingException {
         this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
@@ -169,6 +165,8 @@ public class FrontServlet extends HttpServlet {
             FrontCommand f = (FrontCommand) getCommandClass(req).newInstance();
             return f;
         } catch (Exception e) {
+            singletonFuncionLog5.funcionLog("FrontServlet", "Exception e");
+
             throw new Exception(e);
         }
 
@@ -183,6 +181,8 @@ public class FrontServlet extends HttpServlet {
             result = Class.forName(command);
 
         } catch (ClassNotFoundException e) {
+            singletonFuncionLog5.funcionLog("FrontServlet", "ClassNotFoundException e");
+
             result = UnknownCommand.class;
         }
         return result;
@@ -198,7 +198,5 @@ public class FrontServlet extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
-
 
 }
