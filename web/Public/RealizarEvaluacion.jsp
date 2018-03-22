@@ -4,6 +4,15 @@
     Author     : YonePC
 --%>
 
+<%@page import="beans.SingletonFuncionLog"%>
+<%@page import="javax.naming.InitialContext"%>
+<%
+
+    SingletonFuncionLog singletonFuncionLog = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+
+    singletonFuncionLog.funcionLog("RealizarEvaluacion", "processRequest");
+%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

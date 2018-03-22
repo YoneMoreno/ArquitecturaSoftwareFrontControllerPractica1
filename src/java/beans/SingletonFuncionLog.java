@@ -19,7 +19,7 @@ public class SingletonFuncionLog {
     String log = "";
 
     public String funcionLog(String nombreClase, String nombreFuncion) {
-        log += nombreClase + "::" + nombreFuncion;
+        log += "\n" + nombreClase + "::" + nombreFuncion + "\n";
         System.out.println(log);
         return log;
     }
