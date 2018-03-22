@@ -5,10 +5,13 @@
  */
 package frontController;
 
+import beans.SingletonFuncionLog;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,6 +36,14 @@ public class EvaluacionCommand extends FrontCommand {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+        try {
+            SingletonFuncionLog singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+
+            singletonFuncionLog5.funcionLog("EvaluacionCommand", "processRequest");
+        } catch (NamingException ex) {
+            Logger.getLogger(EvaluacionCommand.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
