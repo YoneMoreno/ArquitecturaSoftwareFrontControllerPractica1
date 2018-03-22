@@ -25,6 +25,7 @@ public class Estadisticas {
     int realizarEvaluacion = 0;
     int profesor = 0;
     int courseInfo = 0;
+    int frontServlet = 0;
 
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
@@ -106,5 +107,13 @@ public class Estadisticas {
 
     public int getNuevaVisitaCourseInfo() {
         return courseInfo;
+    }
+    
+    public void nuevaVisitaFrontServlet() {
+        ++frontServlet;
+    }
+
+    public int getNuevaVisitaFrontServlet() {
+        return frontServlet;
     }
 }

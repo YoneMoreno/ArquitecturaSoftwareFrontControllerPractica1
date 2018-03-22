@@ -19,6 +19,7 @@
     int visitasRealizarEvaluacion = estadisticas2.getNuevaVisitaRealizarEvaluacion();
     int visitasProfesor = estadisticas2.getNuevaVisitaProfesor();
     int visitasCourseInfo = estadisticas2.getNuevaVisitaCourseInfo();
+    int visitasFrontServlet = estadisticas2.getNuevaVisitaFrontServlet();
 %>
 <!DOCTYPE html>
 <html>
@@ -38,6 +39,7 @@
         <h2>Numero de visitas Realizar Evaluacion <%= visitasRealizarEvaluacion%></h2>
         <h2>Numero de visitas Profesor <%= visitasProfesor%></h2>
         <h2>Numero de visitas Course Info (Lista de cursos) <%= visitasCourseInfo%></h2>
+        <h2>Numero de accesos al Front Servlet <%= visitasFrontServlet%></h2>
 
     </body>
 </html>

@@ -5,6 +5,7 @@
  */
 package org;
 
+import beans.Estadisticas;
 import beans.SingletonFuncionLog;
 import frontController.UnknownCommand;
 import frontController.FrontCommand;
@@ -29,6 +30,7 @@ import javax.servlet.http.HttpSession;
 public class FrontServlet extends HttpServlet {
 
     SingletonFuncionLog singletonFuncionLog5;
+    Estadisticas estadisticas;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -37,7 +39,11 @@ public class FrontServlet extends HttpServlet {
             //TODO: SEPARAR la sesión en nel FrontCommand
 
             this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+            this.estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+            
+            estadisticas.nuevaVisitaFrontServlet();
 
+            
             singletonFuncionLog5.funcionLog("FrontServlet", "processRequest");
 
             HttpSession session = request.getSession(true);
