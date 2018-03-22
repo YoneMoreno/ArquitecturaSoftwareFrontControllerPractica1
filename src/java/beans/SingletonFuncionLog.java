@@ -18,9 +18,12 @@ public class SingletonFuncionLog {
     // "Insert Code > Add Business Method")
     String log = "";
 
-    public String funcionLog(String nombreClase, String nombreFuncion) {
+    public void funcionLog(String nombreClase, String nombreFuncion) {
         log += "\n" + nombreClase + "::" + nombreFuncion + "\n";
         System.out.println(log);
+    }
+    
+    public String getFuncionLog(){
         return log;
     }
 }
