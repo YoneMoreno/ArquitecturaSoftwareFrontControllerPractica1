@@ -5,15 +5,23 @@
  */
 package org;
 
+import beans.SingletonFuncionLog;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
 /**
  *
  * @author YonePC
  */
 public class Evaluacion {
 
- String evaluacionAlumno, evaluacionCurso, evaluacion, evaluacionComentario;
+    SingletonFuncionLog singletonFuncionLog5;
 
-    public Evaluacion(String evaluacionAlumno, String evaluacionCurso, String evaluacion, String evaluacionComentario) {
+    String evaluacionAlumno, evaluacionCurso, evaluacion, evaluacionComentario;
+
+    public Evaluacion(String evaluacionAlumno, String evaluacionCurso, String evaluacion, String evaluacionComentario) throws NamingException {
+        this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+        singletonFuncionLog5.funcionLog("Evaluacion", "constructor");
         this.evaluacionAlumno = evaluacionAlumno;
         this.evaluacionCurso = evaluacionCurso;
         this.evaluacion = evaluacion;
@@ -21,36 +29,43 @@ public class Evaluacion {
     }
 
     public String getEvaluacionAlumno() {
+        singletonFuncionLog5.funcionLog("Evaluacion", "getEvaluacionAlumno");
         return evaluacionAlumno;
     }
 
     public void setEvaluacionAlumno(String evaluacionAlumno) {
+        singletonFuncionLog5.funcionLog("Evaluacion", "setEvaluacionAlumno");
         this.evaluacionAlumno = evaluacionAlumno;
     }
 
     public String getEvaluacionCurso() {
+        singletonFuncionLog5.funcionLog("Evaluacion", "getEvaluacionCurso");
         return evaluacionCurso;
     }
 
     public void setEvaluacionCurso(String evaluacionCurso) {
+        singletonFuncionLog5.funcionLog("Evaluacion", "setEvaluacionCurso");
         this.evaluacionCurso = evaluacionCurso;
     }
 
     public String getEvaluacion() {
+        singletonFuncionLog5.funcionLog("Evaluacion", "getEvaluacion");
         return evaluacion;
     }
 
     public void setEvaluacion(String evaluacion) {
+        singletonFuncionLog5.funcionLog("Evaluacion", "setEvaluacion");
         this.evaluacion = evaluacion;
     }
 
     public String getEvaluacionComentario() {
+        singletonFuncionLog5.funcionLog("Evaluacion", "getEvaluacionComentario");
         return evaluacionComentario;
     }
 
     public void setEvaluacionComentario(String evaluacionComentario) {
+        singletonFuncionLog5.funcionLog("Evaluacion", "setEvaluacionComentario");
         this.evaluacionComentario = evaluacionComentario;
     }
 
-    
 }

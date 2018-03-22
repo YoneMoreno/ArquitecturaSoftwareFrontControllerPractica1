@@ -253,3 +253,13 @@ ConvierteComentarioNota::preDestroy::el metodo preDestroy es void!!!
  Cuestionario::constructor::este metodo es crea el cuestionario con: nullnullnullnullnullnullnull
 
  Cuestionario::constructor::este metodo es crea el cuestionario con: nullnullnullnullnullnullnull
+
+ Cuestionario::constructor::este metodo es crea el cuestionario con: nullnullnullnullnullnullnull
+ConviertePuntosNota::postConstruct::el metodo es void 
+ConviertePuntosNota::convertidor::el usuario introdujo: 7
+ConviertePuntosNota::preDestroy::el metodo preDestroy es void 
+
+ Cuestionario::constructor::este metodo es crea el cuestionario con: nullnullnullnullnullnullnull
+ConviertePuntosNota::postConstruct::el metodo es void 
+ConviertePuntosNota::convertidor::el usuario introdujo: 7
+ConviertePuntosNota::preDestroy::el metodo preDestroy es void 
