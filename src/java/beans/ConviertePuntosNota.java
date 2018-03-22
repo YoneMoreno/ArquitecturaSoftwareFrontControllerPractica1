@@ -31,6 +31,8 @@ public class ConviertePuntosNota {
 
             return evaluacion >= 5 ? "Apto" : "No apto";
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("ConviertePuntosNota", "IOException ex");
+
             Logger.getLogger(ConviertePuntosNota.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -49,10 +51,14 @@ public class ConviertePuntosNota {
                 String text = "ConviertePuntosNota::postConstruct::el metodo es void \n";
                 writeLogToFile(text, file);
             } catch (IOException ex) {
+                singletonFuncionLog5.funcionLog("ConviertePuntosNota", "IOException ex");
+
                 Logger.getLogger(ConviertePuntosNota.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         } catch (NamingException ex) {
+            singletonFuncionLog5.funcionLog("ConviertePuntosNota", "NamingException ex");
+
             Logger.getLogger(ConviertePuntosNota.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -65,6 +71,8 @@ public class ConviertePuntosNota {
             String text = "ConviertePuntosNota::preDestroy::el metodo preDestroy es void \n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("ConviertePuntosNota", "IOException ex");
+
             Logger.getLogger(ConviertePuntosNota.class.getName()).log(Level.SEVERE, null, ex);
         }
 
