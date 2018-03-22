@@ -3,6 +3,7 @@
     Created on : 10-feb-2018, 9:36:15
     Author     : YonePC
 --%>
+<%@page import="beans.SingletonFuncionLog"%>
 <%@page import="javax.naming.InitialContext"%>
 <%@page import="beans.Cuestionario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -18,7 +19,11 @@
     <body>
 
         <% Cuestionario cuestionario = (Cuestionario) request.getAttribute("cuestionario");
-       
+
+            SingletonFuncionLog singletonFuncionLog = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+
+            singletonFuncionLog.funcionLog("Cuestionario", "processRequest");
+
         %>
 
         <h1><%= cuestionario.getPregunta1()%></h1>
