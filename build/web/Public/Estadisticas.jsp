@@ -14,6 +14,7 @@
     int visitasUnknown = estadisticas2.getNuevaVisitaUnknown();
     int visitasEvaluacion = estadisticas2.getNuevaVisitaEvaluacion();
     int visitasEncuesta = estadisticas2.getNuevaVisitaEncuesta();
+    int visitasCuestionario = estadisticas2.getNuevaVisitaCuestionario();
 %>
 <!DOCTYPE html>
 <html>
@@ -28,6 +29,7 @@
         <h2>Numero de visitas unknown: <%= visitasUnknown%></h2>
         <h2>Numero de visitas evaluacion <%= visitasEvaluacion%></h2>
         <h2>Numero de visitas encuesta <%= visitasEncuesta%></h2>
+        <h2>Numero de visitas cuestionario <%= visitasCuestionario%></h2>
 
     </body>
 </html>

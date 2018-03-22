@@ -20,6 +20,7 @@ public class Estadisticas {
     int unknown = 0;
     int evaluacion = 0;
     int encuesta = 0;
+    int cuestionario = 0;
 
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
@@ -54,8 +55,8 @@ public class Estadisticas {
     public int getNuevaVisitaEvaluacion() {
         return evaluacion;
     }
-    
-        public void nuevaVisitaEncuesta() {
+
+    public void nuevaVisitaEncuesta() {
         ++encuesta;
     }
 
@@ -63,4 +64,11 @@ public class Estadisticas {
         return encuesta;
     }
 
+    public void nuevaVisitaCuestionario() {
+        ++cuestionario;
+    }
+
+    public int getNuevaVisitaCuestionario() {
+        return cuestionario;
+    }
 }
