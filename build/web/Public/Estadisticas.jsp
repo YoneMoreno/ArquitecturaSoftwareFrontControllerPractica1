@@ -11,6 +11,7 @@
     Estadisticas estadisticas2 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
     int numeroSesionesNuevas = estadisticas2.getCuentaNuevaSesion();
     int visitasIndex = estadisticas2.getNuevaVisitaIndex();
+    int visitasUnknown = estadisticas2.getNuevaVisitaUnknown();
 %>
 <!DOCTYPE html>
 <html>
@@ -22,5 +23,7 @@
     <body>
         <h1>Numero de sesiones nuevas: <%= numeroSesionesNuevas%></h1>
         <h2>Numero de visitas index: <%= visitasIndex%></h2>
+        <h2>Numero de visitas unknown: <%= visitasUnknown%></h2>
+
     </body>
 </html>

@@ -12,15 +12,12 @@
 
     singletonFuncionLog3.funcionLog("Unknown", "processRequest");
     
- Estadisticas estadisticas =  InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
 
     
-     session = request.getSession(true);
-      if (session.isNew()) {
-                estadisticas.cuentaNuevaSesion();
-            }else{
-                System.out.println("La sesion no es nueva");
-            }
+     Estadisticas estadisticasUnknown = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+
+     
+     estadisticasUnknown.nuevaVisitaUnknown();
 %>
 
 <!DOCTYPE html>

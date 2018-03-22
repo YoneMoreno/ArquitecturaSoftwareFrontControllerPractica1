@@ -16,6 +16,7 @@ import javax.servlet.http.HttpSession;
 public class Estadisticas {
     int cuenta = 0;
     int index = 0;
+    int unknown = 0;
 
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
@@ -33,6 +34,13 @@ public class Estadisticas {
     }
     public int getNuevaVisitaIndex(){
         return index;
+    }
+    
+     public void nuevaVisitaUnknown(){
+        ++unknown;
+    }
+    public int getNuevaVisitaUnknown(){
+        return unknown;
     }
     
 }
