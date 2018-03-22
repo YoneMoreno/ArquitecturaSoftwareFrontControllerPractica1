@@ -5,6 +5,7 @@
  */
 package frontController;
 
+import beans.Estadisticas;
 import beans.SingletonFuncionLog;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -23,6 +24,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "CourseInfoCommand", urlPatterns = {"/CourseInfoCommand"})
 public class CourseInfoCommand extends FrontCommand {
 
+    Estadisticas estadisticas;
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -36,6 +39,9 @@ public class CourseInfoCommand extends FrontCommand {
             throws ServletException, IOException, NamingException {
         response.setContentType("text/html;charset=UTF-8");
         SingletonFuncionLog singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+        this.estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+
+        estadisticas.nuevoAccesoCourseInfoCommand();
 
         singletonFuncionLog5.funcionLog("CourseInfoCommand", "processRequest");
 
