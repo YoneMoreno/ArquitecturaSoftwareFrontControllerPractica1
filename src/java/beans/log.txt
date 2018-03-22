@@ -674,3 +674,13 @@ ConviertePuntosNota::postConstruct::el metodo es void
 ConviertePuntosNota::convertidor::el usuario introdujo: 6
 ConviertePuntosNota::postConstruct::el metodo es void 
 ConviertePuntosNota::convertidor::el usuario introdujo: 10
+Encuesta::constructor por defecto de Encuesta::este metodo recibe NADA 
+Encuesta::constructor por defecto de Encuesta::este metodo recibe NADA 
+Encuesta::postConstruct::nuestro PostConstruct es void 
+Encuesta::setCuestion1::la funcion, PONE la cuestion:                           S  
+Encuesta::getCuestion1::la funcion, devuelve la cuestion:                           S  
+Encuesta::constructor por defecto de Encuesta::este metodo recibe NADA 
+Encuesta::constructor por defecto de Encuesta::este metodo recibe NADA 
+Encuesta::postConstruct::nuestro PostConstruct es void 
+Encuesta::setCuestion1::la funcion, PONE la cuestion:                          was   
+Encuesta::getCuestion1::la funcion, devuelve la cuestion:                          was   

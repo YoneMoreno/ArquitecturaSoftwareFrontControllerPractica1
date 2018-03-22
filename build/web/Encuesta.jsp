@@ -18,12 +18,15 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     </head>
     <body>
-        <%
-            Encuesta encuesta = (Encuesta) request.getAttribute("encuesta");
-            
+        <%            Encuesta encuesta = (Encuesta) request.getAttribute("encuesta");
+
             SingletonFuncionLog singletonFuncionLog = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
 
             singletonFuncionLog.funcionLog("Encuesta", "processRequest");
+
+            Estadisticas estadisticasEncuesta = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+
+            estadisticasEncuesta.nuevaVisitaEncuesta();
         %>
 
         <h1><%= encuesta.getCuestion1()%></h1>
