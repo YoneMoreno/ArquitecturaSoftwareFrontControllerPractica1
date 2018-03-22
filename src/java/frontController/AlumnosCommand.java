@@ -5,11 +5,14 @@
  */
 package frontController;
 
+import beans.SingletonFuncionLog;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -83,6 +86,15 @@ public class AlumnosCommand extends FrontCommand {
     @Override
     public void process(HttpServletRequest request) {
         try {
+
+            SingletonFuncionLog singletonFuncionLog5 = null;
+            try {
+                singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+            } catch (NamingException ex) {
+                Logger.getLogger(AlumnosCommand.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            singletonFuncionLog5.funcionLog("AlumnosCommand", "process()");
 
             TransformerFactory factory = TransformerFactory.newInstance();
             StreamSource xsl = new StreamSource(new File("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\frontController\\Alumnos.xsl"));

@@ -161,3 +161,5 @@ LetraNota::preDestroy:: el metodo PreDestroy es void!!!!!!!!!!!
  Cuestionario::constructor::este metodo es crea el cuestionario con: nullnullnullnullnullnullnull
 
  Cuestionario::constructor::este metodo es crea el cuestionario con: nullnullnullnullnullnullnull
+
+ Cuestionario::constructor::este metodo es crea el cuestionario con: nullnullnullnullnullnullnull
