@@ -5,6 +5,7 @@
  */
 package frontController;
 
+import beans.Estadisticas;
 import beans.SingletonFuncionLog;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -27,9 +28,13 @@ public abstract class FrontCommand {
     protected HttpServletRequest request;
     protected HttpServletResponse response;
     SingletonFuncionLog singletonFuncionLog5;
+    Estadisticas estadisticas;
 
     public void init(ServletContext context, HttpServletRequest request, HttpServletResponse response) throws NamingException {
         singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+        this.estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+        
+        estadisticas.nuevoAccesoFrontCommand();
 
         singletonFuncionLog5.funcionLog("FrontCommand", "init");
         this.context = context;

@@ -29,6 +29,7 @@ public class Estadisticas {
     int evaluacionClase = 0;
     int cursoClase = 0;
     int unknownCommand = 0;
+    int frontCommand = 0;
 
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
@@ -111,7 +112,7 @@ public class Estadisticas {
     public int getNuevaVisitaCourseInfo() {
         return courseInfo;
     }
-    
+
     public void nuevaVisitaFrontServlet() {
         ++frontServlet;
     }
@@ -119,8 +120,7 @@ public class Estadisticas {
     public int getNuevaVisitaFrontServlet() {
         return frontServlet;
     }
-    
-    
+
     public void nuevoAccesoEvaluacion() {
         ++evaluacionClase;
     }
@@ -128,7 +128,7 @@ public class Estadisticas {
     public int getNuevoAccesoEvaluacion() {
         return evaluacionClase;
     }
-    
+
     public void nuevoAccesoCurso() {
         ++cursoClase;
     }
@@ -136,12 +136,20 @@ public class Estadisticas {
     public int getNuevoAccesoCurso() {
         return cursoClase;
     }
-    
+
     public void nuevoAccesoUnknownCommand() {
         ++unknownCommand;
     }
 
     public int getNuevoAccesoUnknownCommand() {
         return unknownCommand;
+    }
+
+    public void nuevoAccesoFrontCommand() {
+        ++frontCommand;
+    }
+
+    public int getNuevoAccesoFrontCommand() {
+        return frontCommand;
     }
 }
