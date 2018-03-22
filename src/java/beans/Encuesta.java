@@ -42,9 +42,13 @@ public class Encuesta {
                 String text = "Encuesta::constructor por defecto de Encuesta::este metodo recibe NADA \n";
                 writeLogToFile(text, file);
             } catch (IOException ex) {
+                singletonFuncionLog5.funcionLog("LetraNota", "IOException ex");
+
                 Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
             }
         } catch (NamingException ex) {
+            singletonFuncionLog5.funcionLog("LetraNota", "NamingException ex");
+
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -60,9 +64,13 @@ public class Encuesta {
                 writeLogToFile(text, file);
                 this.cuestion1 = cuestion1;
             } catch (IOException ex) {
+                singletonFuncionLog5.funcionLog("LetraNota", "IOException ex");
+
                 Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
             }
         } catch (NamingException ex) {
+            singletonFuncionLog5.funcionLog("LetraNota", "NamingException ex");
+
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -75,6 +83,8 @@ public class Encuesta {
             writeLogToFile(text, file);
 
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("LetraNota", "IOException ex");
+
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
         }
         return cuestion1;
@@ -89,6 +99,8 @@ public class Encuesta {
 
             this.cuestion1 = cuestion1;
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("LetraNota", "IOException ex");
+
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -103,10 +115,14 @@ public class Encuesta {
                 String text = "Encuesta::postConstruct::nuestro PostConstruct es void \n";
                 writeLogToFile(text, file);
             } catch (IOException ex) {
+                singletonFuncionLog5.funcionLog("LetraNota", "IOException ex");
+
                 Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         } catch (NamingException ex) {
+            singletonFuncionLog5.funcionLog("LetraNota", "NamingException ex");
+
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -120,6 +136,8 @@ public class Encuesta {
             String text = "Encuesta::prePassivate::la funcion que realiza el prePassivate es void \n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("LetraNota", "IOException ex");
+
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -133,6 +151,8 @@ public class Encuesta {
             String text = "Encuesta::postActivate::el metodo paraa realizar el postActivate devuelve NADA \n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("LetraNota", "IOException ex");
+
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -146,6 +166,8 @@ public class Encuesta {
             String text = "Encuesta::remove::el metodo donde realizamos el remove devuelve NADA \n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("LetraNota", "IOException ex");
+
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -159,6 +181,8 @@ public class Encuesta {
             String text = "Encuesta::preDestroy::donde realizamos el PreDestroy es VOID \n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("LetraNota", "IOException ex");
+
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
         }
 
