@@ -4,6 +4,7 @@
     Author     : YonePC
 --%>
 
+<%@page import="beans.Estadisticas"%>
 <%@page import="beans.SingletonFuncionLog"%>
 <%@page import="javax.naming.InitialContext"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -12,6 +13,15 @@
     SingletonFuncionLog singletonFuncionLog4 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
 
     singletonFuncionLog4.funcionLog("Header", "processRequest");
+
+    Estadisticas estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+
+    session = request.getSession(true);
+    if (session.isNew()) {
+        estadisticas.cuentaNuevaSesion();
+    } else {
+        System.out.println("La sesion no es nueva");
+    }
 %>
 
 

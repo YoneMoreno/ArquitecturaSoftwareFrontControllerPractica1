@@ -4,12 +4,23 @@
     Author     : YonePC
 --%>
 
+<%@page import="beans.Estadisticas"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
     SingletonFuncionLog singletonFuncionLog3 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
 
     singletonFuncionLog3.funcionLog("Unknown", "processRequest");
+    
+ Estadisticas estadisticas =  InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+
+    
+     session = request.getSession(true);
+      if (session.isNew()) {
+                estadisticas.cuentaNuevaSesion();
+            }else{
+                System.out.println("La sesion no es nueva");
+            }
 %>
 
 <!DOCTYPE html>

@@ -670,3 +670,5 @@ Cuestionario::getRespuestaTexto12::esta funcoon DEVUELVE la respuesta al texto 1
 Cuestionario::getRespuestaVerdad12::esta FUNCIONCITA Obtiene la respuesta al valor boolean de la respuesta 12: null
 Cuestionario::getRespuestaTexto13::nuestra funcioncita, OBTIENE, la respuesta de texto 13: 
 Cuestionario::getRespuestaVerdad13::nuestro metodo, COGE, la el valor boolean de la respuesta 13: null
+ConviertePuntosNota::postConstruct::el metodo es void 
+ConviertePuntosNota::convertidor::el usuario introdujo: 6

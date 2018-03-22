@@ -8,8 +8,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <% 
-    Estadisticas estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
-    int numeroSesionesNuevas = estadisticas.getCuentaNuevaSesion();
+    Estadisticas estadisticas2 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+    int numeroSesionesNuevas = estadisticas2.getCuentaNuevaSesion();
 %>
 <!DOCTYPE html>
 <html>
