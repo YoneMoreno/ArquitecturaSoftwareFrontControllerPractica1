@@ -28,6 +28,7 @@
     int visitasEncuestaCommand = estadisticas2.getNuevoAccesoEncuestaCommand();
     int visitasCuestionarioCommand = estadisticas2.getNuevoAccesoCuestionarioCommand();
     int visitasCourseInfoCommand = estadisticas2.getNuevoAccesoCourseInfoCommand();
+    int visitasAlumnosCommand = estadisticas2.getNuevoAccesoAlumnosCommand();
 %>
 <!DOCTYPE html>
 <html>
@@ -56,6 +57,7 @@
         <h2>--> Numero de accesos al EncuestaCommand <%= visitasEncuestaCommand%></h2>
         <h2>Numero de accesos al CuestionarioCommand <%= visitasCuestionarioCommand%></h2>
         <h2>Numero de accesos al CourseInfoCommand <%= visitasCourseInfoCommand%></h2>
+        <h2>Numero de accesos AlumnosCommand <%= visitasAlumnosCommand%></h2>
 
     </body>
 </html>
