@@ -14,6 +14,8 @@ import java.util.logging.Logger;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.ejb.Stateless;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 
 /**
  *
@@ -22,9 +24,13 @@ import javax.ejb.Stateless;
 @Stateless
 public class ComentarioNota {
 
+    SingletonFuncionLog singletonFuncionLog5;
+
     File file = new File("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\beans\\log.txt");
 
     public String convierteComentarioNota(String evaluacion, String comentario) {
+
+        singletonFuncionLog5.funcionLog("ComentarioNota", "convierteComentarioNota");
 
         try {
             String text = "ConvierteComentarioNota::convierteComentarioNota::el usuario introdujo la evaluacion: " + evaluacion
@@ -45,15 +51,23 @@ public class ComentarioNota {
     @PostConstruct
     public void postConstruct() {
         try {
-            String text = "ConvierteComentarioNota::postConstruct::el metodo postConstruct es void \n";
-            writeLogToFile(text, file);
-        } catch (IOException ex) {
+            this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+            singletonFuncionLog5.funcionLog("ComentarioNota", "postConstruct");
+            try {
+                String text = "ConvierteComentarioNota::postConstruct::el metodo postConstruct es void \n";
+                writeLogToFile(text, file);
+            } catch (IOException ex) {
+                Logger.getLogger(ComentarioNota.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (NamingException ex) {
             Logger.getLogger(ComentarioNota.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     @PreDestroy
     public void preDestroy() {
+        singletonFuncionLog5.funcionLog("ComentarioNota", "preDestroy");
+
         try {
             String text = "ConvierteComentarioNota::preDestroy::el metodo preDestroy es void!!! \n";
             writeLogToFile(text, file);
@@ -64,6 +78,7 @@ public class ComentarioNota {
     }
 
     private void writeLogToFile(String text, File file) throws IOException {
+        singletonFuncionLog5.funcionLog("ComentarioNota", "writeLogToFile");
 
         BufferedWriter output = null;
         output = new BufferedWriter(new FileWriter(file, true));
