@@ -26,7 +26,7 @@ public abstract class FrontCommand {
     protected ServletContext context;
     protected HttpServletRequest request;
     protected HttpServletResponse response;
-    private SingletonFuncionLog singletonFuncionLog5;
+    SingletonFuncionLog singletonFuncionLog5;
 
     public void init(ServletContext context, HttpServletRequest request, HttpServletResponse response) throws NamingException {
         singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");

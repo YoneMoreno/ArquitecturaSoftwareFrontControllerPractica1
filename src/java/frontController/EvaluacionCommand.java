@@ -42,6 +42,8 @@ public class EvaluacionCommand extends FrontCommand {
 
             singletonFuncionLog5.funcionLog("EvaluacionCommand", "processRequest");
         } catch (NamingException ex) {
+            singletonFuncionLog5.funcionLog("EvaluacionCommand", "NamingException ex");
+
             Logger.getLogger(EvaluacionCommand.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -87,8 +89,12 @@ public class EvaluacionCommand extends FrontCommand {
         try {
             forward("/Evaluacion.jsp");
         } catch (ServletException ex) {
+            singletonFuncionLog5.funcionLog("EvaluacionCommand", "ServletException ex");
+
             Logger.getLogger(EvaluacionCommand.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("EvaluacionCommand", "IOException ex");
+
             Logger.getLogger(EvaluacionCommand.class.getName()).log(Level.SEVERE, null, ex);
         }
 
