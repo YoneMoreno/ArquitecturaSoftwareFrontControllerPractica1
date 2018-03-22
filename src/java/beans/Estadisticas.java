@@ -30,6 +30,7 @@ public class Estadisticas {
     int cursoClase = 0;
     int unknownCommand = 0;
     int frontCommand = 0;
+    int evaluacionCommand = 0;
 
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
@@ -151,5 +152,12 @@ public class Estadisticas {
 
     public int getNuevoAccesoFrontCommand() {
         return frontCommand;
+    }
+    public void nuevoAccesoEvaluacionCommand() {
+        ++evaluacionCommand;
+    }
+
+    public int getNuevoAccesoEvaluacionCommand() {
+        return evaluacionCommand;
     }
 }

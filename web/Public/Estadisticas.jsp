@@ -24,6 +24,7 @@
     int visitasClaseCurso = estadisticas2.getNuevoAccesoCurso();
     int visitasUnknownCommand = estadisticas2.getNuevoAccesoUnknownCommand();
     int visitasFrontCommand = estadisticas2.getNuevoAccesoFrontCommand();
+    int visitasEvaluacionCommand = estadisticas2.getNuevoAccesoEvaluacionCommand();
 %>
 <!DOCTYPE html>
 <html>
@@ -48,6 +49,7 @@
         <h2>Numero de usos de la clase Curso.java <%= visitasClaseCurso%></h2>
         <h2>Numero de accesos al UnknownCommand <%= visitasUnknownCommand%></h2>
         <h2>¡Numero de accesos al FrontCommand! <%= visitasFrontCommand%></h2>
+        <h2>¡!Numero de accesos al EvaluacionCommand¡! <%= visitasEvaluacionCommand%></h2>
 
     </body>
 </html>

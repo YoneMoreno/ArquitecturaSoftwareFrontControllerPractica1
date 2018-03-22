@@ -28,13 +28,13 @@ public abstract class FrontCommand {
     protected HttpServletRequest request;
     protected HttpServletResponse response;
     SingletonFuncionLog singletonFuncionLog5;
-    Estadisticas estadisticas;
+    Estadisticas estadisticasFrontCommand;
 
     public void init(ServletContext context, HttpServletRequest request, HttpServletResponse response) throws NamingException {
         singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
-        this.estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+        this.estadisticasFrontCommand = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
         
-        estadisticas.nuevoAccesoFrontCommand();
+        estadisticasFrontCommand.nuevoAccesoFrontCommand();
 
         singletonFuncionLog5.funcionLog("FrontCommand", "init");
         this.context = context;
