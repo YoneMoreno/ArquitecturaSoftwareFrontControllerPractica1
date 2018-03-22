@@ -21,22 +21,29 @@ import javax.servlet.http.HttpServletRequest;
  */
 public class UnknownCommand extends FrontCommand {
 
+    private SingletonFuncionLog singletonFuncionLog5;
+
     @Override
     public void process(HttpServletRequest request) {
 
         try {
-            
-            SingletonFuncionLog singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
-            
+
+            this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
             singletonFuncionLog5.funcionLog("UnknownCommand", "process");
             try {
                 forward("/Unknown.jsp");
             } catch (ServletException ex) {
+                singletonFuncionLog5.funcionLog("Curso", "ServletException ex");
+
                 Logger.getLogger(UnknownCommand.class.getName()).log(Level.SEVERE, null, ex);
             } catch (IOException ex) {
+                singletonFuncionLog5.funcionLog("Curso", "IOException ex");
+
                 Logger.getLogger(UnknownCommand.class.getName()).log(Level.SEVERE, null, ex);
             }
         } catch (NamingException ex) {
+            singletonFuncionLog5.funcionLog("Curso", "NamingException ex");
+
             Logger.getLogger(UnknownCommand.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
