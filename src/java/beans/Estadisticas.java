@@ -19,8 +19,11 @@ public class Estadisticas {
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
     
-    public int cuentaNuevaSesion(){
+    public void cuentaNuevaSesion(){
         System.out.println("El numero de sesiones nuevas es: " + ++cuenta);
+    }
+    
+    public int getCuentaNuevaSesion(){
         return cuenta;
     }
 }

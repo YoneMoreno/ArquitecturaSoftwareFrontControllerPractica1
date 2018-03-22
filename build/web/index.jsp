@@ -1,3 +1,4 @@
+<%@page import="beans.Estadisticas"%>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -9,6 +10,16 @@ and open the template in the editor.
     SingletonFuncionLog singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
 
     singletonFuncionLog5.funcionLog("Index", "processRequest");
+    
+    Estadisticas estadisticas =  InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+
+    
+     session = request.getSession(true);
+      if (session.isNew()) {
+                estadisticas.cuentaNuevaSesion();
+            }else{
+                System.out.println("La sesion no es nueva");
+            }
 %>
 
 <html>

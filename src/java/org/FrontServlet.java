@@ -47,12 +47,7 @@ public class FrontServlet extends HttpServlet {
             singletonFuncionLog5.funcionLog("FrontServlet", "processRequest");
 
             HttpSession session = request.getSession(true);
-            if (session.isNew()) {
-                estadisticas.cuentaNuevaSesion();
-            }else{
-                System.out.println("La sesion no es nueva");
-            }
-
+            
             Curso curso = getCourseFromSession(session);
             Evaluacion evaluacion = getEvaluacionFromSession(session);
 
