@@ -4,6 +4,7 @@
     Author     : YonePC
 --%>
 
+<%@page import="beans.SingletonFuncionLog"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="org.Curso"%>
@@ -15,6 +16,9 @@
 
 <%
     Profesor profesor = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Profesor!beans.Profesor");
+    SingletonFuncionLog singletonFuncionLog = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+
+    singletonFuncionLog.funcionLog("Profesor", "processRequest");
 %>
 
 <html>
