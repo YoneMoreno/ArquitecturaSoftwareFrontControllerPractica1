@@ -11,6 +11,10 @@
     SingletonFuncionLog singletonFuncionLog = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
 
     singletonFuncionLog.funcionLog("RealizarEvaluacion", "processRequest");
+
+    Estadisticas estadisticasRealizarEvaluacion = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+
+    estadisticasRealizarEvaluacion.nuevaVisitaRealizarEvaluacion();
 %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -22,8 +26,7 @@
         <title>Realizar Evaluación</title>
     </head>
     <body>
-        <%
-            if (request.getParameter("name").toString().equals("command")) {
+        <%            if (request.getParameter("name").toString().equals("command")) {
                 if (request.getParameter("value").toString().equals("numero")) {
 
 

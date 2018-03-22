@@ -7,7 +7,7 @@
 <%@page import="beans.Estadisticas"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<% 
+<%
     Estadisticas estadisticas2 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
     int numeroSesionesNuevas = estadisticas2.getCuentaNuevaSesion();
     int visitasIndex = estadisticas2.getNuevaVisitaIndex();
@@ -16,7 +16,8 @@
     int visitasEncuesta = estadisticas2.getNuevaVisitaEncuesta();
     int visitasCuestionario = estadisticas2.getNuevaVisitaCuestionario();
     int visitasVerSingletonLog = estadisticas2.getNuevaVisitaVerSingletonLog();
-%>
+    int visitasRealizarEvaluacion = estadisticas2.getNuevaVisitaRealizarEvaluacion();
+%>erSingletonLog
 <!DOCTYPE html>
 <html>
     <head>
@@ -32,6 +33,7 @@
         <h2>Numero de visitas encuesta <%= visitasEncuesta%></h2>
         <h2>Numero de visitas cuestionario <%= visitasCuestionario%></h2>
         <h2>Numero de visitas LOG <%= visitasVerSingletonLog%></h2>
+        <h2>Numero de visitas Realizar Evaluacion <%= visitasRealizarEvaluacion%></h2>
 
     </body>
 </html>
