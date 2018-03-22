@@ -488,3 +488,19 @@ Cuestionario::getRespuestaTexto12::esta funcoon DEVUELVE la respuesta al texto 1
 Cuestionario::getRespuestaVerdad12::esta FUNCIONCITA Obtiene la respuesta al valor boolean de la respuesta 12: null
 Cuestionario::getRespuestaTexto13::nuestra funcioncita, OBTIENE, la respuesta de texto 13: 
 Cuestionario::getRespuestaVerdad13::nuestro metodo, COGE, la el valor boolean de la respuesta 13: null
+Encuesta::constructor por defecto de Encuesta::este metodo recibe NADA 
+Encuesta::constructor por defecto de Encuesta::este metodo recibe NADA 
+Encuesta::postConstruct::nuestro PostConstruct es void 
+Encuesta::setCuestion1::la funcion, PONE la cuestion:                        Instala     
+Encuesta::getCuestion1::la funcion, devuelve la cuestion:                        Instala     
+Encuesta::prePassivate::la funcion que realiza el prePassivate es void 
+Encuesta::constructor por defecto de Encuesta::este metodo recibe NADA 
+Encuesta::constructor por defecto de Encuesta::este metodo recibe NADA 
+Encuesta::postConstruct::nuestro PostConstruct es void 
+Encuesta::setCuestion1::la funcion, PONE la cuestion:                        Instala     
+Encuesta::getCuestion1::la funcion, devuelve la cuestion:                        Instala     
+Encuesta::constructor por defecto de Encuesta::este metodo recibe NADA 
+Encuesta::constructor por defecto de Encuesta::este metodo recibe NADA 
+Encuesta::postConstruct::nuestro PostConstruct es void 
+Encuesta::setCuestion1::la funcion, PONE la cuestion:                        Instala     
+Encuesta::getCuestion1::la funcion, devuelve la cuestion:                        Instala     

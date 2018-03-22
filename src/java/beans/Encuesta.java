@@ -17,6 +17,8 @@ import javax.ejb.PostActivate;
 import javax.ejb.PrePassivate;
 import javax.ejb.Remove;
 import javax.ejb.Stateful;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 
 /**
  *
@@ -25,15 +27,24 @@ import javax.ejb.Stateful;
 @Stateful
 public class Encuesta {
 
+    SingletonFuncionLog singletonFuncionLog5;
+
     File file = new File("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\beans\\log.txt");
 
     String cuestion1;
 
     public Encuesta() {
         try {
-            String text = "Encuesta::constructor por defecto de Encuesta::este metodo recibe NADA \n";
-            writeLogToFile(text, file);
-        } catch (IOException ex) {
+            this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+            singletonFuncionLog5.funcionLog("Encuesta", "constructor por defecto");
+
+            try {
+                String text = "Encuesta::constructor por defecto de Encuesta::este metodo recibe NADA \n";
+                writeLogToFile(text, file);
+            } catch (IOException ex) {
+                Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (NamingException ex) {
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -41,15 +52,24 @@ public class Encuesta {
 
     public Encuesta(String cuestion1) {
         try {
-            String text = "Encuesta::constructor de Encuesta::el constructor recibio la cuestion: : " + cuestion1 + "\n";
-            writeLogToFile(text, file);
-            this.cuestion1 = cuestion1;
-        } catch (IOException ex) {
+            this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+            singletonFuncionLog5.funcionLog("Encuesta", "constructor CON argumentos");
+
+            try {
+                String text = "Encuesta::constructor de Encuesta::el constructor recibio la cuestion: : " + cuestion1 + "\n";
+                writeLogToFile(text, file);
+                this.cuestion1 = cuestion1;
+            } catch (IOException ex) {
+                Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (NamingException ex) {
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     public String getCuestion1() {
+        singletonFuncionLog5.funcionLog("Cuestionario", "getCuestion1");
+
         try {
             String text = "Encuesta::getCuestion1::la funcion, devuelve la cuestion: " + cuestion1 + "\n";
             writeLogToFile(text, file);
@@ -61,6 +81,8 @@ public class Encuesta {
     }
 
     public void setCuestion1(String cuestion1) {
+        singletonFuncionLog5.funcionLog("Cuestionario", "setCuestion1");
+
         try {
             String text = "Encuesta::setCuestion1::la funcion, PONE la cuestion: " + cuestion1 + "\n";
             writeLogToFile(text, file);
@@ -74,9 +96,17 @@ public class Encuesta {
     @PostConstruct
     public void postConstruct() {
         try {
-            String text = "Encuesta::postConstruct::nuestro PostConstruct es void \n";
-            writeLogToFile(text, file);
-        } catch (IOException ex) {
+            this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+            singletonFuncionLog5.funcionLog("Encuesta", "postConstruct");
+
+            try {
+                String text = "Encuesta::postConstruct::nuestro PostConstruct es void \n";
+                writeLogToFile(text, file);
+            } catch (IOException ex) {
+                Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        } catch (NamingException ex) {
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -84,6 +114,8 @@ public class Encuesta {
 
     @PrePassivate
     public void prePassivate() {
+        singletonFuncionLog5.funcionLog("Cuestionario", "prePassivate");
+
         try {
             String text = "Encuesta::prePassivate::la funcion que realiza el prePassivate es void \n";
             writeLogToFile(text, file);
@@ -95,6 +127,8 @@ public class Encuesta {
 
     @PostActivate
     public void postActivate() {
+        singletonFuncionLog5.funcionLog("Cuestionario", "postActivate");
+
         try {
             String text = "Encuesta::postActivate::el metodo paraa realizar el postActivate devuelve NADA \n";
             writeLogToFile(text, file);
@@ -106,6 +140,8 @@ public class Encuesta {
 
     @Remove
     public void remove() {
+        singletonFuncionLog5.funcionLog("Cuestionario", "remove");
+
         try {
             String text = "Encuesta::remove::el metodo donde realizamos el remove devuelve NADA \n";
             writeLogToFile(text, file);
@@ -117,6 +153,8 @@ public class Encuesta {
 
     @PreDestroy
     public void preDestroy() {
+        singletonFuncionLog5.funcionLog("Cuestionario", "preDestroy");
+
         try {
             String text = "Encuesta::preDestroy::donde realizamos el PreDestroy es VOID \n";
             writeLogToFile(text, file);
@@ -127,6 +165,7 @@ public class Encuesta {
     }
 
     private void writeLogToFile(String text, File file) throws IOException {
+        singletonFuncionLog5.funcionLog("Cuestionario", "writeLogToFile");
 
         BufferedWriter output = null;
         output = new BufferedWriter(new FileWriter(file, true));
