@@ -10,9 +10,9 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
-    SingletonFuncionLog singletonFuncionLog = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+    SingletonFuncionLog singletonFuncionLog2 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
 
-    singletonFuncionLog.funcionLog("Footer", "processRequest");
+    singletonFuncionLog2.funcionLog("Footer", "processRequest");
 %>
 
 <!DOCTYPE html>
