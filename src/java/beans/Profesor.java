@@ -37,6 +37,8 @@ public class Profesor {
             String text = "\n Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + \n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Profesor", "IOException ex");
+
             Logger.getLogger(Profesor.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -55,6 +57,8 @@ public class Profesor {
             this.telefono = telefono;
             this.despacho = despacho;
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Profesor", "IOException ex");
+
             Logger.getLogger(Profesor.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -66,6 +70,8 @@ public class Profesor {
             String text = "\n Profesor::getNombre::este metodo devuelve el nombre: " + nombre + "\n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Profesor", "IOException ex");
+
             Logger.getLogger(Profesor.class.getName()).log(Level.SEVERE, null, ex);
         }
         return nombre;
@@ -79,6 +85,8 @@ public class Profesor {
             writeLogToFile(text, file);
             this.nombre = nombre;
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Profesor", "IOException ex");
+
             Logger.getLogger(Profesor.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -90,6 +98,8 @@ public class Profesor {
             String text = "\n Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: " + asignatura + "\n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Profesor", "IOException ex");
+
             Logger.getLogger(Profesor.class.getName()).log(Level.SEVERE, null, ex);
         }
         return asignatura;
@@ -103,6 +113,8 @@ public class Profesor {
             writeLogToFile(text, file);
             this.asignatura = asignatura;
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Profesor", "IOException ex");
+
             Logger.getLogger(Profesor.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -114,6 +126,8 @@ public class Profesor {
             String text = "\n Profesor::getValoracion::este metodo Devuelve la valoracion: " + valoracion + " !!!\n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Profesor", "IOException ex");
+
             Logger.getLogger(Profesor.class.getName()).log(Level.SEVERE, null, ex);
         }
         return valoracion;
@@ -127,6 +141,8 @@ public class Profesor {
             writeLogToFile(text, file);
             this.valoracion = valorcion;
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Profesor", "IOException ex");
+
             Logger.getLogger(Profesor.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -139,6 +155,8 @@ public class Profesor {
             String text = "\n Profesor::getCorreo::este metodo COGE el correo: " + correo + " \n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Profesor", "IOException ex");
+
             Logger.getLogger(Profesor.class.getName()).log(Level.SEVERE, null, ex);
         }
         return correo;
@@ -152,6 +170,8 @@ public class Profesor {
             writeLogToFile(text, file);
             this.correo = correo;
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Profesor", "IOException ex");
+
             Logger.getLogger(Profesor.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -163,6 +183,8 @@ public class Profesor {
             String text = "\n Profesor::getTelefono::este metodo DEVUELVE el telefono: " + telefono + " \n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Profesor", "IOException ex");
+
             Logger.getLogger(Profesor.class.getName()).log(Level.SEVERE, null, ex);
         }
         return telefono;
@@ -176,6 +198,8 @@ public class Profesor {
             writeLogToFile(text, file);
             this.telefono = telefono;
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Profesor", "IOException ex");
+
             Logger.getLogger(Profesor.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -188,6 +212,8 @@ public class Profesor {
             singletonFuncionLog5.funcionLog("Profesor", "getDespacho");
 
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Profesor", "IOException ex");
+
             Logger.getLogger(Profesor.class.getName()).log(Level.SEVERE, null, ex);
         }
         return despacho;
@@ -201,6 +227,8 @@ public class Profesor {
             writeLogToFile(text, file);
             this.despacho = despacho;
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Profesor", "IOException ex");
+
             Logger.getLogger(Profesor.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -213,6 +241,8 @@ public class Profesor {
             String text = "Profesor::postConstruct::nuestro PostConstruct es void \n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Profesor", "IOException ex");
+
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -226,6 +256,8 @@ public class Profesor {
             String text = "Profesor::prePassivate::la funcion que realiza el prePassivate es void \n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Profesor", "IOException ex");
+
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -239,6 +271,8 @@ public class Profesor {
             String text = "Profesor::postActivate::el metodo paraa realizar el postActivate devuelve NADA \n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Profesor", "IOException ex");
+
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -252,6 +286,8 @@ public class Profesor {
             String text = "Profesor::remove::el metodo donde realizamos el remove devuelve NADA \n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Profesor", "IOException ex");
+
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -265,6 +301,8 @@ public class Profesor {
             String text = "Profesor::preDestroy::donde realizamos el PreDestroy es VOID \n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Profesor", "IOException ex");
+
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
         }
 

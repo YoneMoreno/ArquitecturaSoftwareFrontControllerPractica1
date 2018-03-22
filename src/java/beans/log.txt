@@ -586,3 +586,45 @@ Profesor::postConstruct::nuestro PostConstruct es void
  Profesor::getTelefono::este metodo DEVUELVE el telefono: 636404142 
 
  Profesor::getTelefono::este metodo DEVUELVE el despacho: S6 
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+Profesor::postConstruct::nuestro PostConstruct es void 
+
+ Profesor::getNombre::este metodo devuelve el nombre: Cory
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getValoracion::este metodo Devuelve la valoracion: 4.7 !!!
+
+ Profesor::getValoracion::este metodo Devuelve la valoracion: 4.7 !!!
+
+ Profesor::getCorreo::este metodo COGE el correo: coryHouse@gmail.com 
+
+ Profesor::getTelefono::este metodo DEVUELVE el telefono: 636404142 
+
+ Profesor::getTelefono::este metodo DEVUELVE el despacho: S6 
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+Profesor::postConstruct::nuestro PostConstruct es void 
+
+ Profesor::getNombre::este metodo devuelve el nombre: Cory
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getValoracion::este metodo Devuelve la valoracion: 4.7 !!!
+
+ Profesor::getValoracion::este metodo Devuelve la valoracion: 4.7 !!!
+
+ Profesor::getCorreo::este metodo COGE el correo: coryHouse@gmail.com 
+
+ Profesor::getTelefono::este metodo DEVUELVE el telefono: 636404142 
+
+ Profesor::getTelefono::este metodo DEVUELVE el despacho: S6 
