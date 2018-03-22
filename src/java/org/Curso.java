@@ -5,6 +5,7 @@
  */
 package org;
 
+import beans.Estadisticas;
 import beans.SingletonFuncionLog;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -19,8 +20,11 @@ public class Curso {
 
     SingletonFuncionLog singletonFuncionLog5;
 
+    Estadisticas estadisticas;
+
     public void setTitulo(String titulo) {
         singletonFuncionLog5.funcionLog("Curso", "setTitulo");
+
         this.titulo = titulo;
     }
 
@@ -48,6 +52,10 @@ public class Curso {
     public Curso(String titulo, String autor, String asignatura, String duracion, String video, String imagen) {
         try {
             this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+            this.estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+
+            estadisticas.nuevoAccesoCurso();
+            
             singletonFuncionLog5.funcionLog("Curso", "constructor");
             this.titulo = titulo;
             this.autor = autor;
