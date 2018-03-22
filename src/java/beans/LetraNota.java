@@ -14,6 +14,8 @@ import java.util.logging.Logger;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.ejb.Stateless;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 
 /**
  *
@@ -22,11 +24,15 @@ import javax.ejb.Stateless;
 @Stateless
 public class LetraNota {
 
+    SingletonFuncionLog singletonFuncionLog5;
+
     File file = new File("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\beans\\log.txt");
 
     public String convierteLetraNota(String letra) {
 
         try {
+            singletonFuncionLog5.funcionLog("LetraNota", "convierteLetraNota");
+
             String text = "LetraNota::convierteLetraNota::el usuario introdujo la LETRA: " + letra + "\n";
             writeLogToFile(text, file);
 
@@ -40,9 +46,12 @@ public class LetraNota {
     @PostConstruct
     public void postConstruct() {
         try {
+            this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+            singletonFuncionLog5.funcionLog("LetraNota", "postConstruct");
+
             String text = "LetraNota::postConstruct:: nuestro metodo PostConstruct es void!!!!!!!! \n";
             writeLogToFile(text, file);
-        } catch (IOException ex) {
+        } catch (IOException | NamingException ex) {
             Logger.getLogger(LetraNota.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -51,6 +60,7 @@ public class LetraNota {
     @PreDestroy
     public void preDestroy() {
         try {
+            singletonFuncionLog5.funcionLog("LetraNota", "preDestroy");
             String text = "LetraNota::preDestroy:: el metodo PreDestroy es void!!!!!!!!!!! \n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
@@ -60,6 +70,7 @@ public class LetraNota {
     }
 
     private void writeLogToFile(String text, File file) throws IOException {
+        singletonFuncionLog5.funcionLog("LetraNota", "writeLogToFile");
 
         BufferedWriter output = null;
         output = new BufferedWriter(new FileWriter(file, true));

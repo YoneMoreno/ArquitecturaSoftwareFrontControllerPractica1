@@ -286,3 +286,15 @@ Profesor::postConstruct::nuestro PostConstruct es void
  Profesor::getTelefono::este metodo DEVUELVE el telefono: 636404142 
 
  Profesor::getTelefono::este metodo DEVUELVE el despacho: S6 
+
+ Cuestionario::constructor::este metodo es crea el cuestionario con: nullnullnullnullnullnullnull
+Encuesta::constructor por defecto de Encuesta::este metodo recibe NADA 
+Encuesta::constructor por defecto de Encuesta::este metodo recibe NADA 
+Encuesta::postConstruct::nuestro PostConstruct es void 
+Encuesta::setCuestion1::la funcion, PONE la cuestion:                             Rio
+Encuesta::getCuestion1::la funcion, devuelve la cuestion:                             Rio
+Encuesta::prePassivate::la funcion que realiza el prePassivate es void 
+
+ Cuestionario::constructor::este metodo es crea el cuestionario con: nullnullnullnullnullnullnull
+LetraNota::postConstruct:: nuestro metodo PostConstruct es void!!!!!!!! 
+LetraNota::convierteLetraNota::el usuario introdujo la LETRA: E
