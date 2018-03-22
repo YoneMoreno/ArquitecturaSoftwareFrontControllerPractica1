@@ -17,15 +17,22 @@ import javax.ejb.PostActivate;
 import javax.ejb.PrePassivate;
 import javax.ejb.Remove;
 import javax.ejb.Stateful;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 
 @Stateful
 public class Profesor {
+
+    SingletonFuncionLog singletonFuncionLog5;
 
     File file = new File("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\beans\\log.txt");
 
     String nombre = "Cory", asignatura = "Javascript", valoracion = "4.7", correo = "coryHouse@gmail.com", telefono = "636404142", despacho = "S6";
 
-    public Profesor() {
+    public Profesor() throws NamingException {
+        this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+        singletonFuncionLog5.funcionLog("Profesor", "constructor");
+
         try {
             String text = "\n Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + \n";
             writeLogToFile(text, file);
@@ -36,6 +43,8 @@ public class Profesor {
 
     public Profesor(String nombre, String asignatura, String valorcion, String correo, String telefono, String despacho) {
         try {
+            singletonFuncionLog5.funcionLog("Profesor", "constructor con parámetros");
+
             String text = "\n Profesor::constructor::este metodo es emplea los siguientes parametros:"
                     + nombre + asignatura + valorcion + correo + telefono + despacho + "\n";
             writeLogToFile(text, file);
@@ -52,6 +61,8 @@ public class Profesor {
 
     public String getNombre() {
         try {
+            singletonFuncionLog5.funcionLog("Profesor", "getNombre");
+
             String text = "\n Profesor::getNombre::este metodo devuelve el nombre: " + nombre + "\n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
@@ -61,6 +72,8 @@ public class Profesor {
     }
 
     public void setNombre(String nombre) {
+        singletonFuncionLog5.funcionLog("Profesor", "setNombre");
+
         try {
             String text = "\n Profesor::setNombre::este metodo PONE el nombre: " + nombre + "\n";
             writeLogToFile(text, file);
@@ -71,6 +84,8 @@ public class Profesor {
     }
 
     public String getAsignatura() {
+        singletonFuncionLog5.funcionLog("Profesor", "getAsignatura");
+
         try {
             String text = "\n Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: " + asignatura + "\n";
             writeLogToFile(text, file);
@@ -81,6 +96,8 @@ public class Profesor {
     }
 
     public void setAsignatura(String asignatura) {
+        singletonFuncionLog5.funcionLog("Profesor", "setAsignatura");
+
         try {
             String text = "\n Profesor::setAsignatura::este metodo PONE la ASIGNATURA: " + asignatura + " !!!\n";
             writeLogToFile(text, file);
@@ -91,6 +108,8 @@ public class Profesor {
     }
 
     public String getValoracion() {
+        singletonFuncionLog5.funcionLog("Profesor", "getValoracion");
+
         try {
             String text = "\n Profesor::getValoracion::este metodo Devuelve la valoracion: " + valoracion + " !!!\n";
             writeLogToFile(text, file);
@@ -101,6 +120,8 @@ public class Profesor {
     }
 
     public void setValorcion(String valorcion) {
+        singletonFuncionLog5.funcionLog("Profesor", "setValorcion");
+
         try {
             String text = "\n Profesor::setValoracion::este metodo PONE la valoracion: " + valorcion + " !!!\n";
             writeLogToFile(text, file);
@@ -111,6 +132,9 @@ public class Profesor {
     }
 
     public String getCorreo() {
+
+        singletonFuncionLog5.funcionLog("Profesor", "getCorreo");
+
         try {
             String text = "\n Profesor::getCorreo::este metodo COGE el correo: " + correo + " \n";
             writeLogToFile(text, file);
@@ -121,6 +145,8 @@ public class Profesor {
     }
 
     public void setCorreo(String correo) {
+        singletonFuncionLog5.funcionLog("Profesor", "setCorreo");
+
         try {
             String text = "\n Profesor::setCorreo::este metodo PONE el correo: " + correo + " \n";
             writeLogToFile(text, file);
@@ -131,6 +157,8 @@ public class Profesor {
     }
 
     public String getTelefono() {
+        singletonFuncionLog5.funcionLog("Profesor", "getTelefono");
+
         try {
             String text = "\n Profesor::getTelefono::este metodo DEVUELVE el telefono: " + telefono + " \n";
             writeLogToFile(text, file);
@@ -141,6 +169,8 @@ public class Profesor {
     }
 
     public void setTelefono(String telefono) {
+        singletonFuncionLog5.funcionLog("Profesor", "setTelefono");
+
         try {
             String text = "\n Profesor::getTelefono::este metodo INTRODUCE el telefono: " + telefono + " \n";
             writeLogToFile(text, file);
@@ -151,9 +181,12 @@ public class Profesor {
     }
 
     public String getDespacho() {
+
         try {
             String text = "\n Profesor::getTelefono::este metodo DEVUELVE el despacho: " + despacho + " \n";
             writeLogToFile(text, file);
+            singletonFuncionLog5.funcionLog("Profesor", "getDespacho");
+
         } catch (IOException ex) {
             Logger.getLogger(Profesor.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -161,6 +194,8 @@ public class Profesor {
     }
 
     public void setDespacho(String despacho) {
+        singletonFuncionLog5.funcionLog("Profesor", "setDespacho");
+
         try {
             String text = "\n Profesor::getTelefono::este metodo PONE, introduce, el despacho: " + despacho + " \n";
             writeLogToFile(text, file);
@@ -172,6 +207,8 @@ public class Profesor {
 
     @PostConstruct
     public void postConstruct() {
+        singletonFuncionLog5.funcionLog("Profesor", "postConstruct");
+
         try {
             String text = "Profesor::postConstruct::nuestro PostConstruct es void \n";
             writeLogToFile(text, file);
@@ -183,6 +220,8 @@ public class Profesor {
 
     @PrePassivate
     public void prePassivate() {
+        singletonFuncionLog5.funcionLog("Profesor", "prePassivate");
+
         try {
             String text = "Profesor::prePassivate::la funcion que realiza el prePassivate es void \n";
             writeLogToFile(text, file);
@@ -194,6 +233,8 @@ public class Profesor {
 
     @PostActivate
     public void postActivate() {
+        singletonFuncionLog5.funcionLog("Profesor", "postActivate");
+
         try {
             String text = "Profesor::postActivate::el metodo paraa realizar el postActivate devuelve NADA \n";
             writeLogToFile(text, file);
@@ -205,6 +246,8 @@ public class Profesor {
 
     @Remove
     public void remove() {
+        singletonFuncionLog5.funcionLog("Profesor", "remove");
+
         try {
             String text = "Profesor::remove::el metodo donde realizamos el remove devuelve NADA \n";
             writeLogToFile(text, file);
@@ -216,6 +259,8 @@ public class Profesor {
 
     @PreDestroy
     public void preDestroy() {
+        singletonFuncionLog5.funcionLog("Profesor", "preDestroy");
+
         try {
             String text = "Profesor::preDestroy::donde realizamos el PreDestroy es VOID \n";
             writeLogToFile(text, file);
@@ -226,6 +271,7 @@ public class Profesor {
     }
 
     private void writeLogToFile(String text, File file) throws IOException {
+        singletonFuncionLog5.funcionLog("Profesor", "writeLogToFile");
 
         BufferedWriter output = null;
         output = new BufferedWriter(new FileWriter(file, true));
