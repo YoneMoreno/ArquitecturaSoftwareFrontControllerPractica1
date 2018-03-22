@@ -43,9 +43,12 @@ public class Cuestionario {
                 String text = "\n Cuestionario::constructor por defecto::este metodo es VOID + \n";
                 writeLogToFile(text, file);
             } catch (IOException ex) {
+                singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
+
                 Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
             }
         } catch (NamingException ex) {
+            singletonFuncionLog5.funcionLog("Cuestionario", "NamingException ex");
             Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -69,9 +72,13 @@ public class Cuestionario {
                 this.respuestaTexto13 = respuestaTexto13;
                 this.respuestaVerdad13 = respuestaVerdad13;
             } catch (IOException ex) {
+                singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
+
                 Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
             }
         } catch (NamingException ex) {
+            singletonFuncionLog5.funcionLog("Cuestionario", "NamingException ex");
+
             Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -83,6 +90,8 @@ public class Cuestionario {
             String text = "Cuestionario::getPregunta1::este metodo devuelve la pregunta1: " + pregunta1 + "\n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
+
             Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
         }
         return pregunta1;
@@ -96,6 +105,8 @@ public class Cuestionario {
             writeLogToFile(text, file);
             this.pregunta1 = pregunta1;
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
+
             Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -107,6 +118,8 @@ public class Cuestionario {
             String text = "Cuestionario::getRespuestaTexto11::este metodo OBTIENE la respuesta al texto 11: " + respuestaTexto11 + "\n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
+
             Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
         }
         return respuestaTexto11;
@@ -120,6 +133,8 @@ public class Cuestionario {
             writeLogToFile(text, file);
             this.respuestaTexto11 = respuestaTexto11;
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
+
             Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -131,6 +146,8 @@ public class Cuestionario {
             String text = "Cuestionario::getRespuestaTexto11::este metodo COGE el booleano de verdad para respuesta 11: " + respuestaVerdad11 + "\n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
+
             Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
         }
         return respuestaVerdad11;
@@ -144,6 +161,8 @@ public class Cuestionario {
             writeLogToFile(text, file);
             this.respuestaVerdad11 = respuestaVerdad11;
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
+
             Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -155,6 +174,8 @@ public class Cuestionario {
             String text = "Cuestionario::getRespuestaTexto12::esta funcoon DEVUELVE la respuesta al texto 12: " + respuestaTexto12 + "\n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
+
             Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
         }
         return respuestaTexto12;
@@ -168,6 +189,8 @@ public class Cuestionario {
             writeLogToFile(text, file);
             this.respuestaTexto12 = respuestaTexto12;
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
+
             Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -179,6 +202,8 @@ public class Cuestionario {
             String text = "Cuestionario::getRespuestaVerdad12::esta FUNCIONCITA Obtiene la respuesta al valor boolean de la respuesta 12: " + respuestaVerdad12 + "\n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
+
             Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
         }
         return respuestaVerdad12;
@@ -192,6 +217,8 @@ public class Cuestionario {
             writeLogToFile(text, file);
             this.respuestaVerdad12 = respuestaVerdad12;
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
+
             Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -203,6 +230,8 @@ public class Cuestionario {
             String text = "Cuestionario::getRespuestaTexto13::nuestra funcioncita, OBTIENE, la respuesta de texto 13: " + respuestaTexto13 + "\n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
+
             Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
         }
         return respuestaTexto13;
@@ -216,6 +245,8 @@ public class Cuestionario {
             writeLogToFile(text, file);
             this.respuestaTexto13 = respuestaTexto13;
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
+
             Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -227,6 +258,8 @@ public class Cuestionario {
             String text = "Cuestionario::getRespuestaVerdad13::nuestro metodo, COGE, la el valor boolean de la respuesta 13: " + respuestaVerdad13 + "\n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
+
             Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
         }
         return respuestaVerdad13;
@@ -240,6 +273,8 @@ public class Cuestionario {
             writeLogToFile(text, file);
             this.respuestaVerdad13 = respuestaVerdad13;
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
+
             Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -253,10 +288,14 @@ public class Cuestionario {
                 String text = "Cuestionario::postConstruct::nuestro PostConstruct es void \n";
                 writeLogToFile(text, file);
             } catch (IOException ex) {
+                singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
+
                 Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         } catch (NamingException ex) {
+            singletonFuncionLog5.funcionLog("Cuestionario", "NamingException ex");
+
             Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -270,6 +309,8 @@ public class Cuestionario {
             String text = "Cuestionario::prePassivate::la funcion que realiza el prePassivate es void \n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
+
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -283,6 +324,8 @@ public class Cuestionario {
             String text = "Cuestionario::postActivate::el metodo paraa realizar el postActivate devuelve NADA \n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
+
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -296,6 +339,8 @@ public class Cuestionario {
             String text = "Cuestionario::remove::el metodo donde realizamos el remove devuelve NADA \n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
+
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -309,6 +354,8 @@ public class Cuestionario {
             String text = "Cuestionario::preDestroy::donde realizamos el PreDestroy es VOID \n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
+
             Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
         }
 
