@@ -43,6 +43,8 @@ public class ComentarioNota {
                 return "No Apto";
             }
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("ComentarioNota", "IOException ex");
+
             Logger.getLogger(ComentarioNota.class.getName()).log(Level.SEVERE, null, ex);
         }
         return "ERROR";
@@ -57,9 +59,13 @@ public class ComentarioNota {
                 String text = "ConvierteComentarioNota::postConstruct::el metodo postConstruct es void \n";
                 writeLogToFile(text, file);
             } catch (IOException ex) {
+                singletonFuncionLog5.funcionLog("ComentarioNota", "IOException ex");
+
                 Logger.getLogger(ComentarioNota.class.getName()).log(Level.SEVERE, null, ex);
             }
         } catch (NamingException ex) {
+            singletonFuncionLog5.funcionLog("ComentarioNota", "NamingException ex");
+
             Logger.getLogger(ComentarioNota.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -72,6 +78,9 @@ public class ComentarioNota {
             String text = "ConvierteComentarioNota::preDestroy::el metodo preDestroy es void!!! \n";
             writeLogToFile(text, file);
         } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("ComentarioNota", "IOException ex");
+
+
             Logger.getLogger(ComentarioNota.class.getName()).log(Level.SEVERE, null, ex);
         }
 
