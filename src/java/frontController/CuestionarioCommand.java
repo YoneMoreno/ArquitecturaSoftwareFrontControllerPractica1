@@ -6,6 +6,7 @@
 package frontController;
 
 import beans.Cuestionario;
+import beans.Estadisticas;
 import beans.SingletonFuncionLog;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -26,6 +27,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "CuestionarioCommand", urlPatterns = {"/CuestionarioCommand"})
 public class CuestionarioCommand extends FrontCommand {
 
+    Estadisticas estadisticas;
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -41,6 +44,9 @@ public class CuestionarioCommand extends FrontCommand {
             response.setContentType("text/html;charset=UTF-8");
 
             SingletonFuncionLog singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+            this.estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+            
+            estadisticas.nuevoAccesoCuestionarioCommand();
 
             singletonFuncionLog5.funcionLog("CuestionarioCommand", "processRequest");
         } catch (NamingException ex) {
