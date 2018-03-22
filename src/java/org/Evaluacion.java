@@ -5,6 +5,7 @@
  */
 package org;
 
+import beans.Estadisticas;
 import beans.SingletonFuncionLog;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -17,10 +18,16 @@ public class Evaluacion {
 
     SingletonFuncionLog singletonFuncionLog5;
 
+    Estadisticas estadisticas;
+
     String evaluacionAlumno, evaluacionCurso, evaluacion, evaluacionComentario;
 
     public Evaluacion(String evaluacionAlumno, String evaluacionCurso, String evaluacion, String evaluacionComentario) throws NamingException {
         this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+        this.estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+        
+        estadisticas.nuevoAccesoEvaluacion();
+
         singletonFuncionLog5.funcionLog("Evaluacion", "constructor");
         this.evaluacionAlumno = evaluacionAlumno;
         this.evaluacionCurso = evaluacionCurso;

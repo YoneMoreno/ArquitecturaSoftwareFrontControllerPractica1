@@ -20,6 +20,7 @@
     int visitasProfesor = estadisticas2.getNuevaVisitaProfesor();
     int visitasCourseInfo = estadisticas2.getNuevaVisitaCourseInfo();
     int visitasFrontServlet = estadisticas2.getNuevaVisitaFrontServlet();
+    int visitasClaseEvaluacion = estadisticas2.getNuevoAccesoEvaluacion();
 %>
 <!DOCTYPE html>
 <html>
@@ -40,6 +41,7 @@
         <h2>Numero de visitas Profesor <%= visitasProfesor%></h2>
         <h2>Numero de visitas Course Info (Lista de cursos) <%= visitasCourseInfo%></h2>
         <h2>Numero de accesos al Front Servlet <%= visitasFrontServlet%></h2>
+        <h2>Numero de usos de la clase Evaluacion.java <%= visitasClaseEvaluacion%></h2>
 
     </body>
 </html>
