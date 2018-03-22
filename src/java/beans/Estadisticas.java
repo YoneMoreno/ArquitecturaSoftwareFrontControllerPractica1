@@ -28,10 +28,10 @@ public class Estadisticas {
         return cuenta;
     }
     
-    public void nuevaVisitaPaginaActual(){
+    public void nuevaVisitaIndex(){
         ++index;
     }
-    public int getNuevaVisitaPaginaActual(){
+    public int getNuevaVisitaIndex(){
         return index;
     }
     

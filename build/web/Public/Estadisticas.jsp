@@ -10,7 +10,7 @@
 <% 
     Estadisticas estadisticas2 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
     int numeroSesionesNuevas = estadisticas2.getCuentaNuevaSesion();
-    int visitasIndex = estadisticas2.getNuevaVisitaPaginaActual();
+    int visitasIndex = estadisticas2.getNuevaVisitaIndex();
 %>
 <!DOCTYPE html>
 <html>

@@ -17,7 +17,7 @@ and open the template in the editor.
      Estadisticas estadisticasIndex = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
 
      
-     estadisticasIndex.nuevaVisitaPaginaActual();
+     estadisticasIndex.nuevaVisitaIndex();
 %>
 
 <html>
