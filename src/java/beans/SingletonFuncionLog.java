@@ -34,8 +34,7 @@ public class SingletonFuncionLog {
     }
 
     public void funcionLog(String nombreClase, String nombreFuncion) {
-        estadisticas.nuevoAccesoSingletonFuncionLog();
-
+       
         log += "\n" + nombreClase + "::" + nombreFuncion + "\n";
         System.out.println(log);
     }

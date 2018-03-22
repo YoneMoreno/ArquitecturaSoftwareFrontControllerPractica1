@@ -25,12 +25,16 @@ public class Profesor {
 
     SingletonFuncionLog singletonFuncionLog5;
 
+    Estadisticas estadisticas;
+
     File file = new File("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\beans\\log.txt");
 
     String nombre = "Cory", asignatura = "Javascript", valoracion = "4.7", correo = "coryHouse@gmail.com", telefono = "636404142", despacho = "S6";
 
     public Profesor() throws NamingException {
         this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+        this.estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+
         singletonFuncionLog5.funcionLog("Profesor", "constructor");
 
         try {
@@ -46,6 +50,7 @@ public class Profesor {
     public Profesor(String nombre, String asignatura, String valorcion, String correo, String telefono, String despacho) {
         try {
             singletonFuncionLog5.funcionLog("Profesor", "constructor con parámetros");
+            this.estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
 
             String text = "\n Profesor::constructor::este metodo es emplea los siguientes parametros:"
                     + nombre + asignatura + valorcion + correo + telefono + despacho + "\n";
@@ -60,12 +65,15 @@ public class Profesor {
             singletonFuncionLog5.funcionLog("Profesor", "IOException ex");
 
             Logger.getLogger(Profesor.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NamingException ex) {
+            Logger.getLogger(Profesor.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     public String getNombre() {
         try {
             singletonFuncionLog5.funcionLog("Profesor", "getNombre");
+            estadisticas.nuevoAccesoProfesorClase();
 
             String text = "\n Profesor::getNombre::este metodo devuelve el nombre: " + nombre + "\n";
             writeLogToFile(text, file);

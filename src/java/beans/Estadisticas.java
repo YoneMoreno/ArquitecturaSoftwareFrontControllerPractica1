@@ -36,6 +36,7 @@ public class Estadisticas {
     int courseInfoCommand = 0;
     int alumnosCommand = 0;
     int singletonFuncionLog = 0;
+    int profesorClase = 0;
 
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
@@ -205,5 +206,12 @@ public class Estadisticas {
 
     public int getNuevoAccesoSingletonFuncionLog() {
         return singletonFuncionLog;
+    }
+    public void nuevoAccesoProfesorClase() {
+        ++profesorClase;
+    }
+
+    public int getNuevoAccesoProfesorClase() {
+        return profesorClase;
     }
 }
