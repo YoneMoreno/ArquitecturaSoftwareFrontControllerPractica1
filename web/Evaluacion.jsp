@@ -3,6 +3,7 @@
     Created on : 17-feb-2018, 8:47:46
     Author     : YonePC
 --%>
+<%@page import="beans.SingletonFuncionLog"%>
 <%@page import="beans.ComentarioNota"%>
 <%@page import="beans.LetraNota"%>
 <%@page import="beans.ConviertePuntosNota"%>
@@ -20,6 +21,10 @@
     ConviertePuntosNota conviertePuntosNota = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/ConviertePuntosNota");
     LetraNota letraNota = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/LetraNota!beans.LetraNota");
     ComentarioNota comentarioNota = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/ComentarioNota!beans.ComentarioNota");
+
+    SingletonFuncionLog singletonFuncionLog = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+
+    singletonFuncionLog.funcionLog("Evaluacion", "processRequest");
 %>
 
 <html>
