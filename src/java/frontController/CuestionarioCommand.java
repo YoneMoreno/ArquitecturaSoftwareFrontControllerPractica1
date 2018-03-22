@@ -6,6 +6,7 @@
 package frontController;
 
 import beans.Cuestionario;
+import beans.SingletonFuncionLog;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -36,7 +37,15 @@ public class CuestionarioCommand extends FrontCommand {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        try {
+            response.setContentType("text/html;charset=UTF-8");
+
+            SingletonFuncionLog singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+
+            singletonFuncionLog5.funcionLog("CuestionarioCommand", "processRequest");
+        } catch (NamingException ex) {
+            Logger.getLogger(CuestionarioCommand.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }
 
