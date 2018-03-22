@@ -44,12 +44,10 @@ public class FrontServlet extends HttpServlet {
 
             HttpSession session = request.getSession(true);
             Curso curso = getCourseFromSession(session);
-            Cuestionario cuestionario = getCuestionarioFromSession(session);
             Evaluacion evaluacion = getEvaluacionFromSession(session);
 
             setCourseInSession(curso, session, request);
 
-            setCuestionarioInSession(request, session);
 
             setEvaluacionInSession(evaluacion, session, request);
 
@@ -61,12 +59,7 @@ public class FrontServlet extends HttpServlet {
         }
     }
 
-    private Cuestionario getCuestionarioFromSession(HttpSession session) throws NamingException {
-        this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
-        singletonFuncionLog5.funcionLog("FrontServlet", "getCuestionarioFromSession");
-        Cuestionario cuestionario = (Cuestionario) session.getAttribute("cuestionario");
-        return cuestionario;
-    }
+
 
     private Evaluacion getEvaluacionFromSession(HttpSession session) throws NamingException {
         this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
@@ -82,13 +75,7 @@ public class FrontServlet extends HttpServlet {
         return curso;
     }
 
-    private void setCuestionarioInSession(HttpServletRequest request, HttpSession session) throws NamingException {
-        this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
-        singletonFuncionLog5.funcionLog("FrontServlet", "setCuestionarioInSession");
-        Cuestionario cuestionario;
-        cuestionario = cuestionarioHelper(request);
-        session.setAttribute("cuestionario", cuestionario);
-    }
+
 
     private void setCourseInSession(Curso curso, HttpSession session, HttpServletRequest request) throws NamingException {
         this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
@@ -212,17 +199,6 @@ public class FrontServlet extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    private Cuestionario cuestionarioHelper(HttpServletRequest request) throws NamingException {
-        this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
-        singletonFuncionLog5.funcionLog("FrontServlet", "cuestionarioHelper");
-        Cuestionario cuestionario;
-        cuestionario = new Cuestionario(request.getParameter("pregunta1"), request.getParameter("respuestaTexto11"),
-                request.getParameter("respuestaVerdad11"),
-                request.getParameter("respuestaTexto12"),
-                request.getParameter("respuestaVerdad12"),
-                request.getParameter("respuestaTexto13"),
-                request.getParameter("respuestaVerdad13"));
-        return cuestionario;
-    }
+
 
 }
