@@ -18,6 +18,7 @@
     int visitasVerSingletonLog = estadisticas2.getNuevaVisitaVerSingletonLog();
     int visitasRealizarEvaluacion = estadisticas2.getNuevaVisitaRealizarEvaluacion();
     int visitasProfesor = estadisticas2.getNuevaVisitaProfesor();
+    int visitasCourseInfo = estadisticas2.getNuevaVisitaCourseInfo();
 %>
 <!DOCTYPE html>
 <html>
@@ -36,6 +37,7 @@
         <h2>Numero de visitas LOG <%= visitasVerSingletonLog%></h2>
         <h2>Numero de visitas Realizar Evaluacion <%= visitasRealizarEvaluacion%></h2>
         <h2>Numero de visitas Profesor <%= visitasProfesor%></h2>
+        <h2>Numero de visitas Course Info (Lista de cursos) <%= visitasCourseInfo%></h2>
 
     </body>
 </html>

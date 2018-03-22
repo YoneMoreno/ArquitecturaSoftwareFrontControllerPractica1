@@ -24,6 +24,7 @@ public class Estadisticas {
     int verSingletonLog = 0;
     int realizarEvaluacion = 0;
     int profesor = 0;
+    int courseInfo = 0;
 
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
@@ -90,12 +91,20 @@ public class Estadisticas {
     public int getNuevaVisitaRealizarEvaluacion() {
         return realizarEvaluacion;
     }
-    
-        public void nuevaVisitaProfesor() {
+
+    public void nuevaVisitaProfesor() {
         ++profesor;
     }
 
     public int getNuevaVisitaProfesor() {
         return profesor;
+    }
+
+    public void nuevaVisitaCourseInfo() {
+        ++courseInfo;
+    }
+
+    public int getNuevaVisitaCourseInfo() {
+        return courseInfo;
     }
 }

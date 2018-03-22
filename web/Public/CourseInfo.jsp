@@ -15,6 +15,10 @@
     SingletonFuncionLog singletonFuncionLog = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
 
     singletonFuncionLog.funcionLog("CourseInfo", "processRequest");
+
+    Estadisticas estadisticasCourseInfo = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+
+    estadisticasCourseInfo.nuevaVisitaCourseInfo();
 %>
 
 <html> 
@@ -35,8 +39,7 @@
                 <th style="padding: 8px">Imagen</th>
             </tr>
 
-            <%
-                if (session.getAttribute("cursos") == null) {
+            <%                if (session.getAttribute("cursos") == null) {
                     ArrayList cursos = new ArrayList();
                     session.setAttribute("cursos", cursos);
                     Curso curso = new Curso("AS", "Javier", "Gestion SW", "100h", "", "https://image.slidesharecdn.com/the-recovered-architect-140318152419-phpapp02/95/the-modern-software-architect-13-638.jpg?cb=1395216721");
