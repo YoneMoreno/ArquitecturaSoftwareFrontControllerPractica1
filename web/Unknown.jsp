@@ -5,6 +5,13 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%
+    SingletonFuncionLog singletonFuncionLog3 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+
+    singletonFuncionLog3.funcionLog("Unknown", "processRequest");
+%>
+
 <!DOCTYPE html>
 <html>
     <head>
