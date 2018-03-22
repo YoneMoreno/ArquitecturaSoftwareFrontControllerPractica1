@@ -142,3 +142,11 @@ Cuestionario::getRespuestaVerdad12::esta FUNCIONCITA Obtiene la respuesta al val
 Cuestionario::getRespuestaTexto13::nuestra funcioncita, OBTIENE, la respuesta de texto 13: 
 Cuestionario::getRespuestaVerdad13::nuestro metodo, COGE, la el valor boolean de la respuesta 13: null
 Cuestionario::prePassivate::la funcion que realiza el prePassivate es void 
+
+ Cuestionario::constructor::este metodo es crea el cuestionario con: nullnullnullnullnullnullnull
+Encuesta::constructor por defecto de Encuesta::este metodo recibe NADA 
+Encuesta::constructor por defecto de Encuesta::este metodo recibe NADA 
+Encuesta::postConstruct::nuestro PostConstruct es void 
+Encuesta::setCuestion1::la funcion, PONE la cuestion: Instalaciones
+Encuesta::getCuestion1::la funcion, devuelve la cuestion: Instalaciones
+Encuesta::prePassivate::la funcion que realiza el prePassivate es void 

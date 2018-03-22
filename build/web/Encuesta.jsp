@@ -4,6 +4,8 @@
     Author     : YonePC
 --%>
 
+<%@page import="beans.SingletonFuncionLog"%>
+<%@page import="javax.naming.InitialContext"%>
 <%@page import="beans.Encuesta"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -19,7 +21,9 @@
         <%
             Encuesta encuesta = (Encuesta) request.getAttribute("encuesta");
             
+            SingletonFuncionLog singletonFuncionLog = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
 
+            singletonFuncionLog.funcionLog("Encuesta", "processRequest");
         %>
 
         <h1><%= encuesta.getCuestion1()%></h1>
