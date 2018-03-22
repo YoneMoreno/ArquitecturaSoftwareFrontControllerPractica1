@@ -35,6 +35,7 @@ public class Estadisticas {
     int cuestionarioCommand = 0;
     int courseInfoCommand = 0;
     int alumnosCommand = 0;
+    int singletonFuncionLog = 0;
 
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
@@ -157,6 +158,7 @@ public class Estadisticas {
     public int getNuevoAccesoFrontCommand() {
         return frontCommand;
     }
+
     public void nuevoAccesoEvaluacionCommand() {
         ++evaluacionCommand;
     }
@@ -164,6 +166,7 @@ public class Estadisticas {
     public int getNuevoAccesoEvaluacionCommand() {
         return evaluacionCommand;
     }
+
     public void nuevoAccesoEncuestaCommand() {
         ++encuestaCommand;
     }
@@ -171,6 +174,7 @@ public class Estadisticas {
     public int getNuevoAccesoEncuestaCommand() {
         return encuestaCommand;
     }
+
     public void nuevoAccesoCuestionarioCommand() {
         ++cuestionarioCommand;
     }
@@ -178,6 +182,7 @@ public class Estadisticas {
     public int getNuevoAccesoCuestionarioCommand() {
         return cuestionarioCommand;
     }
+
     public void nuevoAccesoCourseInfoCommand() {
         ++courseInfoCommand;
     }
@@ -185,11 +190,20 @@ public class Estadisticas {
     public int getNuevoAccesoCourseInfoCommand() {
         return courseInfoCommand;
     }
+
     public void nuevoAccesoAlumnosCommand() {
         ++alumnosCommand;
     }
 
     public int getNuevoAccesoAlumnosCommand() {
         return alumnosCommand;
+    }
+
+    public void nuevoAccesoSingletonFuncionLog() {
+        ++singletonFuncionLog;
+    }
+
+    public int getNuevoAccesoSingletonFuncionLog() {
+        return singletonFuncionLog;
     }
 }

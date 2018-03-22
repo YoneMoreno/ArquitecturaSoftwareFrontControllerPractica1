@@ -5,7 +5,11 @@
  */
 package beans;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.ejb.Singleton;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 
 /**
  *
@@ -14,16 +18,31 @@ import javax.ejb.Singleton;
 @Singleton
 public class SingletonFuncionLog {
 
+    Estadisticas estadisticas;
+
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
     String log = "";
 
+    public SingletonFuncionLog() {
+        try {
+            this.estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+            estadisticas.nuevoAccesoSingletonFuncionLog();
+        } catch (NamingException ex) {
+            Logger.getLogger(SingletonFuncionLog.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
     public void funcionLog(String nombreClase, String nombreFuncion) {
+        estadisticas.nuevoAccesoSingletonFuncionLog();
+
         log += "\n" + nombreClase + "::" + nombreFuncion + "\n";
         System.out.println(log);
     }
-    
-    public String getFuncionLog(){
+
+    public String getFuncionLog() {
+        estadisticas.nuevoAccesoSingletonFuncionLog();
+
         return log;
     }
 }

@@ -43,6 +43,8 @@ public class EvaluacionCommand extends FrontCommand {
         try {
             this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
             this.estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+            
+            estadisticas.nuevoAccesoEvaluacionCommand();
 
             singletonFuncionLog5.funcionLog("EvaluacionCommand", "processRequest");
         } catch (NamingException ex) {

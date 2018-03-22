@@ -29,6 +29,7 @@
     int visitasCuestionarioCommand = estadisticas2.getNuevoAccesoCuestionarioCommand();
     int visitasCourseInfoCommand = estadisticas2.getNuevoAccesoCourseInfoCommand();
     int visitasAlumnosCommand = estadisticas2.getNuevoAccesoAlumnosCommand();
+    int visitasSingletonFuncionLog = estadisticas2.getNuevoAccesoSingletonFuncionLog();
 %>
 <!DOCTYPE html>
 <html>
@@ -58,6 +59,7 @@
         <h2>Numero de accesos al CuestionarioCommand <%= visitasCuestionarioCommand%></h2>
         <h2>Numero de accesos al CourseInfoCommand <%= visitasCourseInfoCommand%></h2>
         <h2>Numero de accesos AlumnosCommand <%= visitasAlumnosCommand%></h2>
+        <h2>->Numero de accesos SingletonFuncionLog (Log de clases y funciones) <%= visitasSingletonFuncionLog%></h2>
 
     </body>
 </html>

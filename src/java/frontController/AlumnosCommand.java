@@ -95,7 +95,7 @@ public class AlumnosCommand extends FrontCommand {
                 singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
                 this.estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
 
-                        estadisticas.nuevoAccesoAlumnosCommand();
+                estadisticas.nuevoAccesoAlumnosCommand();
 
             } catch (NamingException ex) {
                 singletonFuncionLog5.funcionLog("AlumnosCommand", "NamingException ex");
