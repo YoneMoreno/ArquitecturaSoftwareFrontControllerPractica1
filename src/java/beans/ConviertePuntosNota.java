@@ -10,14 +10,19 @@ import java.io.FileWriter;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.ejb.Startup;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 
-@Startup
 @Stateless
 public class ConviertePuntosNota {
+
+    SingletonFuncionLog singletonFuncionLog5;
 
     File file = new File("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\beans\\log.txt");
 
     public String convertidor(int evaluacion) {
+
+        singletonFuncionLog5.funcionLog("ConviertePuntosNota", "convertidor");
 
         String text = "ConviertePuntosNota::convertidor::el usuario introdujo: " + evaluacion + "\n";
 
@@ -36,9 +41,18 @@ public class ConviertePuntosNota {
     public void postConstruct() {
 
         try {
-            String text = "ConviertePuntosNota::postConstruct::el metodo es void \n";
-            writeLogToFile(text, file);
-        } catch (IOException ex) {
+
+            this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+            singletonFuncionLog5.funcionLog("ConviertePuntosNota", "postConstruct");
+
+            try {
+                String text = "ConviertePuntosNota::postConstruct::el metodo es void \n";
+                writeLogToFile(text, file);
+            } catch (IOException ex) {
+                Logger.getLogger(ConviertePuntosNota.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        } catch (NamingException ex) {
             Logger.getLogger(ConviertePuntosNota.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -46,6 +60,7 @@ public class ConviertePuntosNota {
 
     @PreDestroy
     public void preDestroy() {
+        singletonFuncionLog5.funcionLog("ConviertePuntosNota", "preDestroy");
         try {
             String text = "ConviertePuntosNota::preDestroy::el metodo preDestroy es void \n";
             writeLogToFile(text, file);
@@ -56,6 +71,7 @@ public class ConviertePuntosNota {
     }
 
     private void writeLogToFile(String text, File file) throws IOException {
+        singletonFuncionLog5.funcionLog("ConviertePuntosNota", "writeLogToFile");
 
         BufferedWriter output = null;
         output = new BufferedWriter(new FileWriter(file, true));
