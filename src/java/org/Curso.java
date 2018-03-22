@@ -56,6 +56,8 @@ public class Curso {
             this.video = video;
             this.imagen = imagen;
         } catch (NamingException ex) {
+            singletonFuncionLog5.funcionLog("Curso", "NamingException ex");
+
             Logger.getLogger(Curso.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
