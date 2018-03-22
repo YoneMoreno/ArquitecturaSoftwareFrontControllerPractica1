@@ -249,3 +249,7 @@ ConvierteComentarioNota::convierteComentarioNota::el usuario introdujo la evalua
 ConvierteComentarioNota::preDestroy::el metodo preDestroy es void!!! 
 
  Cuestionario::constructor::este metodo es crea el cuestionario con: nullnullnullnullnullnullnull
+
+ Cuestionario::constructor::este metodo es crea el cuestionario con: nullnullnullnullnullnullnull
+
+ Cuestionario::constructor::este metodo es crea el cuestionario con: nullnullnullnullnullnullnull
