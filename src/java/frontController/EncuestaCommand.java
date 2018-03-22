@@ -6,6 +6,7 @@
 package frontController;
 
 import beans.Encuesta;
+import beans.Estadisticas;
 import beans.SingletonFuncionLog;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -26,6 +27,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "EncuestaCommand", urlPatterns = {"/EncuestaCommand"})
 public class EncuestaCommand extends FrontCommand {
 
+    Estadisticas estadisticas;
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -38,9 +41,13 @@ public class EncuestaCommand extends FrontCommand {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
+
             response.setContentType("text/html;charset=UTF-8");
 
             SingletonFuncionLog singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+            this.estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+
+            estadisticas.nuevoAccesoEncuestaCommand();
 
             singletonFuncionLog5.funcionLog("EncuestaCommand", "processRequest");
         } catch (NamingException ex) {
