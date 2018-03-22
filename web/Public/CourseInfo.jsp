@@ -1,4 +1,6 @@
 
+<%@page import="beans.SingletonFuncionLog"%>
+<%@page import="javax.naming.InitialContext"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
@@ -7,6 +9,14 @@
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Enumeration"%>
+
+
+<%
+    SingletonFuncionLog singletonFuncionLog = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+
+    singletonFuncionLog.funcionLog("CourseInfo", "processRequest");
+%>
+
 <html> 
     <head>
         <%@include file="../Header.jsp" %>
@@ -26,7 +36,6 @@
             </tr>
 
             <%
-
                 if (session.getAttribute("cursos") == null) {
                     ArrayList cursos = new ArrayList();
                     session.setAttribute("cursos", cursos);
