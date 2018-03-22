@@ -91,6 +91,8 @@ public class AlumnosCommand extends FrontCommand {
             try {
                 singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
             } catch (NamingException ex) {
+                singletonFuncionLog5.funcionLog("AlumnosCommand", "NamingException ex");
+
                 Logger.getLogger(AlumnosCommand.class.getName()).log(Level.SEVERE, null, ex);
             }
 
@@ -107,8 +109,11 @@ public class AlumnosCommand extends FrontCommand {
             writer.println(writer.toString());
 
         } catch (IOException ioe) {
+            singletonFuncionLog5.funcionLog("AlumnosCommand", "IOException ioe");
             ioe.printStackTrace();
         } catch (TransformerException te) {
+            singletonFuncionLog5.funcionLog("AlumnosCommand", "TransformerException te");
+
             te.printStackTrace();
 
         }
