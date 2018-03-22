@@ -5,6 +5,7 @@
  */
 package frontController;
 
+import beans.Estadisticas;
 import beans.SingletonFuncionLog;
 import frontController.FrontCommand;
 import java.io.IOException;
@@ -22,6 +23,7 @@ import javax.servlet.http.HttpServletRequest;
 public class UnknownCommand extends FrontCommand {
 
     private SingletonFuncionLog singletonFuncionLog5;
+    Estadisticas estadisticas;
 
     @Override
     public void process(HttpServletRequest request) {
@@ -29,6 +31,10 @@ public class UnknownCommand extends FrontCommand {
         try {
 
             this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+            this.estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+            
+            estadisticas.nuevoAccesoUnknownCommand();
+            
             singletonFuncionLog5.funcionLog("UnknownCommand", "process");
             try {
                 forward("/Unknown.jsp");
