@@ -9,7 +9,6 @@ import java.io.File;
 import java.io.FileWriter;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-import javax.ejb.Startup;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
@@ -26,17 +25,9 @@ public class ConviertePuntosNota {
 
         String text = "ConviertePuntosNota::convertidor::el usuario introdujo: " + evaluacion + "\n";
 
-        try {
-            writeLogToFile(text, file);
+        writeLogToFile(text, file);
+        return evaluacion >= 5 ? "Apto" : "No apto";
 
-            return evaluacion >= 5 ? "Apto" : "No apto";
-        } catch (IOException ex) {
-            singletonFuncionLog5.funcionLog("ConviertePuntosNota", "IOException ex");
-
-            Logger.getLogger(ConviertePuntosNota.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        return "ERROR";
     }
 
     @PostConstruct
@@ -47,14 +38,8 @@ public class ConviertePuntosNota {
             this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
             singletonFuncionLog5.funcionLog("ConviertePuntosNota", "postConstruct");
 
-            try {
-                String text = "ConviertePuntosNota::postConstruct::el metodo es void \n";
-                writeLogToFile(text, file);
-            } catch (IOException ex) {
-                singletonFuncionLog5.funcionLog("ConviertePuntosNota", "IOException ex");
-
-                Logger.getLogger(ConviertePuntosNota.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            String text = "ConviertePuntosNota::postConstruct::el metodo es void \n";
+            writeLogToFile(text, file);
 
         } catch (NamingException ex) {
             singletonFuncionLog5.funcionLog("ConviertePuntosNota", "NamingException ex");
@@ -67,24 +52,26 @@ public class ConviertePuntosNota {
     @PreDestroy
     public void preDestroy() {
         singletonFuncionLog5.funcionLog("ConviertePuntosNota", "preDestroy");
-        try {
-            String text = "ConviertePuntosNota::preDestroy::el metodo preDestroy es void \n";
-            writeLogToFile(text, file);
-        } catch (IOException ex) {
-            singletonFuncionLog5.funcionLog("ConviertePuntosNota", "IOException ex");
-
-            Logger.getLogger(ConviertePuntosNota.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        String text = "ConviertePuntosNota::preDestroy::el metodo preDestroy es void \n";
+        writeLogToFile(text, file);
 
     }
 
-    private void writeLogToFile(String text, File file) throws IOException {
-        singletonFuncionLog5.funcionLog("ConviertePuntosNota", "writeLogToFile");
+    private void writeLogToFile(String text, File file) {
+        try {
+            if (file == null) {
+                file = new File("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\beans\\log.txt");
+            }
+            singletonFuncionLog5.funcionLog("ConviertePuntosNota", "writeLogToFile");
 
-        BufferedWriter output = null;
-        output = new BufferedWriter(new FileWriter(file, true));
-        output.write(text);
-        output.close();
+            BufferedWriter output = null;
+            output = new BufferedWriter(new FileWriter(file, true));
+            output.write(text);
+            output.close();
+        } catch (IOException ex) {
+            singletonFuncionLog5.funcionLog("ConviertePuntosNota", "writeLogToFile: IOException ex");
+            Logger.getLogger(ConviertePuntosNota.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
 }

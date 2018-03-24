@@ -7,6 +7,7 @@ package org;
 
 import beans.Estadisticas;
 import beans.SingletonFuncionLog;
+import java.io.Serializable;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
@@ -14,7 +15,7 @@ import javax.naming.NamingException;
  *
  * @author YonePC
  */
-public class Evaluacion {
+public class Evaluacion implements Serializable {
 
     SingletonFuncionLog singletonFuncionLog5;
 

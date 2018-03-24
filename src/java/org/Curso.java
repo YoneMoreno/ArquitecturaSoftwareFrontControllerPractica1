@@ -7,6 +7,7 @@ package org;
 
 import beans.Estadisticas;
 import beans.SingletonFuncionLog;
+import java.io.Serializable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.naming.InitialContext;
@@ -16,7 +17,7 @@ import javax.naming.NamingException;
  *
  * @author YonePC
  */
-public class Curso {
+public class Curso implements Serializable {
 
     public Curso(String titulo, String autor, String asignatura, String duracion, String video, String imagen) throws NamingException {
         try {
