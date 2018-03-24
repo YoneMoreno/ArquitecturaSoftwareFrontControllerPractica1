@@ -57,6 +57,7 @@ public class Evaluacion {
 
     public String getEvaluacion() {
         singletonFuncionLog5.funcionLog("Evaluacion", "getEvaluacion");
+        if(evaluacion == null) return "0";
         return evaluacion;
     }
 

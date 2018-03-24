@@ -920,3 +920,24 @@ Profesor::postConstruct::nuestro PostConstruct es void
  Profesor::getTelefono::este metodo DEVUELVE el telefono: 636404142 
 
  Profesor::getTelefono::este metodo DEVUELVE el despacho: S6 
+
+ Cuestionario::constructor por defecto::este metodo es VOID + 
+
+ Cuestionario::constructor por defecto::este metodo es VOID + 
+Cuestionario::postConstruct::nuestro PostConstruct es void 
+Cuestionario::setPregunta1::este metodo PONE la pregunta1: Vino
+Cuestionario::setRespuestaTexto11::esta funcoon PONE la respuesta al texto 11: An
+Cuestionario::setRespuestaVerdad11::esta FUNCION, pone la respuesta al boolean de verdad 11 null
+Cuestionario::setRespuestaTexto12::esta funcion PONE la respuesta al texto 12: Ec
+Cuestionario::setRespuestaVerdad12::esta funcion, PONE la respuesta al valor boolean de la respuesta 12: null
+Cuestionario::setRespuestaTexto13::nuestra funcioncita, PONE, la respuesta de texto 13: Ro
+Cuestionario::getRespuestaVerdad13::nuestro metodo, PONE, el valor boolean para la repuesta 13: null
+Cuestionario::getPregunta1::este metodo devuelve la pregunta1: Vino
+Cuestionario::getRespuestaTexto11::este metodo OBTIENE la respuesta al texto 11: An
+Cuestionario::getRespuestaTexto11::este metodo COGE el booleano de verdad para respuesta 11: null
+Cuestionario::getRespuestaTexto12::esta funcoon DEVUELVE la respuesta al texto 12: Ec
+Cuestionario::getRespuestaVerdad12::esta FUNCIONCITA Obtiene la respuesta al valor boolean de la respuesta 12: null
+Cuestionario::getRespuestaTexto13::nuestra funcioncita, OBTIENE, la respuesta de texto 13: Ro
+Cuestionario::getRespuestaVerdad13::nuestro metodo, COGE, la el valor boolean de la respuesta 13: null
+ConviertePuntosNota::postConstruct::el metodo es void 
+ConviertePuntosNota::convertidor::el usuario introdujo: 10
