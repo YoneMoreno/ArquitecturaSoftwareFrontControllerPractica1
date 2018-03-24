@@ -22,7 +22,15 @@
     } else {
         System.out.println("La sesion no es nueva");
     }
-    
+
+    int accesos;
+    if (session.getAttribute("accesos") == null) {
+         accesos = 0;
+    } else {
+         accesos = (Integer) session.getAttribute("accesos");
+         accesos++;
+    }
+    session.setAttribute("accesos", accesos);
 
 %>
 

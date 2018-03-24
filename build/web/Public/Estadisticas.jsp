@@ -1,8 +1,4 @@
-<%-- 
-    Document   : Estadisticas
-    Created on : 22-mar-2018, 12:48:18
-    Author     : YonePC
---%>
+
 
 <%@page import="beans.Estadisticas"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -32,6 +28,8 @@
     int visitasSingletonFuncionLog = estadisticas2.getNuevoAccesoSingletonFuncionLog();
     int visitasProfesorClase = estadisticas2.getNuevoAccesoProfesorClase();
     int visitasEstadisticasClase = estadisticas2.getNuevoAccesoEstadisticas();
+
+
 %>
 <!DOCTYPE html>
 <html>
@@ -42,6 +40,16 @@
     </head>
     <body>
         <h1>Numero de sesiones nuevas: <%= numeroSesionesNuevas%></h1>
+
+        <%
+
+            if (session.getAttribute("accesos") != null) {
+                int accesosSesionActual = (Integer) session.getAttribute("accesos");
+        %>
+        <h1>Accesos a componentes en la sesion actual: <%=  accesosSesionActual%></h1>
+
+        <% }%>
+
         <h2>Numero de visitas index: <%= visitasIndex%></h2>
         <h2>Numero de visitas unknown: <%= visitasUnknown%></h2>
         <h2>Numero de visitas evaluacion <%= visitasEvaluacion%></h2>

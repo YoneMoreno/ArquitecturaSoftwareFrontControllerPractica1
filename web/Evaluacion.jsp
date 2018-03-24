@@ -29,6 +29,7 @@
     Estadisticas estadisticasEvaluacion = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
 
     estadisticasEvaluacion.nuevaVisitaEvaluacion();
+    
 %>
 
 <html>
