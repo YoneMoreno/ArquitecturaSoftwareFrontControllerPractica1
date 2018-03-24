@@ -6,11 +6,13 @@
 package beans;
 
 import javax.ejb.Singleton;
+import javax.ejb.Startup;
 
 /**
  *
  * @author YonePC
  */
+@Startup
 @Singleton
 public class Estadisticas {
 
