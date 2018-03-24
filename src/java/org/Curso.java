@@ -21,6 +21,27 @@ public class Curso {
     SingletonFuncionLog singletonFuncionLog5;
 
     Estadisticas estadisticas;
+    
+    public Curso(String titulo, String autor, String asignatura, String duracion, String video, String imagen) {
+        try {
+            this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+            this.estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+
+            estadisticas.nuevoAccesoCurso();
+            
+            singletonFuncionLog5.funcionLog("Curso", "constructor");
+            this.titulo = titulo;
+            this.autor = autor;
+            this.asignatura = asignatura;
+            this.duracion = duracion;
+            this.video = video;
+            this.imagen = imagen;
+        } catch (NamingException ex) {
+            singletonFuncionLog5.funcionLog("Curso", "NamingException ex");
+
+            Logger.getLogger(Curso.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
     public void setTitulo(String titulo) {
         singletonFuncionLog5.funcionLog("Curso", "setTitulo");
@@ -49,26 +70,6 @@ public class Curso {
     }
     String titulo, autor, asignatura, duracion, video, imagen;
 
-    public Curso(String titulo, String autor, String asignatura, String duracion, String video, String imagen) {
-        try {
-            this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
-            this.estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
-
-            estadisticas.nuevoAccesoCurso();
-            
-            singletonFuncionLog5.funcionLog("Curso", "constructor");
-            this.titulo = titulo;
-            this.autor = autor;
-            this.asignatura = asignatura;
-            this.duracion = duracion;
-            this.video = video;
-            this.imagen = imagen;
-        } catch (NamingException ex) {
-            singletonFuncionLog5.funcionLog("Curso", "NamingException ex");
-
-            Logger.getLogger(Curso.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
 
     public String getImagen() throws NamingException {
         singletonFuncionLog5.funcionLog("Curso", "getImagen");
