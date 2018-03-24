@@ -947,3 +947,5 @@ ConviertePuntosNota::postConstruct::el metodo es void
 ConviertePuntosNota::convertidor::el usuario introdujo: 10
 LetraNota::postConstruct:: nuestro metodo PostConstruct es void!!!!!!!! 
 LetraNota::convierteLetraNota::el usuario introdujo la LETRA: E
+ConviertePuntosNota::postConstruct::el metodo es void 
+ConviertePuntosNota::convertidor::el usuario introdujo: 10
