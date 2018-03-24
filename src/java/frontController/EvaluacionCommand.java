@@ -24,7 +24,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author YonePC
  */
 @WebServlet(name = "EvaluacionCommand", urlPatterns = {"/EvaluacionCommand"})
-public class EvaluacionCommand extends FrontCommand {
+public class EvaluacionCommand extends FrontCommand  {
 
     Estadisticas estadisticas;
 

@@ -20,6 +20,7 @@ import javax.ejb.Stateful;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
+
 @Stateful
 public class Profesor {
 
@@ -256,18 +257,10 @@ public class Profesor {
 
     }
 
+    
     @PrePassivate
     public void prePassivate() {
-        singletonFuncionLog5.funcionLog("Profesor", "prePassivate");
-
-        try {
-            String text = "Profesor::prePassivate::la funcion que realiza el prePassivate es void \n";
-            writeLogToFile(text, file);
-        } catch (IOException ex) {
-            singletonFuncionLog5.funcionLog("Profesor", "IOException ex");
-
-            Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        
 
     }
 

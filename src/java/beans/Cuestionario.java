@@ -303,16 +303,7 @@ public class Cuestionario {
 
     @PrePassivate
     public void prePassivate() {
-        singletonFuncionLog5.funcionLog("Cuestionario", "prePassivate");
-
-        try {
-            String text = "Cuestionario::prePassivate::la funcion que realiza el prePassivate es void \n";
-            writeLogToFile(text, file);
-        } catch (IOException ex) {
-            singletonFuncionLog5.funcionLog("Cuestionario", "IOException ex");
-
-            Logger.getLogger(Encuesta.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        
 
     }
 

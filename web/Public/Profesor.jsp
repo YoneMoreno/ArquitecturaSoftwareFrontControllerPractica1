@@ -27,13 +27,14 @@
 
 <html>
     <%@include file="../Header.jsp" %>
+    <title>Profesor</title>
     <body>
         <div class="d-flex flex-row">
             <div>
                 <i class="fas fa-user-circle fa-5x"></i>
             </div>     
             <div class="container center">
-                <h1 class="text-center "><%= profesor.getNombre()%><h1/>
+                <p class="text-center "><%= profesor.getNombre()%><p/>
             </div>
         </div>
         <div class="d-flex flex-row">
@@ -135,11 +136,5 @@
             </table>
 
 
-    </body> 
-</details>
+ 
 
-
-
-
-</body>
-</html>
