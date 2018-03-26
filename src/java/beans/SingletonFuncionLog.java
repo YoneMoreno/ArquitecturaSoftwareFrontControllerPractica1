@@ -28,8 +28,8 @@ public class SingletonFuncionLog {
 
     public void funcionLog(String nombreClase, String nombreFuncion) {
 
-        log += "\n" + nombreClase + "::" + nombreFuncion + "\n";
-        System.out.println(log);
+        this.log += "\n" + nombreClase + "::" + nombreFuncion + "\n";
+        System.out.println(this.log);
     }
 
     public String getFuncionLog() {
@@ -37,8 +37,7 @@ public class SingletonFuncionLog {
             Estadisticas estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
             
             estadisticas.nuevoAccesoSingletonFuncionLog();
-            
-            return log;
+            return this.log;
         } catch (NamingException ex) {
             Logger.getLogger(SingletonFuncionLog.class.getName()).log(Level.SEVERE, null, ex);
         }

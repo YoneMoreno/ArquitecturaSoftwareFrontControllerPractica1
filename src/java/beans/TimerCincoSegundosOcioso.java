@@ -21,7 +21,8 @@ import org.FrontServlet;
  */
 @Singleton
 public class TimerCincoSegundosOcioso {
-
+    String logAnterior = "";
+    String logActual = "";
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
     @Schedule(second = "*/5", minute = "*", hour = "*")
@@ -29,7 +30,14 @@ public class TimerCincoSegundosOcioso {
 
         try {
             SingletonFuncionLog singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
-            singletonFuncionLog5.funcionLog("TimerCincoSegundosOcioso::", "El usuario ha permanecido cinco segundos sin realizar actividad");
+            logActual = singletonFuncionLog5.getFuncionLog();
+            if (!logActual.equals(logAnterior)) {
+                System.out.println("logActual: " + logActual + " logAnterior: " + logAnterior);
+                logAnterior = singletonFuncionLog5.getFuncionLog();
+            } else {
+                System.out.println("EN EL TIMER, el logActual y logAnterior son iguales");
+                singletonFuncionLog5.funcionLog("TimerCincoSegundosOcioso::", "El usuario ha permanecido cinco segundos sin realizar actividad");
+            }
 
         } catch (NamingException ex) {
             Logger.getLogger(TimerCincoSegundosOcioso.class.getName()).log(Level.SEVERE, null, ex);
