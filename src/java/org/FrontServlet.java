@@ -38,16 +38,16 @@ public class FrontServlet extends HttpServlet {
         try {
             //TODO: SEPARAR la sesión en nel FrontCommand
 
+
             this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
             this.estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
-            
+
             estadisticas.nuevaVisitaFrontServlet();
 
-            
             singletonFuncionLog5.funcionLog("FrontServlet", "processRequest");
 
             HttpSession session = request.getSession(true);
-            
+
             Curso curso = getCourseFromSession(session);
             Evaluacion evaluacion = getEvaluacionFromSession(session);
 
@@ -192,6 +192,8 @@ public class FrontServlet extends HttpServlet {
         }
         return result;
     }
+
+ 
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

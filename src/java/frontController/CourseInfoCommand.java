@@ -36,14 +36,18 @@ public class CourseInfoCommand extends FrontCommand {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, NamingException {
-        response.setContentType("text/html;charset=UTF-8");
-        SingletonFuncionLog singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
-        this.estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
-
-        estadisticas.nuevoAccesoCourseInfoCommand();
-
-        singletonFuncionLog5.funcionLog("CourseInfoCommand", "processRequest");
+            throws ServletException, IOException {
+        try {
+            response.setContentType("text/html;charset=UTF-8");
+            SingletonFuncionLog singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+            this.estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+            
+            estadisticas.nuevoAccesoCourseInfoCommand();
+            
+            singletonFuncionLog5.funcionLog("CourseInfoCommand", "processRequest");
+        } catch (NamingException ex) {
+            Logger.getLogger(CourseInfoCommand.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }
 
@@ -57,7 +61,7 @@ public class CourseInfoCommand extends FrontCommand {
      * @throws IOException if an I/O error occurs
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, NamingException {
+            throws ServletException, IOException {
         processRequest(request, response);
     }
 
@@ -70,7 +74,7 @@ public class CourseInfoCommand extends FrontCommand {
      * @throws IOException if an I/O error occurs
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, NamingException {
+            throws ServletException, IOException {
         processRequest(request, response);
     }
 
