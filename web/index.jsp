@@ -157,7 +157,9 @@ and open the template in the editor.
                         <!-- The slideshow -->
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="Images/software.PNG" alt="Software"/>
+                                <a href="Public/Asignatura.jsp">
+                                    <img src="Images/software.PNG" alt="Software"/>
+                                </a>
                             </div>
                             <div class="carousel-item">
                                 <img src="Images/it.PNG" alt=""/>
