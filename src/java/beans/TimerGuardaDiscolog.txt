@@ -80,3 +80,453 @@ Header::processRequest
 TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
 
 TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+ERROR
+Index::processRequest
+
+Header::processRequest
+
+Footer::processRequest
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+Index::processRequest
+
+Header::processRequest
+
+Footer::processRequest
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+Index::processRequest
+
+Header::processRequest
+
+Footer::processRequest
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+Index::processRequest
+
+Header::processRequest
+
+Footer::processRequest
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+Index::processRequest
+
+Header::processRequest
+
+Footer::processRequest
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+Index::processRequest
+
+Header::processRequest
+
+Footer::processRequest
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+Index::processRequest
+
+Header::processRequest
+
+Footer::processRequest
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+CourseInfo::processRequest
+
+Header::processRequest
+
+Curso::constructor
+
+Curso::getTitulo
+
+Curso::getAutor
+
+Curso::getAsignatura
+
+Curso::getDuracion
+
+Curso::getVideo
+
+Curso::getImagen
+
+Curso::getTitulo
+
+Footer::processRequest
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+Index::processRequest
+
+Header::processRequest
+
+Footer::processRequest
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+Index::processRequest
+
+Header::processRequest
+
+Footer::processRequest
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+Index::processRequest
+
+Header::processRequest
+
+Footer::processRequest
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+Index::processRequest
+
+Header::processRequest
+
+Footer::processRequest
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+CourseInfo::processRequest
+
+Header::processRequest
+
+Curso::getTitulo
+
+Curso::getAutor
+
+Curso::getAsignatura
+
+Curso::getDuracion
+
+Curso::getVideo
+
+Curso::getImagen
+
+Curso::getTitulo
+
+Footer::processRequest
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+Index::processRequest
+
+Header::processRequest
+
+Footer::processRequest
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+Index::processRequest
+
+Header::processRequest
+
+Footer::processRequest
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad

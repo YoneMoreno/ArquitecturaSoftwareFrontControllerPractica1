@@ -9,6 +9,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.Schedule;
 import javax.ejb.Singleton;
+import javax.ejb.Stateless;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +20,7 @@ import org.FrontServlet;
  *
  * @author YonePC
  */
-@Singleton
+@Stateless
 public class TimerCincoSegundosOcioso {
     String logAnterior = "";
     String logActual = "";

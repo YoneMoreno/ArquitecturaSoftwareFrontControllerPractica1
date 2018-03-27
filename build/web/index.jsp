@@ -7,24 +7,25 @@ and open the template in the editor.
 -->
 
 <%
-    
-    
-    
+
     SingletonFuncionLog singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
 
     singletonFuncionLog5.funcionLog("Index", "processRequest");
-    
-     Estadisticas estadisticasIndex = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
 
-     
-     estadisticasIndex.nuevaVisitaIndex();
+    Estadisticas estadisticasIndex = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+
+    estadisticasIndex.nuevaVisitaIndex();
 %>
 
 <html>
     <head>
         <%@include file="Header.jsp" %>
         <title>CursosApp</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>       
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -140,9 +141,58 @@ and open the template in the editor.
                             <input type="hidden" name="command" value="AlumnosCommand"/>
                         </form>
                     </details>
+                    <div id="demo" class="carousel slide" data-ride="carousel" style="width: 25%; height: 25%">
+                        <!-- Indicators -->
+                        <ul class="carousel-indicators">
+                            <li data-target="#demo" data-slide-to="0" class="active"></li>
+                            <li data-target="#demo" data-slide-to="1"></li>
+                            <li data-target="#demo" data-slide-to="2"></li>
+                            <li data-target="#demo" data-slide-to="3"></li>
+                            <li data-target="#demo" data-slide-to="4"></li>
+                            <li data-target="#demo" data-slide-to="5"></li>
+                            <li data-target="#demo" data-slide-to="6"></li>
+                            <li data-target="#demo" data-slide-to="7"></li>
+                        </ul>
+
+                        <!-- The slideshow -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="Images/software.PNG" alt="Software"/>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Images/it.PNG" alt=""/>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Images/creative.PNG" alt=""/>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Images/business.PNG" alt=""/>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Images/data.PNG" alt=""/>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Images/cybersecurity.PNG" alt=""/>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Images/architecture.PNG" alt=""/>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Images/design.PNG" alt=""/>
+                            </div>
+
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
     </body>
     <%@include file="Footer.jsp" %>
 </html>
