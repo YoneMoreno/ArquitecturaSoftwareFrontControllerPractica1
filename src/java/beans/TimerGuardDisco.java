@@ -25,15 +25,10 @@ public class TimerGuardDisco {
 
     @Schedule(second = "*/5", minute = "*", hour = "*")
     private void writeLogToFile() throws IOException {
-        try {
-            SingletonFuncionLog singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
-            File file = new File("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\beans\\TimerGuardaDiscolog.txt");
-            BufferedWriter output = null;
-            output = new BufferedWriter(new FileWriter(file, true));
-            output.write(singletonFuncionLog5.getFuncionLog());
-            output.close();
-        } catch (NamingException ex) {
-            Logger.getLogger(TimerGuardDisco.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        File file = new File("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\beans\\TimerGuardaDiscolog.txt");
+        BufferedWriter output = null;
+        output = new BufferedWriter(new FileWriter(file, true));
+        output.write(SingletonFuncionLog.getFuncionLog());
+        output.close();
     }
 }

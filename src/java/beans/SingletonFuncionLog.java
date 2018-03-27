@@ -22,7 +22,7 @@ public class SingletonFuncionLog {
 
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
-    String log = "";
+    static String log = "";
 
     
 
@@ -32,12 +32,12 @@ public class SingletonFuncionLog {
         System.out.println(this.log);
     }
 
-    public String getFuncionLog() {
+    public static String getFuncionLog() {
         try {
             Estadisticas estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
             
             estadisticas.nuevoAccesoSingletonFuncionLog();
-            return this.log;
+            return log;
         } catch (NamingException ex) {
             Logger.getLogger(SingletonFuncionLog.class.getName()).log(Level.SEVERE, null, ex);
         }
