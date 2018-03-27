@@ -50,7 +50,6 @@ public class Estadisticas {
     public static void addKey(String key){
         mapa.put(key, null);
     }
-    
     public static void addValue(String key, String value){
         mapa.put(key,value);
     }
