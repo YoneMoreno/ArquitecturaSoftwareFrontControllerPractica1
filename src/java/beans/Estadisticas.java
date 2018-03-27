@@ -5,6 +5,8 @@
  */
 package beans;
 
+import java.util.HashMap;
+import java.util.Map;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
 
@@ -39,9 +41,22 @@ public class Estadisticas {
     int singletonFuncionLog = 0;
     int profesorClase = 0;
     int estadisticasClase = 0;
+    
+    static Map mapa = new HashMap<>();
 
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
+    
+    public static void addKey(String key){
+        mapa.put(key, null);
+    }
+    
+    public static void addValue(String key, String value){
+        mapa.put(key,value);
+    }
+    
+    
+    
     public void cuentaNuevaSesion() {
         nuevoAccesoEstadisticas();
         System.out.println("El numero de sesiones nuevas es: " + ++cuenta);
