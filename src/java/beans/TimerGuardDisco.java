@@ -13,6 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.Schedule;
 import javax.ejb.Singleton;
+import javax.ejb.Stateless;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
@@ -20,7 +21,7 @@ import javax.naming.NamingException;
  *
  * @author YonePC
  */
-@Singleton
+@Stateless
 public class TimerGuardDisco {
 
     @Schedule(second = "*/5", minute = "*", hour = "*")
