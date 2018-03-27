@@ -96,7 +96,7 @@ public class CourseInfoCommand extends FrontCommand {
 
             singletonFuncionLog5.funcionLog("CourseInfoCommand", "process");
             try {
-                forward("/Public/CourseInfo.jsp");
+                    forward("/Public/CourseInfo.jsp");
             } catch (ServletException ex) {
                 singletonFuncionLog5.funcionLog("CourseInfoCommand", "ServletException ex");
 

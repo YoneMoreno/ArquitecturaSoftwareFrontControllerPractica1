@@ -4,16 +4,25 @@
     Author     : YonePC
 --%>
 
+<%@page import="beans.Asignatura"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%
+
+    Asignatura asignatura = (Asignatura) request.getAttribute("asignatura");
+
+%>
 <!DOCTYPE html>
 <html>
     <head>
         <%@include file="../Header.jsp" %>
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Asignatura</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Nombre: <%= asignatura.getNombre()%></h1>
+        <h1>Descripción: <%= asignatura.getDescripcion()%></h1>
+
     </body>
 </html>

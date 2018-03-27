@@ -5,10 +5,12 @@
  */
 package frontController;
 
+import beans.Asignatura;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,6 +24,9 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "AsignaturaCommand", urlPatterns = {"/AsignaturaCommand"})
 public class AsignaturaCommand extends FrontCommand {
 
+    @EJB
+    private Asignatura asignatura;
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -34,18 +39,7 @@ public class AsignaturaCommand extends FrontCommand {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet AsignaturaCommand</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet AsignaturaCommand at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -90,6 +84,8 @@ public class AsignaturaCommand extends FrontCommand {
     @Override
     public void process(HttpServletRequest request) {
         try {
+            Asignatura asignatura = new Asignatura(request.getParameter("nombre"), request.getParameter("descripcion"), request.getParameter("imagen"));
+            request.setAttribute("asignatura", asignatura);
             forward("/Public/Asignatura.jsp");
         } catch (ServletException ex) {
             Logger.getLogger(AsignaturaCommand.class.getName()).log(Level.SEVERE, null, ex);
