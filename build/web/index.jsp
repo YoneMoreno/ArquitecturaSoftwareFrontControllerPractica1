@@ -141,6 +141,7 @@ and open the template in the editor.
                             <input type="hidden" name="command" value="AlumnosCommand"/>
                         </form>
                     </details>
+                    <h1>Mis asignaturas:</h1>
                     <div id="demo" class="carousel slide" data-ride="carousel" style="width: 25%; height: 25%">
                         <!-- Indicators -->
                         <ul class="carousel-indicators">
@@ -162,25 +163,39 @@ and open the template in the editor.
                                 </a>
                             </div>
                             <div class="carousel-item">
-                                <img src="Images/it.PNG" alt=""/>
+                                <a href="FrontServlet?nombre=Tecnologias+de+la+informacion&descripcion=Mencion+TI&command=AsignaturaCommand">
+                                    <img src="Images/it.PNG" alt=""/>
+                                </a>
                             </div>
                             <div class="carousel-item">
-                                <img src="Images/creative.PNG" alt=""/>
+                                <a href="FrontServlet?nombre=Modelado+3D&descripcion=Postgrado&command=AsignaturaCommand">
+                                    <img src="Images/creative.PNG" alt=""/>
+                                </a>
                             </div>
                             <div class="carousel-item">
-                                <img src="Images/business.PNG" alt=""/>
+                                <a href="FrontServlet?nombre=ADE&descripcion=Direccion+empresas&command=AsignaturaCommand">
+                                    <img src="Images/business.PNG" alt=""/>
+                                </a>
                             </div>
                             <div class="carousel-item">
-                                <img src="Images/data.PNG" alt=""/>
+                                <a href="FrontServlet?nombre=Cientifico+datos&descripcion=Mencion+inteligencia+artificial&command=AsignaturaCommand">
+                                    <img src="Images/data.PNG" alt=""/>
+                                </a>
                             </div>
                             <div class="carousel-item">
-                                <img src="Images/cybersecurity.PNG" alt=""/>
+                                <a href="FrontServlet?nombre=Ciberseguridad&descripcion=Mencion+TI&command=AsignaturaCommand">
+                                    <img src="Images/cybersecurity.PNG" alt=""/>
+                                </a>
                             </div>
                             <div class="carousel-item">
-                                <img src="Images/architecture.PNG" alt=""/>
+                                <a href="FrontServlet?nombre=Arquitectura&descripcion=Diseno+con+herramientas+CAD&command=AsignaturaCommand">
+                                    <img src="Images/architecture.PNG" alt=""/>
+                                </a>
                             </div>
                             <div class="carousel-item">
-                                <img src="Images/design.PNG" alt=""/>
+                                <a href="FrontServlet?nombre=Diseno+2D&descripcion=Con+Blender+y+Maya&command=AsignaturaCommand">
+                                    <img src="Images/design.PNG" alt=""/>
+                                </a>
                             </div>
 
                         </div>
