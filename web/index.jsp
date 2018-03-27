@@ -141,7 +141,7 @@ and open the template in the editor.
                             <input type="hidden" name="command" value="AlumnosCommand"/>
                         </form>
                     </details>
-                    <h1>Mis asignaturas:</h1>
+                    <h4>Asignaturas impartidas en la escuela:</h4>
                     <div id="demo" class="carousel slide" data-ride="carousel" style="width: 25%; height: 25%">
                         <!-- Indicators -->
                         <ul class="carousel-indicators">
