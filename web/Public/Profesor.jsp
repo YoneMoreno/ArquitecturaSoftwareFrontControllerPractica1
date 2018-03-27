@@ -70,19 +70,21 @@
                         <!-- The slideshow -->
                         <div class="carousel-inner container center text-center">
                             <div class="carousel-item active">
-                                <a href="FrontServlet?nombre=Software&descripcion=Mencion+Ingenieria+Software&command=AsignaturaCommand">
+                                <a href="../FrontServlet?valoracionCurso=Grado+Ingenieria+Informatica+4&valoracionAsignatura=Arquitectura+Software&valoracion=4.7&command=ValoracionCommand">
                                     <img src="../Images/CHValoracion.JPG" alt=""/>
                                 </a>
                             </div>
                             <div class="carousel-item">
-                                <a href="FrontServlet?nombre=Tecnologias+de+la+informacion&descripcion=Mencion+TI&command=AsignaturaCommand">
+                                <a href="../FrontServlet?valoracionCurso=Grado+Ingenieria+Informatica+1&valoracionAsignatura=Introduccion+a+la+Programacion&valoracion=4.6&command=ValoracionCommand">
                                     <img src="../Images/valoracion2.PNG" alt=""/>
                                 </a>
+
                             </div>
                             <div class="carousel-item">
-                                <a href="FrontServlet?nombre=Modelado+3D&descripcion=Postgrado&command=AsignaturaCommand">
+                                <a href="../FrontServlet?valoracionCurso=Grado+Ingenieria+Informatica+2&valoracionAsignatura=Ingenieria+Software+I&valoracion=4.5&command=ValoracionCommand">
                                     <img src="../Images/valoracion3.PNG" alt=""/>
                                 </a>
+
                             </div>
                         </div>
                     </div>
