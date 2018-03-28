@@ -4,6 +4,7 @@
     Author     : YonePC
 --%>
 
+<%@page import="beans.Biblioteca"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,6 +14,9 @@
         <title>Biblioteca</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <%            
+            Biblioteca biblioteca = (Biblioteca) request.getAttribute("biblioteca");
+        %>
+        <h1>Nombre: <%= biblioteca.getNombre()%></h1>
     </body>
 </html>
