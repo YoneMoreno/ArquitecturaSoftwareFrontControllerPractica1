@@ -58,6 +58,9 @@
         <li class="nav-item">
             <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/Estadisticas.jsp"><i class="fas fa-signal"></i></i></a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/Bibliotecas.jsp"><i class="fas fa-book"></i></i></a>
+        </li>
     </ul>
 </nav>
 
