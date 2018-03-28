@@ -29,12 +29,12 @@
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="Biblioteca?nombre=Biblioteca+Informatica&command=BibliotecaCommand">
+                    <a href="Biblioteca.jsp?nombre=Biblioteca+Informatica&command=BibliotecaCommand">
                         <img src="../Images/informaticBiblioteca.jpg" alt="" width="100%" height="100%"/>
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="Biblioteca?nombre=Biblioteca+Arquitectura&command=BibliotecaCommand">
+                    <a href="Biblioteca.jsp?nombre=Biblioteca+Arquitectura&command=BibliotecaCommand">
                         <img src="../Images/arquitecturaBiblioteca.jpg" alt="" width="100%" height="100%"/>
                     </a>
                 </div>
