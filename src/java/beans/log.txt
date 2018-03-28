@@ -2309,3 +2309,5 @@ Profesor::postConstruct::nuestro PostConstruct es void
  Profesor::getTelefono::este metodo DEVUELVE el telefono: 636404142 
 
  Profesor::getTelefono::este metodo DEVUELVE el despacho: S6 
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
