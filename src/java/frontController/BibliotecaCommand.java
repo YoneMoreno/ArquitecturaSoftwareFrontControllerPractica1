@@ -5,6 +5,7 @@
  */
 package frontController;
 
+import beans.Biblioteca;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -81,8 +82,9 @@ public class BibliotecaCommand extends FrontCommand {
     @Override
     public void process(HttpServletRequest request) {
         try {
-            request.getParameter("nombre");
+            String nombre = request.getParameter("nombre");
             Biblioteca biblioteca = new Biblioteca(nombre);
+            request.setAttribute("biblioteca",biblioteca);
             forward("/Public/Biblioteca.jsp");
         } catch (ServletException ex) {
             Logger.getLogger(BibliotecaCommand.class.getName()).log(Level.SEVERE, null, ex);
