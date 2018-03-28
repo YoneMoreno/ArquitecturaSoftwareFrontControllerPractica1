@@ -14,10 +14,15 @@
         <title>Biblioteca</title>
     </head>
     <body>
-        <%            Biblioteca biblioteca = (Biblioteca) request.getAttribute("biblioteca");
+        <%            Biblioteca biblioteca;
+                    String nombre = "";
+            if (request.getAttribute("biblioteca") != null) {
+                biblioteca = (Biblioteca) request.getAttribute("biblioteca");
             if (biblioteca.getNombre() != null) {
+                 nombre = biblioteca.getNombre();
+            }
         %>
-        <h1>Nombre: <%= biblioteca.getNombre()%></h1>
+        <h1>Nombre: <%= nombre %></h1>
         <% }%>
         <div id="demo" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
