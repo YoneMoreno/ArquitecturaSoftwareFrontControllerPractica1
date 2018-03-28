@@ -28,17 +28,17 @@
             <!-- The slideshow -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href="Libro?nombre=Clean+Code&autor=Robert+C+Martin">
+                    <a href="Libro.jsp?nombre=Clean+Code&autor=Robert+C+Martin">
                         <img src="../Images/libroCleanCode.jpg" alt="" />
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="Libro?nombre=Refactoring&autor=Joshua+Bloch">
+                    <a href="Libro.jsp?nombre=Refactoring&autor=Joshua+Bloch">
                         <img src="../Images/libroRefactoring.png" alt=""/>
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="Libro?nombre=Python&autor=OReilly">
+                    <a href="Libro.jsp?nombre=Python&autor=OReilly">
                         <img src="../Images/libroPython.jpg" alt=""/>
                     </a>
                 </div>
