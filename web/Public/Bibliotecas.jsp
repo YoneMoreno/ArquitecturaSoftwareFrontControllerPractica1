@@ -24,17 +24,17 @@
             <!-- The slideshow -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href="FrontServlet?nombre=Software&descripcion=Mencion+Ingenieria+Software&command=AsignaturaCommand">
+                    <a href="FrontServlet?nombre=Biblioteca+General&command=BibliotecaCommand">
                         <img src="../Images/generalBiblioteca.jpg" alt="Biblioteca General" width="100%" height="100%"/>
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="FrontServlet?nombre=Tecnologias+de+la+informacion&descripcion=Mencion+TI&command=AsignaturaCommand">
+                    <a href="FrontServlet?nombre=Biblioteca+Informatica&command=BibliotecaCommand">
                         <img src="../Images/informaticBiblioteca.jpg" alt="" width="100%" height="100%"/>
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="FrontServlet?nombre=Modelado+3D&descripcion=Postgrado&command=AsignaturaCommand">
+                    <a href="FrontServlet?nombre=Biblioteca+Arquitectura&command=BibliotecaCommand">
                         <img src="../Images/arquitecturaBiblioteca.jpg" alt="" width="100%" height="100%"/>
                     </a>
                 </div>
