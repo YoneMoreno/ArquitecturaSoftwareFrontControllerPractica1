@@ -28,17 +28,17 @@
             <!-- The slideshow -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href="../FrontServlet?nombre=Biblioteca+General&command=BibliotecaCommand">
+                    <a href="Libro?nombre=Clean+Code&autor=Robert+C+Martin">
                         <img src="../Images/libroCleanCode.jpg" alt="" />
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="../FrontServlet?nombre=Biblioteca+Informatica&command=BibliotecaCommand">
+                    <a href="Libro?nombre=Refactoring&autor=Joshua+Bloch">
                         <img src="../Images/libroRefactoring.png" alt=""/>
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="../FrontServlet?nombre=Biblioteca+Arquitectura&command=BibliotecaCommand">
+                    <a href="Libro?nombre=Python&autor=OReilly">
                         <img src="../Images/libroPython.jpg" alt=""/>
                     </a>
                 </div>
