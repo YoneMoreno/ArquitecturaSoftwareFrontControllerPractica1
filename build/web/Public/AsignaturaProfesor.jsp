@@ -37,10 +37,12 @@
         <% } %>
 
         <form action="./AsignaturaProfesor.jsp" method="POST">
-            <h2>Crear tema</h2>
-            <label for="titulo">Titulo: </label><input type="text" name="titulo"/><br>
-            <label for="descripcion">Descripcion: </label><input type="text" name="descripcion"/><br>
-            <input type="submit" value="Crear tema"/><br>
+            <div class="form-group">
+                <h2>Crear tema</h2>
+                <label for="titulo">Titulo: </label><input class="form-control" type="text" name="titulo" required/><br>
+                <label for="descripcion">Descripcion: </label><input class="form-control" type="text" name="descripcion" required/><br>
+                <input type="submit" value="Crear tema" class="btn btn-primary"/><br>
+            </div>
         </form>
 
         <%
@@ -54,24 +56,26 @@
 
         %>
 
-        <table>
-            <thead>
-            <th>Titulo</th>
-            <th>Descripcion</th>
-        </thead>
-        <tbody>
-            <%                    AsignaturaProfesor asignaturaProfesor = (AsignaturaProfesor) session.getAttribute("asignaturaProfesor");
-                Iterator i = asignaturaProfesor.getLista().iterator();
-                while (i.hasNext()) {
-                    Tema temaActual = (Tema) i.next();
+        <div class="container">
+            <table class="table table-hover">
+                <thead>
+                <th>Titulo</th>
+                <th>Descripcion</th>
+                </thead>
+                <tbody>
+                    <%                    AsignaturaProfesor asignaturaProfesor = (AsignaturaProfesor) session.getAttribute("asignaturaProfesor");
+                        Iterator i = asignaturaProfesor.getLista().iterator();
+                        while (i.hasNext()) {
+                            Tema temaActual = (Tema) i.next();
 
-            %>
-            <tr>
-                <td><%= temaActual.getNombre() %></td>
-                <td><%= temaActual.getDescripcion() %></td>
-            </tr>
-            <% }%>
-        </tbody>
-    </table>
-</body>
+                    %>
+                    <tr>
+                        <td><%= temaActual.getNombre()%></td>
+                        <td><%= temaActual.getDescripcion()%></td>
+                    </tr>
+                    <% }%>
+                </tbody>
+            </table>
+        </div>
+    </body>
 </html>
