@@ -4,6 +4,7 @@
     Author     : YonePC
 --%>
 
+<%@page import="beans.AsignaturaProfesor"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,6 +14,14 @@
         <title>Asignatura Profesor</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+
+        <%            ;
+            if (request.getParameter("nombre") != null && !request.getParameter("nombre").isEmpty()) {
+                AsignaturaProfesor asignatura = new AsignaturaProfesor(request.getParameter("nombre"));
+
+        %>
+
+        <h1>Nombre: <%= asignatura.getNombre()%></h1>
+        <%  }%>
     </body>
 </html>
