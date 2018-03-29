@@ -49,7 +49,9 @@
 
             </div>     
             <div class="container text-center">
-                <img class="image-center" src="../Images/CHJavascript.JPG" alt="<%= profesor.getAsignatura()%>"/>
+                <a href="./AsignaturaProfesor.jsp">
+                    <img class="image-center" src="../Images/CHJavascript.JPG" alt="<%= profesor.getAsignatura()%>"/>
+                </a>
                 <h4><%= profesor.getAsignatura()%></h4>
             </div>
         </div>
