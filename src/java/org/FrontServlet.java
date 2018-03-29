@@ -38,7 +38,6 @@ public class FrontServlet extends HttpServlet {
         try {
             //TODO: SEPARAR la sesión en nel FrontCommand
 
-
             this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
             this.estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
 
@@ -102,7 +101,9 @@ public class FrontServlet extends HttpServlet {
             evaluaciones.add(evaluacion);
 
         } else {
-            evaluacion = evaluacionHelper(request);
+            if (request.getParameter("evaluacionAlumno") != null && request.getParameter("evaluacionCurso") != null) {
+                evaluacion = evaluacionHelper(request);
+            }
             ArrayList evaluaciones = (ArrayList) session.getAttribute("evaluaciones");
             if (evaluaciones == null) {
                 evaluaciones = new ArrayList();
@@ -192,8 +193,6 @@ public class FrontServlet extends HttpServlet {
         }
         return result;
     }
-
- 
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

@@ -2736,3 +2736,153 @@ Profesor::postConstruct::nuestro PostConstruct es void
  Profesor::getTelefono::este metodo DEVUELVE el telefono: 636404142 
 
  Profesor::getTelefono::este metodo DEVUELVE el despacho: S6 
+ConviertePuntosNota::postConstruct::el metodo es void 
+ConviertePuntosNota::convertidor::el usuario introdujo: 0
+ConviertePuntosNota::convertidor::el usuario introdujo: 10
+
+ Cuestionario::constructor por defecto::este metodo es VOID + 
+
+ Cuestionario::constructor por defecto::este metodo es VOID + 
+Cuestionario::postConstruct::nuestro PostConstruct es void 
+Cuestionario::setPregunta1::este metodo PONE la pregunta1:                      AS       
+Cuestionario::setRespuestaTexto11::esta funcoon PONE la respuesta al texto 11: Ed
+Cuestionario::setRespuestaVerdad11::esta FUNCION, pone la respuesta al boolean de verdad 11 null
+Cuestionario::setRespuestaTexto12::esta funcion PONE la respuesta al texto 12: 
+Cuestionario::setRespuestaVerdad12::esta funcion, PONE la respuesta al valor boolean de la respuesta 12: null
+Cuestionario::setRespuestaTexto13::nuestra funcioncita, PONE, la respuesta de texto 13: 
+Cuestionario::getRespuestaVerdad13::nuestro metodo, PONE, el valor boolean para la repuesta 13: null
+Cuestionario::getPregunta1::este metodo devuelve la pregunta1:                      AS       
+Cuestionario::getRespuestaTexto11::este metodo OBTIENE la respuesta al texto 11: Ed
+Cuestionario::getRespuestaTexto11::este metodo COGE el booleano de verdad para respuesta 11: null
+Cuestionario::getRespuestaTexto12::esta funcoon DEVUELVE la respuesta al texto 12: 
+Cuestionario::getRespuestaVerdad12::esta FUNCIONCITA Obtiene la respuesta al valor boolean de la respuesta 12: null
+Cuestionario::getRespuestaTexto13::nuestra funcioncita, OBTIENE, la respuesta de texto 13: 
+Cuestionario::getRespuestaVerdad13::nuestro metodo, COGE, la el valor boolean de la respuesta 13: null
+Encuesta::constructor por defecto de Encuesta::este metodo recibe NADA 
+Encuesta::constructor por defecto de Encuesta::este metodo recibe NADA 
+Encuesta::postConstruct::nuestro PostConstruct es void 
+Encuesta::setCuestion1::la funcion, PONE la cuestion:             Va                
+Encuesta::getCuestion1::la funcion, devuelve la cuestion:             Va                
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+Profesor::postConstruct::nuestro PostConstruct es void 
+
+ Profesor::getNombre::este metodo devuelve el nombre: Cory
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getCorreo::este metodo COGE el correo: coryHouse@gmail.com 
+
+ Profesor::getTelefono::este metodo DEVUELVE el telefono: 636404142 
+
+ Profesor::getTelefono::este metodo DEVUELVE el despacho: S6 
+ConviertePuntosNota::postConstruct::el metodo es void 
+ConviertePuntosNota::convertidor::el usuario introdujo: 0
+ConviertePuntosNota::convertidor::el usuario introdujo: 10
+ConviertePuntosNota::convertidor::el usuario introdujo: 0
+ConviertePuntosNota::convertidor::el usuario introdujo: 0
+ConviertePuntosNota::convertidor::el usuario introdujo: 0
+ConviertePuntosNota::convertidor::el usuario introdujo: 0
+ConviertePuntosNota::convertidor::el usuario introdujo: 0
+ConviertePuntosNota::convertidor::el usuario introdujo: 0
+ConviertePuntosNota::convertidor::el usuario introdujo: 0
+ConviertePuntosNota::postConstruct::el metodo es void 
+ConviertePuntosNota::convertidor::el usuario introdujo: 0
+ConviertePuntosNota::convertidor::el usuario introdujo: 10
+ConviertePuntosNota::convertidor::el usuario introdujo: 0
+ConviertePuntosNota::convertidor::el usuario introdujo: 0
+ConviertePuntosNota::convertidor::el usuario introdujo: 0
+ConviertePuntosNota::convertidor::el usuario introdujo: 0
+ConviertePuntosNota::convertidor::el usuario introdujo: 0
+ConviertePuntosNota::convertidor::el usuario introdujo: 0
+ConviertePuntosNota::convertidor::el usuario introdujo: 0
+LetraNota::postConstruct:: nuestro metodo PostConstruct es void!!!!!!!! 
+LetraNota::convierteLetraNota::el usuario introdujo la LETRA: E
+LetraNota::postConstruct:: nuestro metodo PostConstruct es void!!!!!!!! 
+LetraNota::convierteLetraNota::el usuario introdujo la LETRA: E
+ConvierteComentarioNota::postConstruct::el metodo postConstruct es void 
+ConvierteComentarioNota::convierteComentarioNota::el usuario introdujo la evaluacion: Apto y el comentario:  Puntutalidad
+            
+ConvierteComentarioNota::postConstruct::el metodo postConstruct es void 
+ConvierteComentarioNota::convierteComentarioNota::el usuario introdujo la evaluacion: Apto y el comentario:  Puntutalidad
+            
+LetraNota::postConstruct:: nuestro metodo PostConstruct es void!!!!!!!! 
+LetraNota::convierteLetraNota::el usuario introdujo la LETRA: A
+ConvierteComentarioNota::postConstruct::el metodo postConstruct es void 
+ConvierteComentarioNota::convierteComentarioNota::el usuario introdujo la evaluacion: Apto y el comentario:  Puntutalidad
+            
+LetraNota::postConstruct:: nuestro metodo PostConstruct es void!!!!!!!! 
+LetraNota::convierteLetraNota::el usuario introdujo la LETRA: A
+ConviertePuntosNota::postConstruct::el metodo es void 
+ConviertePuntosNota::convertidor::el usuario introdujo: 8
+ConvierteComentarioNota::postConstruct::el metodo postConstruct es void 
+ConvierteComentarioNota::convierteComentarioNota::el usuario introdujo la evaluacion: Apto y el comentario:  Puntutalidad
+            
+LetraNota::postConstruct:: nuestro metodo PostConstruct es void!!!!!!!! 
+LetraNota::convierteLetraNota::el usuario introdujo la LETRA: A
+ConviertePuntosNota::postConstruct::el metodo es void 
+ConviertePuntosNota::convertidor::el usuario introdujo: 8
+ConviertePuntosNota::convertidor::el usuario introdujo: 3
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+Profesor::postConstruct::nuestro PostConstruct es void 
+
+ Profesor::getNombre::este metodo devuelve el nombre: Cory
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getCorreo::este metodo COGE el correo: coryHouse@gmail.com 
+
+ Profesor::getTelefono::este metodo DEVUELVE el telefono: 636404142 
+
+ Profesor::getTelefono::este metodo DEVUELVE el despacho: S6 
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+Profesor::postConstruct::nuestro PostConstruct es void 
+
+ Profesor::getNombre::este metodo devuelve el nombre: Cory
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getCorreo::este metodo COGE el correo: coryHouse@gmail.com 
+
+ Profesor::getTelefono::este metodo DEVUELVE el telefono: 636404142 
+
+ Profesor::getTelefono::este metodo DEVUELVE el despacho: S6 
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+Profesor::postConstruct::nuestro PostConstruct es void 
+
+ Profesor::getNombre::este metodo devuelve el nombre: Cory
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getCorreo::este metodo COGE el correo: coryHouse@gmail.com 
+
+ Profesor::getTelefono::este metodo DEVUELVE el telefono: 636404142 
+
+ Profesor::getTelefono::este metodo DEVUELVE el despacho: S6 

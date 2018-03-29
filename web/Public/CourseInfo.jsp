@@ -19,6 +19,7 @@
     Estadisticas estadisticasCourseInfo = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
 
     estadisticasCourseInfo.nuevaVisitaCourseInfo();
+
 %>
 
 <html> 
@@ -42,11 +43,13 @@
             <%                if (session.getAttribute("cursos") == null) {
                     ArrayList cursos = new ArrayList();
                     session.setAttribute("cursos", cursos);
-                    Curso curso = new Curso("AS", "Javier", "Gestion SW", "100h", "", "https://image.slidesharecdn.com/the-recovered-architect-140318152419-phpapp02/95/the-modern-software-architect-13-638.jpg?cb=1395216721");
-                    cursos.add(curso);
                 }
                 if (session.getAttribute("cursos") != null) {
                     ArrayList cursos = (ArrayList) session.getAttribute("cursos");
+                    if (cursos.size() == 0) {
+                        Curso curso = new Curso("AS", "Javier", "Gestion SW", "100h", "", "https://image.slidesharecdn.com/the-recovered-architect-140318152419-phpapp02/95/the-modern-software-architect-13-638.jpg?cb=1395216721");
+                        cursos.add(curso);
+                    }
                     Iterator i = cursos.iterator();
                     int current = 0;
                     while (i.hasNext()) {
