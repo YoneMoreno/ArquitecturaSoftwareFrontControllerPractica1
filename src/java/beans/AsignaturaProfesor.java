@@ -20,20 +20,21 @@ public class AsignaturaProfesor {
     // "Insert Code > Add Business Method")
     
     String nombre;
-    ArrayList<Tema> lista;
+    List<Tema> lista;
 
     public AsignaturaProfesor() {
     }
 
     public AsignaturaProfesor(String nombre) {
         this.nombre = nombre;
+        this.lista = new ArrayList<>();
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public ArrayList<Tema> getLista() {
+    public List<Tema> getLista() {
         return lista;
     }
     
