@@ -23,5 +23,12 @@
 
         <h1>Nombre: <%= asignatura.getNombre()%></h1>
         <%  }%>
+
+        <form action="./AsignaturaProfesor.jsp" method="GET">
+            <h2>Crear tema</h2>
+            <label for="titulo">Titulo: </label><input type="text" name="titulo"/><br>
+            <label for="descripcion">Descripcion: </label><input type="text" name="descripcion"/><br>
+            <input type="submit" value="Crear tema"/><br>
+        </form>
     </body>
 </html>
