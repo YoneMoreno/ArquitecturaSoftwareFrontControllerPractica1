@@ -29,9 +29,9 @@
             
         %>
        
-                <h1>Nombre de la asignatura: <%= asignaturaProfesor.getNombre() %></h1>
+        <h1>Nombre de la asignatura: <%= asignaturaProfesor.getNombre() %></h1>
                 
-                <% } %>
+        <% } %>
 
         <form action="./AsignaturaProfesor.jsp" method="GET">
             <h2>Crear tema</h2>
@@ -45,11 +45,12 @@
         if(request.getParameter("titulo") != null && !request.getParameter("titulo").isEmpty()
                 && request.getParameter("descripcion") != null && !request.getParameter("descripcion").isEmpty()){
             Tema tema = new Tema(request.getParameter("titulo"),request.getParameter("descripcion"));
-            
+            AsignaturaProfesor asignatura = (AsignaturaProfesor) session.getAttribute("asignaturaProfesor");
+            asignatura.insertarTema(tema);
         
         %>
         
-        <h3>Nombre del tema: <%= tema.getNombre() %></h3>
+        
         
         <% } %>
     </body>

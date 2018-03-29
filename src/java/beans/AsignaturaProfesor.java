@@ -37,5 +37,8 @@ public class AsignaturaProfesor {
         return lista;
     }
     
+    public void insertarTema(Tema tema){
+        this.getLista().add(tema);
+    }
     
 }
