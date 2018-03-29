@@ -12,6 +12,8 @@
 <%@page import="javax.naming.InitialContext"%>
 <%@page import="beans.Profesor"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 
 <%
@@ -49,7 +51,7 @@
 
             </div>     
             <div class="container text-center">
-                <a href="./AsignaturaProfesor.jsp">
+                <a href="./AsignaturaProfesor.jsp?nombre=<%=profesor.getAsignatura()%>">
                     <img class="image-center" src="../Images/CHJavascript.JPG" alt="<%= profesor.getAsignatura()%>"/>
                 </a>
                 <h4><%= profesor.getAsignatura()%></h4>
