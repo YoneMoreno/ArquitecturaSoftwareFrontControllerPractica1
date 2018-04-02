@@ -5,6 +5,8 @@
  */
 package beans;
 
+import javax.ejb.Stateful;
+
 
 /**
  *

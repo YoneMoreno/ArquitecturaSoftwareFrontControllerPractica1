@@ -3162,3 +3162,7 @@ Profesor::postConstruct::nuestro PostConstruct es void
  Profesor::getTelefono::este metodo DEVUELVE el telefono: 636404142 
 
  Profesor::getTelefono::este metodo DEVUELVE el despacho: S6 
+ConviertePuntosNota::postConstruct::el metodo es void 
+ConviertePuntosNota::convertidor::el usuario introdujo: 10
+LetraNota::postConstruct:: nuestro metodo PostConstruct es void!!!!!!!! 
+LetraNota::convierteLetraNota::el usuario introdujo la LETRA: E
