@@ -47,7 +47,7 @@
                 if (session.getAttribute("cursos") != null) {
                     ArrayList cursos = (ArrayList) session.getAttribute("cursos");
                     if (cursos.size() == 0) {
-                        Curso curso = new Curso("AS", "Javier", "Gestion SW", "100h", "", "https://image.slidesharecdn.com/the-recovered-architect-140318152419-phpapp02/95/the-modern-software-architect-13-638.jpg?cb=1395216721");
+                        Curso curso = new Curso("AS", "Javier", "Gestion SW", "100h", "https://www.youtube.com/embed/xulqPJdBt5E", "https://image.slidesharecdn.com/the-recovered-architect-140318152419-phpapp02/95/the-modern-software-architect-13-638.jpg?cb=1395216721");
                         cursos.add(curso);
                     }
                     Iterator i = cursos.iterator();
@@ -61,7 +61,7 @@
                 <td><%= cursoActual.getAutor()%></td>
                 <td><%= cursoActual.getAsignatura()%></td>
                 <td><%= cursoActual.getDuracion()%></td>
-                <td><a href="./Video.jsp">Video</a></td>
+                <td><a href="./Video.jsp?video=<%=cursoActual.getVideo()%>">Video</a></td>
                 <td style="display:flex">
                     <img width="75" height="50" src="<%= cursoActual.getImagen()%>" alt="<%= cursoActual.getTitulo()%>"/>
                     <div id="container" class="dropdown">
