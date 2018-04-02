@@ -5,13 +5,12 @@
  */
 package beans;
 
-import javax.ejb.Stateless;
 
 /**
  *
  * @author YonePC
  */
-@Stateless
+@Stateful
 public class Tema {
 
     // Add business logic below. (Right-click in editor and choose

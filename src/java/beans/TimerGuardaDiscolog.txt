@@ -4890,3 +4890,11 @@ TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realiza
 TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
 
 TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
+
+TimerCincoSegundosOcioso::::El usuario ha permanecido cinco segundos sin realizar actividad
