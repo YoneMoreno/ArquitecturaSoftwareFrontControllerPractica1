@@ -62,7 +62,7 @@ and open the template in the editor.
                             <input style="width:100%" type="url" name="imagen" pattern="https?://.+" title="imagen">
 
                             <input type="hidden" name="command" value="CourseInfoCommand">
-                            <input type="submit" value="Crear curso">
+                            <input type="submit" value="Crear curso" onclick="alert('El curso se ha creado');">
                         </form>
                     </details>
                     <details>
