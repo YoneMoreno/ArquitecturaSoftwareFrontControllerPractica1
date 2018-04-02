@@ -61,7 +61,7 @@
                 <td><%= cursoActual.getAutor()%></td>
                 <td><%= cursoActual.getAsignatura()%></td>
                 <td><%= cursoActual.getDuracion()%></td>
-                <td><a href="<%= cursoActual.getVideo()%>">Video</a></td>
+                <td><a href="./Video.jsp">Video</a></td>
                 <td style="display:flex">
                     <img width="75" height="50" src="<%= cursoActual.getImagen()%>" alt="<%= cursoActual.getTitulo()%>"/>
                     <div id="container" class="dropdown">
