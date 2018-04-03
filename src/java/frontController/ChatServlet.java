@@ -5,11 +5,8 @@ import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.Resource;
-import javax.inject.Inject;
 import javax.jms.Connection;
 import javax.jms.ConnectionFactory;
-import javax.jms.JMSConnectionFactory;
-import javax.jms.JMSContext;
 import javax.jms.JMSException;
 import javax.jms.MessageProducer;
 import javax.jms.Queue;
@@ -34,7 +31,9 @@ public class ChatServlet extends HttpServlet {
             throws ServletException, IOException {
         try{
             String mensaje = request.getParameter("mensaje");
+            PrintWriter out = response.getWriter();
             sendJMSMessageToNavinDest(mensaje);
+            out.println("Tu mensaje: " + mensaje + " esta en cola");
         }catch(Exception e){
             System.out.println(e);
         }
