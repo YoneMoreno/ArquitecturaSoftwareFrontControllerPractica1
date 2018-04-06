@@ -17,6 +17,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.messageLine;
 
 @WebServlet(name = "ChatServlet", urlPatterns = {"/ChatServlet"})
 public class ChatServlet extends HttpServlet {
@@ -31,14 +32,16 @@ public class ChatServlet extends HttpServlet {
             throws ServletException, IOException {
         try {
             String mensaje = request.getParameter("mensaje");
-            sendJMSMessageToNavinDest(mensaje);
+            String getId = request.getParameter("getId");
+            
+            sendJMSMessageToNavinDest(mensaje, getId);
             response.sendRedirect(request.getContextPath() + "/Public/Chat.jsp");
         } catch (Exception e) {
             System.out.println(e);
         }
     }
 
-    private void sendJMSMessageToNavinDest(String messageData) {
+    private void sendJMSMessageToNavinDest(String messageData, String getId) {
         try {
             Connection con = queue.createConnection();
             Session s = con.createSession();
@@ -46,6 +49,9 @@ public class ChatServlet extends HttpServlet {
             TextMessage tm = s.createTextMessage();
             tm.setText(messageData);
             mp.send(tm);
+            TextMessage userId = s.createTextMessage();
+            userId.setText(getId);
+            mp.send(userId);
         } catch (JMSException ex) {
             Logger.getLogger(ChatServlet.class.getName()).log(Level.SEVERE, null, ex);
         }

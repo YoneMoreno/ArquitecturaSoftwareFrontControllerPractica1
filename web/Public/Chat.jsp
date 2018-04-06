@@ -21,6 +21,7 @@
     <body>
         <form action="../ChatServlet">
             Escribe tu mensaje: <input type="text" name="mensaje"/>
+            <input type="hidden" name="getId" value=<%= session.getId()%>/>
             <input type="submit" value="Enviar"/>
         </form>
 
@@ -37,6 +38,14 @@
             <%= currentMessage.getBody(String.class)%>
         </div>
         <%
+                    if (i.hasNext()) {
+                        Message currentID = (Message) i.next();
+        %>
+                    <div>
+                        <%= currentID.getBody(String.class)%>
+                    </div>
+        <%
+                    }
                 }
             }
         %>
