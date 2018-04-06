@@ -29,12 +29,11 @@ public class ChatServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try{
+        try {
             String mensaje = request.getParameter("mensaje");
-            PrintWriter out = response.getWriter();
             sendJMSMessageToNavinDest(mensaje);
-            out.println("Tu mensaje: " + mensaje + " esta en cola");
-        }catch(Exception e){
+            response.sendRedirect(request.getContextPath() + "/Public/Chat.jsp");
+        } catch (Exception e) {
             System.out.println(e);
         }
     }

@@ -3,23 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="OwnEJBProjects">
-            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/beans/SingletonFuncionLog.java</file>
-            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/frontController/EvaluacionCommand.java</file>
-            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/beans/log.txt</file>
-            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/web/Public/Profesor.jsp</file>
-            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/web/Evaluacion.jsp</file>
-            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/org/Curso.java</file>
             <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/beans/Asignatura.java</file>
-            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/beans/AsignaturaProfesor.java</file>
-            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/web/Public/RealizarEvaluacion.jsp</file>
-            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/org/FrontServlet.java</file>
-            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/beans/TimerGuardDisco.java</file>
-            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/beans/Valoracion.java</file>
-            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/beans/Profesor.java</file>
-            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/beans/Biblioteca.java</file>
-            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/web/index.jsp</file>
-            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/web/Public/CourseInfo.jsp</file>
-            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/beans/TimerGuardaDiscolog.txt</file>
         </group>
     </open-files>
 </project-private>
