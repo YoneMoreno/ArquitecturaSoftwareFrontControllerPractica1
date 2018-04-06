@@ -24,6 +24,8 @@
             <input type="hidden" name="getId" value=<%= session.getId()%>/>
             <input type="submit" value="Enviar"/>
         </form>
+            
+            <div class="row">
 
 
         <%            List<Message> messages = myChatSingleton.getMessage();
@@ -34,20 +36,26 @@
 
         %>
 
-        <div>
-            <%= currentMessage.getBody(String.class)%>
-        </div>
-        <%
-                    if (i.hasNext()) {
-                        Message currentID = (Message) i.next();
-        %>
-                    <div>
-                        <%= currentID.getBody(String.class)%>
-                    </div>
-        <%
+        
+            <div class="col-md-6 text-center">
+                <div class="float-md-left">
+                    <%= currentMessage.getBody(String.class)%>
+                </div>
+            </div>
+
+            <%
+                if (i.hasNext()) {
+                    Message currentID = (Message) i.next();
+            %>
+            <div class="col-md-6 text-center">
+                <div class="float-md-right">
+                    <%= currentID.getBody(String.class)%>
+                </div>
+            </div>
+            <%
+                        }
                     }
                 }
-            }
-        %>
+            %>
     </body>
 </html>
