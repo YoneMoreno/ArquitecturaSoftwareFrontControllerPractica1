@@ -32,7 +32,7 @@ and open the template in the editor.
     <body>
         <div class="container">
             <div class="jumbotron">
-                <h1>Bienvenido a CursosApp, eliga una opción del panel para comenzar:</h1>
+                <h1>Bienvenido a CursosApp, elija una opción del panel para comenzar:</h1>
                 <div>
                     <details>
                         <summary>Crear curso</summary>
