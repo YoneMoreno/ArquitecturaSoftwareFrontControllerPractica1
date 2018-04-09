@@ -103,7 +103,7 @@
         </table>
 
         <script>
-            const triggers = document.querySelectorAll('a');
+            let triggers = document.querySelectorAll('a');
             //console.log(triggers);
             const highlight = document.createElement('span');
             highlight.classList.add('highlight');
