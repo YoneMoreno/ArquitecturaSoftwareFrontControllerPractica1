@@ -3166,3 +3166,70 @@ ConviertePuntosNota::postConstruct::el metodo es void
 ConviertePuntosNota::convertidor::el usuario introdujo: 10
 LetraNota::postConstruct:: nuestro metodo PostConstruct es void!!!!!!!! 
 LetraNota::convierteLetraNota::el usuario introdujo la LETRA: E
+ConviertePuntosNota::postConstruct::el metodo es void 
+ConviertePuntosNota::convertidor::el usuario introdujo: 9
+LetraNota::postConstruct:: nuestro metodo PostConstruct es void!!!!!!!! 
+LetraNota::convierteLetraNota::el usuario introdujo la LETRA: E
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+Profesor::postConstruct::nuestro PostConstruct es void 
+
+ Profesor::getNombre::este metodo devuelve el nombre: Cory
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getCorreo::este metodo COGE el correo: coryHouse@gmail.com 
+
+ Profesor::getTelefono::este metodo DEVUELVE el telefono: 636404142 
+
+ Profesor::getTelefono::este metodo DEVUELVE el despacho: S6 
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+Profesor::postConstruct::nuestro PostConstruct es void 
+
+ Profesor::getNombre::este metodo devuelve el nombre: Cory
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getCorreo::este metodo COGE el correo: coryHouse@gmail.com 
+
+ Profesor::getTelefono::este metodo DEVUELVE el telefono: 636404142 
+
+ Profesor::getTelefono::este metodo DEVUELVE el despacho: S6 
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+
+ Profesor::constructor por defecto::este metodo es VOID!!!!!!!!!!! + 
+Profesor::postConstruct::nuestro PostConstruct es void 
+
+ Profesor::getNombre::este metodo devuelve el nombre: Cory
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getAsignatura::este metodo OBTIENE la ASIGNATURA: Javascript
+
+ Profesor::getCorreo::este metodo COGE el correo: coryHouse@gmail.com 
+
+ Profesor::getTelefono::este metodo DEVUELVE el telefono: 636404142 
+
+ Profesor::getTelefono::este metodo DEVUELVE el despacho: S6 
+ConviertePuntosNota::postConstruct::el metodo es void 
+ConviertePuntosNota::convertidor::el usuario introdujo: 6
+ConviertePuntosNota::postConstruct::el metodo es void 
+ConviertePuntosNota::convertidor::el usuario introdujo: 6
+LetraNota::postConstruct:: nuestro metodo PostConstruct es void!!!!!!!! 
+LetraNota::convierteLetraNota::el usuario introdujo la LETRA: E

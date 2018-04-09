@@ -8,7 +8,7 @@
 <%
 
     chatSingleton myChatSingleton = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/chatSingleton");
-
+    
 %>
 
 <!DOCTYPE html>

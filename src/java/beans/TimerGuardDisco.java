@@ -26,13 +26,12 @@ public class TimerGuardDisco {
 
     @Schedule(second = "*/6", minute = "*", hour = "*")
     private void writeLogToFile() throws IOException {
-        /*
-        File file = new File("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\beans\\TimerGuardaDiscolog.txt");
+
+        File file = new File("C:\\Users\\YonePC\\Desktop\\TimerGuardaDiscoLog.txt");
         BufferedWriter output = null;
         output = new BufferedWriter(new FileWriter(file, true));
         output.write(SingletonFuncionLog.getFuncionLog());
         output.close();
-*/
 
     }
 }
