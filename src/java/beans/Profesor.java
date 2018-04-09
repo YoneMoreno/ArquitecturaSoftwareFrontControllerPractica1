@@ -20,7 +20,6 @@ import javax.ejb.Stateful;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-
 @Stateful
 public class Profesor {
 
@@ -28,7 +27,7 @@ public class Profesor {
 
     Estadisticas estadisticas;
 
-    File file = new File("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\beans\\log.txt");
+    File file = new File("C:\\Users\\YonePC\\Desktop\\LogDelSistemaSingleton.txt");
 
     String nombre = "Cory", asignatura = "Javascript", valoracion = "4.7", correo = "coryHouse@gmail.com", telefono = "636404142", despacho = "S6";
 
@@ -257,10 +256,8 @@ public class Profesor {
 
     }
 
-    
     @PrePassivate
     public void prePassivate() {
-        
 
     }
 

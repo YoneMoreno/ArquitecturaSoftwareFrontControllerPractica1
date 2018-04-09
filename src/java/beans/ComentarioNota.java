@@ -26,7 +26,7 @@ public class ComentarioNota {
 
     SingletonFuncionLog singletonFuncionLog5;
 
-    File file = new File("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\beans\\log.txt");
+    File file = new File("C:\\Users\\YonePC\\Desktop\\LogDelSistemaSingleton.txt");
 
     public String convierteComentarioNota(String evaluacion, String comentario) {
 

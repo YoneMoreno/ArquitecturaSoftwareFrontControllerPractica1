@@ -29,7 +29,7 @@ public class Cuestionario {
 
     SingletonFuncionLog singletonFuncionLog5;
 
-    File file = new File("C:\\Users\\YonePC\\Videos\\ASAPLICACIONCURSOSPRACTICA1\\src\\java\\beans\\log.txt");
+    File file = new File("C:\\Users\\YonePC\\Desktop\\LogDelSistemaSingleton.txt");
 
     String pregunta1, respuestaTexto11, respuestaVerdad11, respuestaTexto12, respuestaVerdad12,
             respuestaTexto13, respuestaVerdad13;
