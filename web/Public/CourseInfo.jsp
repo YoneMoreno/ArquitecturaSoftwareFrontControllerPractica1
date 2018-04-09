@@ -30,6 +30,7 @@
         <title>Lista de cursos</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link href="nav.css" rel="stylesheet" type="text/css"/>
+        <link href="highlight.css" rel="stylesheet" type="text/css"/>
     </head>
     <body> 
         <table width="100%" border=1>
@@ -65,16 +66,16 @@
                 <td><%= cursoActual.getAutor()%></td>
                 <td><%= cursoActual.getAsignatura()%></td>
                 <td><%= cursoActual.getDuracion()%></td>
-                <% 
+                <%
                     String pattern = "https://.*mp4";
                     Pattern r = Pattern.compile(pattern);
                     Matcher m = r.matcher(cursoActual.getVideo());
-                    if(m.find()){  
+                    if (m.find()) {
                 %>
                 <td><a href="./VideoMP4.jsp?video=<%=cursoActual.getVideo()%>">Video</a></td>
-                <% } else { %>
+                <% } else {%>
                 <td><a href="./Video.jsp?video=<%=cursoActual.getVideo()%>">Video</a></td>
-                <% } %>
+                <% }%>
                 <td style="display:flex">
                     <img width="75" height="50" src="<%= cursoActual.getImagen()%>" alt="<%= cursoActual.getTitulo()%>"/>
                     <div id="container" class="dropdown">
@@ -101,7 +102,34 @@
             %>
         </table>
 
+        <script>
+            const triggers = document.querySelectorAll('a');
+            //console.log(triggers);
+            const highlight = document.createElement('span');
+            highlight.classList.add('highlight');
+            document.body.appendChild(highlight);
 
+            function highlightLink() {
+                const linkCoords = this.getBoundingClientRect();
+                //console.log(linkCoords);
+                const coords = {
+                    width: linkCoords.width,
+                    height: linkCoords.height,
+                    top: linkCoords.top + window.scrollY,
+                    left: linkCoords.left + window.scrollX
+                };
+                console.log(coords.width);
+
+                highlight.style.width = coords.width + 'px';
+                console.log(highlight.style.width);
+                highlight.style.height = coords.height + 'px';
+                highlight.style.transform = 'translate(' + coords.left + 'px,' + coords.top + 'px)';
+
+            }
+
+            triggers.forEach(a => a.addEventListener('mouseenter', highlightLink));
+
+        </script>
     </body> 
 
     <%@include file="../Footer.jsp" %>

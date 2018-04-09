@@ -41,8 +41,8 @@
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-<!-- A grey horizontal navbar that becomes vertical on small screens -->
-<!-- Grey with black text -->
+
+
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
     <ul class="navbar-nav">
         <li class="nav-item active">
@@ -68,5 +68,7 @@
         </li>
     </ul>
 </nav>
+
+
 
 </html>
