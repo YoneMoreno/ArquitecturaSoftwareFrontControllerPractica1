@@ -2,6 +2,10 @@
     Document   : Valoracion
     Created on : 27-mar-2018, 16:42:16
     Author     : YonePC
+
+   Valoracion.jsp has the aim to display the details of the assessment (rating) which the pupils
+give to the teacher.
+The rating's details are: course's name, subject's title and points.
 --%>
 
 <%@page import="beans.Valoracion"%>

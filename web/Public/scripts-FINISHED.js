@@ -1,3 +1,12 @@
+/*This javascript file selects the video player in VideoMP4.jsp and customizes it. 
+ * We add the icon of pause and play.
+ * We add a left slider to control the volume, and a right slider to change
+ * video's playback speed.
+ * Then we also have a progress bar, and a scrub which lets us time travel on the video.
+ * */
+
+
+
 /* Get Our Elements */
 const player = document.querySelector('.player');
 const video = player.querySelector('.viewer');

@@ -2,6 +2,11 @@
     Document   : VerSingletonLog
     Created on : 22-mar-2018, 10:51:53
     Author     : YonePC
+
+    VerSingletonLog is focused in getting all program's logs, and display them, as for example:
+When did the user created a statefull like Profesor. So then it keeps track of
+statefull, and stateless lifecycle methods as @PostConstruct.
+
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

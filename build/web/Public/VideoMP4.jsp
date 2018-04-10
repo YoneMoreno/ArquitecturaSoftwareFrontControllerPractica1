@@ -1,3 +1,11 @@
+
+<%-- 
+
+    VideoMP4 gets all the videos which URL as https...mp4 and builds a custom
+javascript UI to enhance the video HTML5 player.
+
+--%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

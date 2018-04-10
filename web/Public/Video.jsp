@@ -2,6 +2,10 @@
     Document   : Video
     Created on : 02-abr-2018, 16:31:47
     Author     : YonePC
+
+    Video.jsp gets all non-mp4 video sources and tries to display a YouTube embedded video using
+an iframe
+
 --%>
 
 <%@page import="org.Curso"%>

@@ -1,4 +1,6 @@
-
+/* This class hosts the CSS made to display a black span under the links to make
+a better contrast
+*/
 
 a {
     text-decoration: none;

@@ -1,3 +1,10 @@
+/*Here we have the javascript to get the position of the link where the user is
+ * entering the mouse, then we calculate the rectangle which fits that link, to be able
+ * to get its width and height. Finally we move the span to the position where the user
+ * entered the mouse if it is on a link
+ * */
+
+
 let triggers = document.querySelectorAll('a');
 //console.log(triggers);
 const highlight = document.createElement('span');
