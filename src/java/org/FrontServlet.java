@@ -21,6 +21,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import jpa.Curso_1Facade;
 
 /**
  *
@@ -137,6 +138,16 @@ public class FrontServlet extends HttpServlet {
                 request.getParameter("duracion"),
                 request.getParameter("video"),
                 request.getParameter("imagen"));
+
+        Curso_1 cursoToPersist = new Curso_1();
+        cursoToPersist.setTitulo(request.getParameter("titulo"));
+        cursoToPersist.setDuracion(Integer.parseInt(request.getParameter("duracion")));
+        cursoToPersist.setVideo(request.getParameter("video"));
+        cursoToPersist.setImagen(request.getParameter("imagen"));
+        
+        Curso_1Facade cursoFacade = new Curso_1Facade();
+        cursoFacade.create(cursoToPersist);
+        
         return curso;
     }
 
@@ -148,6 +159,7 @@ public class FrontServlet extends HttpServlet {
                 request.getParameter("evaluacionCurso"),
                 request.getParameter("evaluacion"),
                 request.getParameter("evaluacionComentario"));
+
         return evaluacion;
     }
 
