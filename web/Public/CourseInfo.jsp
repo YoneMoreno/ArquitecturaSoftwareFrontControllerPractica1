@@ -1,4 +1,7 @@
 
+<%@page import="java.util.List"%>
+<%@page import="org.Curso_1"%>
+<%@page import="jpa.Curso_1Facade"%>
 <%@page import="java.util.regex.Matcher"%>
 <%@page import="java.util.regex.Pattern"%>
 <%@page import="beans.SingletonFuncionLog"%>
@@ -22,6 +25,8 @@
 
     estadisticasCourseInfo.nuevaVisitaCourseInfo();
 
+    Curso_1Facade cursoFacade = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Curso_1Facade");
+
 %>
 
 <html> 
@@ -43,22 +48,15 @@
                 <th style="padding: 8px">Imagen</th>
             </tr>
 
-            <%                if (session.getAttribute("cursos") == null) {
-                    ArrayList cursos = new ArrayList();
-                    session.setAttribute("cursos", cursos);
-                }
-                if (session.getAttribute("cursos") != null) {
-                    ArrayList cursos = (ArrayList) session.getAttribute("cursos");
-                    if (cursos.size() == 0) {
-                        Curso curso = new Curso("AS", "Javier", "Gestion SW", "100h", "https://www.youtube.com/embed/xulqPJdBt5E", "https://image.slidesharecdn.com/the-recovered-architect-140318152419-phpapp02/95/the-modern-software-architect-13-638.jpg?cb=1395216721");
-                        Curso curso2 = new Curso("MDA", "Agustin", "Gestion SW", "100h", "https://player.vimeo.com/external/194837908.sd.mp4?s=c350076905b78c67f74d7ee39fdb4fef01d12420&profile_id=164", "https://www.codejobs.biz/public/images/blog/original/a6cd96ce30b459e.png");
-                        cursos.add(curso);
-                        cursos.add(curso2);
-                    }
-                    Iterator i = cursos.iterator();
-                    int current = 0;
-                    while (i.hasNext()) {
-                        Curso cursoActual = (Curso) i.next();
+            <%                
+                
+                
+                List<Curso_1> cursosPersisted = cursoFacade.findAll();
+
+                Iterator i = cursosPersisted.iterator();
+                int current = 0;
+                while (i.hasNext()) {
+                    Curso_1 cursoActual = (Curso_1) i.next();
 
             %>
             <tr>
@@ -77,7 +75,7 @@
                 <td><a href="./Video.jsp?video=<%=cursoActual.getVideo()%>">Video</a></td>
                 <% }%>
                 <td style="display:flex">
-                    <img width="75" height="50" src="<%= cursoActual.getImagen()%>" alt="<%= cursoActual.getTitulo()%>"/>
+                    <img width="75" height="50" src="<%=cursoActual.getImagen()%>" alt="<%= cursoActual.getTitulo()%>"/>
                     <div id="container" class="dropdown">
                         <ul>
                             <li><a href="#">Evaluación</a>
@@ -95,10 +93,10 @@
             </tr>
 
             <%
-                        current++;
+                    current++;
 
-                    }
                 }
+
             %>
         </table>
 
