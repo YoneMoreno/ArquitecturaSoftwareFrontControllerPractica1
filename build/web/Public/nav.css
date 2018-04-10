@@ -1,0 +1,70 @@
+/* CSS Document */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+
+#container {
+    margin: 0 auto;
+}
+
+
+
+
+.dropdown ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+.dropdown ul li {
+    display:inline-block;
+    background-color: #E64A19;
+}
+
+.dropdown a {
+    display:block;
+    padding:0 10px;	
+    font-size:20px;
+    color: #FFF;
+    line-height: 60px;
+    text-decoration:none;
+}
+
+.dropdown a:hover { 
+    background-color: #000000; 
+}
+
+/* Hide Dropdowns by Default */
+.dropdown ul ul {
+    display: none;
+    position: absolute; 
+    top: 60px; /* the height of the main nav */
+}
+
+/* Display Dropdowns on Hover */
+.dropdown ul li:hover > ul {
+    display:inherit;
+}
+
+/* Fisrt Tier Dropdown */
+.dropdown ul ul li {
+    width:170px;
+    float:none;
+    display:list-item;
+    position: relative;
+    left:130px;
+}
+
+/* Second, Third and more Tiers	*/
+.dropdown ul ul ul li {
+    position: relative;
+    top:-60px; 
+    left:170px;
+}
+
+
+/* Change this in order to change the Dropdown symbol */
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
