@@ -2,6 +2,10 @@
     Document   : Profesor
     Created on : 19-mar-2018, 15:34:07
     Author     : YonePC
+
+    Profesor.jsp shows a teacher's profile.
+It is made by name, subject, pupils' assessments made to this teacher, email, phone and office
+
 --%>
 
 <%@page import="beans.SingletonFuncionLog"%>

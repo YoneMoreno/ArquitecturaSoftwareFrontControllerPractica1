@@ -2,6 +2,9 @@
     Document   : Libro
     Created on : 28-mar-2018, 16:01:58
     Author     : YonePC
+
+Libro.jsp's focus is to obtain the book passed by parameter in the request.
+Then it displays its name and author.
 --%>
 
 <%@page import="beans.Libro"%>
