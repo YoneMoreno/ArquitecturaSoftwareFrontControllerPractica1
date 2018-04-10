@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.ejb.EJB;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.servlet.ServletException;
@@ -29,6 +30,9 @@ import jpa.Curso_1Facade;
  */
 @WebServlet(name = "FrontServlet", urlPatterns = {"/FrontServlet"})
 public class FrontServlet extends HttpServlet {
+
+    @EJB
+    private Curso_1Facade curso_1Facade;
 
     SingletonFuncionLog singletonFuncionLog5;
     Estadisticas estadisticas;
@@ -141,12 +145,12 @@ public class FrontServlet extends HttpServlet {
 
         Curso_1 cursoToPersist = new Curso_1();
         cursoToPersist.setTitulo(request.getParameter("titulo"));
+        cursoToPersist.setAutor(request.getParameter("autor"));
         cursoToPersist.setDuracion(Integer.parseInt(request.getParameter("duracion")));
         cursoToPersist.setVideo(request.getParameter("video"));
         cursoToPersist.setImagen(request.getParameter("imagen"));
         
-        Curso_1Facade cursoFacade = new Curso_1Facade();
-        cursoFacade.create(cursoToPersist);
+        curso_1Facade.create(cursoToPersist);
         
         return curso;
     }
