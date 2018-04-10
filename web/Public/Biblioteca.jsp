@@ -2,6 +2,14 @@
     Document   : Biblioteca
     Created on : 28-mar-2018, 15:07:52
     Author     : YonePC
+
+    Biblioteca displays a carousel which show library's images.
+This JSP expects a parameter nombre which is the library's name.
+Then w edisplay the library's name.
+The carousel host various images. Each one has a link as:
+nombre=Clean+Code&autor=Robert+C+Martin
+
+nombre means the library's book's name, and autor is the library's author name.
 --%>
 
 <%@page import="beans.Biblioteca"%>

@@ -2,6 +2,8 @@
     Document   : Asignatura
     Created on : 27-mar-2018, 15:34:04
     Author     : YonePC
+
+    We get a school's subject and print its name and description
 --%>
 
 <%@page import="beans.Asignatura"%>

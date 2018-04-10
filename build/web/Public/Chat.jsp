@@ -1,4 +1,20 @@
 
+
+<%-- 
+
+    Chat.jsp shows an input field to write mesages.
+Then it sends the message to ChatServlet to be processed.
+In addition, it shows current messages and the session ID of the emitter, both in one line.
+Please note that we are supposing that the queue always has messages in even indexes,
+and session IDs in odd indexes.
+
+So for example, message is at List's index 0, the session ID is at List's index 1:
+
+message at index 0 = 'Hello, how is this course going?'
+session ID at index 1 = 9ef9ed9ggggg
+
+--%>
+
 <%@page import="java.util.Iterator"%>
 <%@page import="javax.jms.Message"%>
 <%@page import="java.util.List"%>
@@ -8,6 +24,8 @@
 <%
 
     chatSingleton myChatSingleton = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/chatSingleton");
+    
+
     
 %>
 

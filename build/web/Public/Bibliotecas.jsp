@@ -2,6 +2,12 @@
     Document   : Bibliotecas
     Created on : 28-mar-2018, 14:45:08
     Author     : YonePC
+
+    In Bibliotecas we have a carousel of library's portrait images.
+
+Each one has a link with: Biblioteca.jsp?nombre=Biblioteca+General&command=BibliotecaCommand
+
+nombre is the library's name, command is the action forwarded by frontServlet.
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
