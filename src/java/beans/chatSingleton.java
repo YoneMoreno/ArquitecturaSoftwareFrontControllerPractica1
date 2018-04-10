@@ -11,7 +11,6 @@ import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.LocalBean;
 import javax.jms.Message;
-import org.messageLine;
 
 /**
  *
