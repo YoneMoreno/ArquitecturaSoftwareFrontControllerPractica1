@@ -1,4 +1,10 @@
+<%-- 
 
+    Estadisticas.jsp's objective is to count the number of new sessions, how many acceses
+has been made to web pages' components in this session, and then we show how many accesses have
+been made to each page.
+
+--%>
 
 <%@page import="beans.Estadisticas"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
