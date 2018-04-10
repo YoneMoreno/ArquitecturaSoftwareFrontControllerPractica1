@@ -146,6 +146,7 @@ public class FrontServlet extends HttpServlet {
         Curso_1 cursoToPersist = new Curso_1();
         cursoToPersist.setTitulo(request.getParameter("titulo"));
         cursoToPersist.setAutor(request.getParameter("autor"));
+        cursoToPersist.setAsignatura(request.getParameter("asignatura"));
         cursoToPersist.setDuracion(Integer.parseInt(request.getParameter("duracion")));
         cursoToPersist.setVideo(request.getParameter("video"));
         cursoToPersist.setImagen(request.getParameter("imagen"));

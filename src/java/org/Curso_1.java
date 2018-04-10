@@ -34,6 +34,10 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Curso_1.findByImagen", query = "SELECT c FROM Curso_1 c WHERE c.imagen = :imagen")})
 public class Curso_1 implements Serializable {
 
+    @Basic(optional = false)
+    @Column(name = "asignatura")
+    private String asignatura;
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -143,6 +147,14 @@ public class Curso_1 implements Serializable {
     @Override
     public String toString() {
         return "org.Curso_1[ idCurso=" + idCurso + " ]";
+    }
+
+    public String getAsignatura() {
+        return asignatura;
+    }
+
+    public void setAsignatura(String asignatura) {
+        this.asignatura = asignatura;
     }
     
 }
