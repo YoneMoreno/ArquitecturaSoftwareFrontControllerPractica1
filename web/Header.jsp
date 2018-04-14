@@ -52,6 +52,7 @@
 
 
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+
     <ul class="navbar-nav">
         <li class="nav-item active">
             <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1">Inicio</a>
@@ -74,7 +75,12 @@
         <li class="nav-item">
             <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/Chat.jsp"><i class="fas fa-comments"></i></a>
         </li>
-    </ul>
+
+
+            <form class="form-inline" style="margin-left: 40em">
+                <input class="mr-sm-2" type="search" placeholder="Escribe para buscar" aria-labels="search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Busca</button>
+            </form>
 </nav>
 
 </head>
