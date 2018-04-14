@@ -1,7 +1,10 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+
+
+This class keeps a rating posted by a pupil to a teacher.
+It is made by a course, subject and points.
+
+
  */
 package beans;
 

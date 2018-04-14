@@ -5,7 +5,7 @@
 
     Biblioteca displays a carousel which show library's images.
 This JSP expects a parameter nombre which is the library's name.
-Then w edisplay the library's name.
+Then we display the library's name.
 The carousel host various images. Each one has a link as:
 nombre=Clean+Code&autor=Robert+C+Martin
 

@@ -2,6 +2,19 @@
     Document   : Evaluacion
     Created on : 17-feb-2018, 8:47:46
     Author     : YonePC
+
+
+
+
+
+
+    This class displays a table of assessments made by the teacher to a pupil in a course.
+
+There are thre types of assessments:
+
+By number, from 0 to 10.
+By Letter from A to E.
+By commentary, and Pass/Not Pass
 --%>
 <%@page import="beans.SingletonFuncionLog"%>
 <%@page import="beans.ComentarioNota"%>

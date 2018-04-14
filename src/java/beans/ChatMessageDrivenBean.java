@@ -1,7 +1,10 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+
+
+This class aims to add messages to a singleton
+when Queue: jmsDemo/navinDest receives a new message,
+the purpose is to store incoming messages in the singleton and broadcast them as a chat.
+
  */
 package beans;
 

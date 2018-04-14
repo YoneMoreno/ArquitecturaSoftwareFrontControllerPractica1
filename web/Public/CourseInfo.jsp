@@ -2,7 +2,7 @@
 
 <%-- 
 
-CourseInfo.jsp aims to fetch all database's courses, mae a list from them, and show them
+CourseInfo.jsp aims to fetch all database's courses, make a list from them, and show them
 in a table.
 
 Please note that currently each user fetches all the courses in the database so it means they are

@@ -1,7 +1,10 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+
+This class saves a teacher's info.
+It is made by name, subject, pupils' assessment, phone, email and office
+
+
+
  */
 package beans;
 

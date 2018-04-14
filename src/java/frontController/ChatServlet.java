@@ -1,3 +1,12 @@
+/*
+
+
+ChatServlet receives a messages and posts it to a queue and also appends the session ID
+
+*/
+
+
+
 package frontController;
 
 import java.io.IOException;

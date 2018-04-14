@@ -1,7 +1,10 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+
+This timer writes a message into SIngletonFuncionLog when the user has been inactive for
+five seconds.
+
+
+
  */
 package beans;
 

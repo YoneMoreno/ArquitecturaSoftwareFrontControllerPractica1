@@ -2,6 +2,10 @@
     Document   : Encuesta
     Created on : 10-feb-2018, 10:06:01
     Author     : YonePC
+
+This class shows a survey.
+
+It is made by a question and users can vote from 0 to 10
 --%>
 
 <%@page import="beans.SingletonFuncionLog"%>

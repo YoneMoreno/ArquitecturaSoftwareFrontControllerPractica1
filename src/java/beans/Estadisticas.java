@@ -1,7 +1,17 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+
+
+This class hosts website statistics
+
+
+It counts how many new session are active,
+how many pages have been accesed by the current session,
+
+and also shows how many visits in total, in all sessions have been made
+to each page.
+
+
+
  */
 package beans;
 
@@ -42,17 +52,7 @@ public class Estadisticas {
     int profesorClase = 0;
     int estadisticasClase = 0;
     
-    static Map mapa = new HashMap<>();
-
-    // Add business logic below. (Right-click in editor and choose
-    // "Insert Code > Add Business Method")
     
-    public static void addKey(String key){
-        mapa.put(key, null);
-    }
-    public static void addValue(String key, String value){
-        mapa.put(key,value);
-    }
     
     
     

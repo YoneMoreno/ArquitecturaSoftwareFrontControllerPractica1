@@ -1,7 +1,13 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+
+
+
+
+
+This command relates RealizarEvaluacion.jsp and Evaluacion.jsp,
+it forwards the assessment made by the teacher to the assessments' table.
+
+
  */
 package frontController;
 

@@ -3,17 +3,17 @@
     Created on : 14-mar-2018, 10:32:00
     Author     : YonePC
 
-    RealizarEvaluacion.jsp haas the purpose of let the teacher assess the pupils.
+    RealizarEvaluacion.jsp has the purpose of let the teacher assess the pupils.
 There are three types of assessments:
 
 Using a number from 0 to 10.
-Selecting a letter from A to E (as English modality)
+Selecting a letter from A to E
 Writting a commentary and choosing Pass/Not Pass.
 
 Plase note that this RealizarEvaluacion.jsp expects two parameters in the request:
 
 --> name=command
---> value=numero (number) or letra (letter) or comentari (commentary)
+--> value=numero (number) or letra (letter) or comentario (commentary)
 --%>
 
 <%@page import="beans.SingletonFuncionLog"%>

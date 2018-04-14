@@ -1,7 +1,10 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+
+This commands answers users' clicks on teacer's carousel, where we host
+the assessments made by the pupils to the teacher.
+
+
+
  */
 package frontController;
 

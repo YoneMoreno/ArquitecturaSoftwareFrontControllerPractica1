@@ -2,6 +2,15 @@
     Document   : Cuestionario
     Created on : 10-feb-2018, 9:36:15
     Author     : YonePC
+
+This class aims to display a questionnaire. A questionnaire is a question with three possible
+answers and each answer could be either true or false.
+
+Pregunta1 is the questions being asked.
+
+RespuestaTexto11 is the first answer proposed.
+RespuestaVerdad11 is either false or true, which represents if this answer is true or not.
+
 --%>
 <%@page import="beans.SingletonFuncionLog"%>
 <%@page import="javax.naming.InitialContext"%>

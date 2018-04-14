@@ -1,9 +1,19 @@
 <%@page import="beans.Estadisticas"%>
 <!DOCTYPE html>
 <!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+
+
+
+This class allows users to:
+
+Create a new course,
+create a new questionnaire,
+create a new survey,
+see the pupils list,
+see the school's subjects in a carousel,
+observe social media links/icons.
+
+
 -->
 
 <%

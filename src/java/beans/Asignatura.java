@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+
+
+This class holds a school's subject. It is being shown in index.jsp' carousel.
+
  */
 package beans;
 

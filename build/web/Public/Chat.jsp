@@ -2,7 +2,7 @@
 
 <%-- 
 
-    Chat.jsp shows an input field to write mesages.
+    Chat.jsp shows an input field to write messages.
 Then it sends the message to ChatServlet to be processed.
 In addition, it shows current messages and the session ID of the emitter, both in one line.
 Please note that we are supposing that the queue always has messages in even indexes,

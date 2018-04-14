@@ -1,3 +1,13 @@
+/*
+
+This class aims to convert a note from 0 to 10 into pass / not pass.
+
+
+*/
+
+
+
+
 package beans;
 
 import java.io.BufferedWriter;

@@ -1,7 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+
+
+This class represents a teacher's subject.
+It has a name and a list of topics.
+
  */
 package beans;
 

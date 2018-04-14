@@ -1,7 +1,12 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+
+
+
+This commands gets the request made from the school's carousel,
+after clicking on one of the subjects taught,
+and gets the request and forwards it.
+
+
  */
 package frontController;
 

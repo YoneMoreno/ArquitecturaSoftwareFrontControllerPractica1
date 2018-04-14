@@ -1,7 +1,10 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+
+
+
+This command's logic defines how XML transformation is done using
+XSLT rules to reach a HTML output.
+
  */
 package frontController;
 
