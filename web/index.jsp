@@ -210,7 +210,34 @@ and open the template in the editor.
                     </div>
                 </div>
             </div>
-    </body>
-    <%@include file="Footer.jsp" %>
+        </div>
+
+
+        <div class="container-fluid"/>
+        <!-- Control the column width, and how they should appear on different devices -->
+        <div class="row">
+            <div class="col-7" style="margin-bottom: 3em">
+                <h2>Escuela de informatica:</h2>
+                <p>En esta escuela se imparten cursos de ingenieria del software,
+                    y desarrollo web.
+                </p>
+            </div>
+            <div class="col-5" style="margin-bottom: 3em">
+                <h2>Redes sociales:</h2>
+                <p>
+                    <a href="https://es-es.facebook.com/EII.ULPGC/"><i class="fab fa-facebook-f fa-5x" size="5x"></i></a>
+                    <a href="https://twitter.com/EII_ULPGC?ref_src=twsrc%5Etfw&ref_url=http%3A%2F%2Fwww.eii.ulpgc.es%2Ftb_university_ex%2F%3Fq%3Dfrontpage">
+                        <i class="fab fa-twitter fa-5x"></i>
+                    </a>
+                    <a href="https://www.studocu.com/es/institution/universidad-de-las-palmas-de-gran-canaria/8890">
+                        <i class="fas fa-university fa-5x"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<%@include file="Footer.jsp" %>
 </html>
 
