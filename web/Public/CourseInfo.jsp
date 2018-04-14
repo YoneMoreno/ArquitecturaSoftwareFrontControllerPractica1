@@ -59,14 +59,14 @@ which he has created
         <link href="highlight.css" rel="stylesheet" type="text/css"/>
     </head>
     <body> 
-        <table width="100%" border=1>
+        <table class="table table-striped table-hover">
             <tr>
-                <th style="padding: 8px">Titulo</th>
-                <th style="padding: 8px">Autor</th>
-                <th style="padding: 8px">Asignatura</th>
-                <th style="padding: 8px">Duracion</th>
-                <th style="padding: 8px">Video</th>
-                <th style="padding: 8px">Imagen</th>
+                <th>Titulo</th>
+                <th>Autor</th>
+                <th>Asignatura</th>
+                <th>Duracion</th>
+                <th>Video</th>
+                <th>Imagen</th>
             </tr>
 
             <%                
