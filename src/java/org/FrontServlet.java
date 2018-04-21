@@ -37,6 +37,9 @@ public class FrontServlet extends HttpServlet {
     @EJB
     private Curso_1Facade curso_1Facade;
 
+
+    
+
     SingletonFuncionLog singletonFuncionLog5;
     Estadisticas estadisticas;
 

@@ -12,7 +12,7 @@
     <div class="container">
     </head>
     <body>
-        <form class="form-horizontal" action="FrontServlet" method="POST">
+        <form class="form-horizontal" action="../FrontServlet" method="POST">
             <input type="hidden" name="command" value="RegisterCommand"/>
             <fieldset>
                 <div id="legend">

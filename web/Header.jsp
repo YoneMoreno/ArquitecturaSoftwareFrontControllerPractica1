@@ -18,10 +18,7 @@
 
     session = request.getSession(true);
     if (session.isNew()) {
-        System.out.println("La sesion nueva, tine ID: " + session.getId());
         estadisticas.cuentaNuevaSesion();
-    } else {
-        System.out.println("La sesion no es nueva, y su ID es: " + session.getId());
     }
 
     int accesos;

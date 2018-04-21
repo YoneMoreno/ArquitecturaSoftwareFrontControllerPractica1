@@ -25,16 +25,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name = "profesor")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Profesor.findAll", query = "SELECT p FROM Profesor p")
-    , @NamedQuery(name = "Profesor.findByIdProfesor", query = "SELECT p FROM Profesor p WHERE p.idProfesor = :idProfesor")
-    , @NamedQuery(name = "Profesor.findByNombre", query = "SELECT p FROM Profesor p WHERE p.nombre = :nombre")
-    , @NamedQuery(name = "Profesor.findByContrasena", query = "SELECT p FROM Profesor p WHERE p.contrasena = :contrasena")
-    , @NamedQuery(name = "Profesor.findByAsignatura", query = "SELECT p FROM Profesor p WHERE p.asignatura = :asignatura")
-    , @NamedQuery(name = "Profesor.findByValoracion", query = "SELECT p FROM Profesor p WHERE p.valoracion = :valoracion")
-    , @NamedQuery(name = "Profesor.findByCorreo", query = "SELECT p FROM Profesor p WHERE p.correo = :correo")
-    , @NamedQuery(name = "Profesor.findByTelefono", query = "SELECT p FROM Profesor p WHERE p.telefono = :telefono")
-    , @NamedQuery(name = "Profesor.findByDespacho", query = "SELECT p FROM Profesor p WHERE p.despacho = :despacho")})
-public class Profesor implements Serializable {
+    @NamedQuery(name = "Profesor_1.findAll", query = "SELECT p FROM Profesor_1 p")
+    , @NamedQuery(name = "Profesor_1.findByIdProfesor", query = "SELECT p FROM Profesor_1 p WHERE p.idProfesor = :idProfesor")
+    , @NamedQuery(name = "Profesor_1.findByNombre", query = "SELECT p FROM Profesor_1 p WHERE p.nombre = :nombre")
+    , @NamedQuery(name = "Profesor_1.findByContrasena", query = "SELECT p FROM Profesor_1 p WHERE p.contrasena = :contrasena")
+    , @NamedQuery(name = "Profesor_1.findByAsignatura", query = "SELECT p FROM Profesor_1 p WHERE p.asignatura = :asignatura")
+    , @NamedQuery(name = "Profesor_1.findByValoracion", query = "SELECT p FROM Profesor_1 p WHERE p.valoracion = :valoracion")
+    , @NamedQuery(name = "Profesor_1.findByCorreo", query = "SELECT p FROM Profesor_1 p WHERE p.correo = :correo")
+    , @NamedQuery(name = "Profesor_1.findByTelefono", query = "SELECT p FROM Profesor_1 p WHERE p.telefono = :telefono")
+    , @NamedQuery(name = "Profesor_1.findByDespacho", query = "SELECT p FROM Profesor_1 p WHERE p.despacho = :despacho")})
+public class Profesor_1 implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -64,14 +64,14 @@ public class Profesor implements Serializable {
     @Column(name = "despacho")
     private String despacho;
 
-    public Profesor() {
+    public Profesor_1() {
     }
 
-    public Profesor(Integer idProfesor) {
+    public Profesor_1(Integer idProfesor) {
         this.idProfesor = idProfesor;
     }
 
-    public Profesor(Integer idProfesor, String nombre, String contrasena, String asignatura, int valoracion, String correo, int telefono, String despacho) {
+    public Profesor_1(Integer idProfesor, String nombre, String contrasena, String asignatura, int valoracion, String correo, int telefono, String despacho) {
         this.idProfesor = idProfesor;
         this.nombre = nombre;
         this.contrasena = contrasena;
@@ -156,10 +156,10 @@ public class Profesor implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Profesor)) {
+        if (!(object instanceof Profesor_1)) {
             return false;
         }
-        Profesor other = (Profesor) object;
+        Profesor_1 other = (Profesor_1) object;
         if ((this.idProfesor == null && other.idProfesor != null) || (this.idProfesor != null && !this.idProfesor.equals(other.idProfesor))) {
             return false;
         }
@@ -168,7 +168,7 @@ public class Profesor implements Serializable {
 
     @Override
     public String toString() {
-        return "org.Profesor[ idProfesor=" + idProfesor + " ]";
+        return "org.Profesor_1[ idProfesor=" + idProfesor + " ]";
     }
     
 }

@@ -58,7 +58,6 @@ public class Estadisticas {
     
     public void cuentaNuevaSesion() {
         nuevoAccesoEstadisticas();
-        System.out.println("El numero de sesiones nuevas es: " + ++cuenta);
     }
 
     public int getCuentaNuevaSesion() {

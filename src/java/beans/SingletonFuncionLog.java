@@ -35,7 +35,6 @@ public class SingletonFuncionLog {
     public void funcionLog(String nombreClase, String nombreFuncion) {
 
         this.log += "\n" + nombreClase + "::" + nombreFuncion + "\n";
-        System.out.println(this.log);
     }
 
     public static String getFuncionLog() {
