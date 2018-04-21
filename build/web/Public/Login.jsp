@@ -13,7 +13,7 @@
         <title>Login</title>
     </head>
    <div class="container">
-    <form class="form-horizontal" action="FrontServlet" method="POST">
+    <form class="form-horizontal" action="../FrontServlet" method="POST">
         <input type="hidden" name="command" value="LoginCommand"/>
         <fieldset>
             <div id="legend">
