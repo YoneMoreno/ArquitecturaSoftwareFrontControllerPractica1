@@ -75,8 +75,11 @@
       <li class="nav-item">
             <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/ProfesorRegistro.jsp"><i class="fas fa-user-plus"></i></a>
         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/Login.jsp"><i class="fas fa-sign-in-alt"></i></a>
+        </li>
 
-            <form class="form-inline" style="margin-left: 40em">
+            <form class="form-inline" style="margin-left: 20em">
                 <input class="mr-sm-2" type="search" placeholder="Escribe para buscar" aria-labels="search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Busca</button>
             </form>
