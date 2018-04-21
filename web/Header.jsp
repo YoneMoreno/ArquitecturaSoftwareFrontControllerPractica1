@@ -89,7 +89,7 @@
                 <%= profesor.getNombre()%></a>            
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/Login.jsp"><i class="fas fa-sign-out-alt"></i>          
+            <a class="nav-link" href="FrontServlet?command=LogoutCommand"><i class="fas fa-sign-out-alt"></i>          
         </li>
         <%}%>
 

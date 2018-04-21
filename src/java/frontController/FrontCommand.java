@@ -22,6 +22,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -32,19 +33,21 @@ public abstract class FrontCommand extends HttpServlet {
     protected ServletContext context;
     protected HttpServletRequest request;
     protected HttpServletResponse response;
+    protected HttpSession session;
     SingletonFuncionLog singletonFuncionLog5;
     Estadisticas estadisticasFrontCommand;
 
-    public void init(ServletContext context, HttpServletRequest request, HttpServletResponse response) throws NamingException {
+    public void init(ServletContext context, HttpServletRequest request, HttpServletResponse response, HttpSession session) throws NamingException {
         singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
         this.estadisticasFrontCommand = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
-        
+
         estadisticasFrontCommand.nuevoAccesoFrontCommand();
 
         singletonFuncionLog5.funcionLog("FrontCommand", "init");
         this.context = context;
         this.request = request;
         this.response = response;
+        this.session = session;
     }
 
     abstract public void process(HttpServletRequest request);

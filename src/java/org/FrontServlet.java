@@ -66,7 +66,7 @@ public class FrontServlet extends HttpServlet {
             setEvaluacionInSession(evaluacion, session, request);
 
             FrontCommand command = getCommand(request);
-            command.init(getServletContext(), request, response);
+            command.init(getServletContext(), request, response, request.getSession());
             command.process(request);
         } catch (Exception ex) {
             singletonFuncionLog5.funcionLog("FrontServlet", "Exception ex");
