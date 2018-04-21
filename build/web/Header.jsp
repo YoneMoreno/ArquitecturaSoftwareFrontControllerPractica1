@@ -69,7 +69,7 @@
         <%}%>
 
         <%if (session.getAttribute("profesor") != null) {
-                Profesor_1 profesor = (Profesor_1) session.getAttribute("profesor");
+                Profesor_1 myProfesor = (Profesor_1) session.getAttribute("profesor");
         %>
 
 
@@ -96,7 +96,7 @@
 
         <li class="nav-item">
             <a class="nav-link" href="#"><i class="fas fa-graduation-cap"></i>   
-                <%= profesor.getNombre()%>
+                <%= myProfesor.getNombre()%>
             </a>
         </li>
         <li class="nav-item">
