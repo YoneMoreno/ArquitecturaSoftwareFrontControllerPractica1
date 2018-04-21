@@ -52,10 +52,27 @@
 
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
 
+
+
     <ul class="navbar-nav">
+
         <li class="nav-item active">
             <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1">Inicio</a>
         </li>
+        <%if (session.getAttribute("profesor") == null) {%>
+        <li class="nav-item">
+            <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/ProfesorRegistro.jsp"><i class="fas fa-user-plus"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/Login.jsp"><i class="fas fa-sign-in-alt"></i></a>
+        </li>
+        <%}%>
+
+        <%if (session.getAttribute("profesor") != null) {
+                Profesor_1 profesor = (Profesor_1) session.getAttribute("profesor");
+        %>
+
+
         <li class="nav-item">
             <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/CourseInfo.jsp">Lista de cursos</a>
         </li>
@@ -74,23 +91,18 @@
         <li class="nav-item">
             <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/Chat.jsp"><i class="fas fa-comments"></i></a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/ProfesorRegistro.jsp"><i class="fas fa-user-plus"></i></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/Login.jsp"><i class="fas fa-sign-in-alt"></i></a>
-        </li>
 
-        <%if (session.getAttribute("profesor") != null) {
-                Profesor_1 profesor = (Profesor_1) session.getAttribute("profesor");
-        %>
+
+
         <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-graduation-cap"></i>
-                <%= profesor.getNombre()%></a>            
+            <a class="nav-link" href="#"><i class="fas fa-graduation-cap"></i>   
+                <%= profesor.getNombre()%>
+            </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="FrontServlet?command=LogoutCommand"><i class="fas fa-sign-out-alt"></i></a>          
         </li>
+
         <%}%>
 
         <form class="form-inline" style="margin-left: 20em">
