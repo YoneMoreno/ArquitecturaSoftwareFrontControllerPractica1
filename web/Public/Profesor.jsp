@@ -27,7 +27,7 @@ It is made by name, subject, pupils' assessments made to this teacher, email, ph
     Estadisticas estadisticasProfesor = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
 
     estadisticasProfesor.nuevaVisitaProfesor();
-    
+
     Profesor_1 sesionProfesor = (Profesor_1) session.getAttribute("profesor");
 %>
 
@@ -38,9 +38,14 @@ It is made by name, subject, pupils' assessments made to this teacher, email, ph
     <body>
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col ">
                     <p class="lead">Profesor: <%= sesionProfesor.getNombre()%></p>
                     <i class="fas fa-user-circle fa-5x"></i>
+                    <div class="jumbotron">
+                        <p>Correo: <%= sesionProfesor.getCorreo()%></p>
+                        <p>Despacho: <%= sesionProfesor.getDespacho()%></p>
+                        <p>Telefono: <%= sesionProfesor.getTelefono()%></p>
+                    </div>
                 </div>
                 <div class="col">
                     <p class="lead">Asignatura: <%=sesionProfesor.getAsignatura()%> </p>
