@@ -20,7 +20,6 @@ It is made by name, subject, pupils' assessments made to this teacher, email, ph
 <!DOCTYPE html>
 
 <%
-    Profesor profesor = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Profesor!beans.Profesor");
     SingletonFuncionLog singletonFuncionLog = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
 
     singletonFuncionLog.funcionLog("Profesor", "processRequest");
@@ -28,6 +27,8 @@ It is made by name, subject, pupils' assessments made to this teacher, email, ph
     Estadisticas estadisticasProfesor = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
 
     estadisticasProfesor.nuevaVisitaProfesor();
+    
+    Profesor_1 sesionProfesor = (Profesor_1) session.getAttribute("profesor");
 %>
 
 <html>
@@ -38,13 +39,13 @@ It is made by name, subject, pupils' assessments made to this teacher, email, ph
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <p class="lead">Profesor: <%= profesor.getNombre()%></p>
+                    <p class="lead">Profesor: <%= sesionProfesor.getNombre()%></p>
                     <i class="fas fa-user-circle fa-5x"></i>
                 </div>
                 <div class="col">
-                    <p class="lead">Asignatura: <%=profesor.getAsignatura()%> </p>
-                    <a href="./AsignaturaProfesor.jsp?nombre=<%=profesor.getAsignatura()%>">
-                        <img class="image-center" src="../Images/CHJavascript.JPG" alt="<%= profesor.getAsignatura()%>"/>
+                    <p class="lead">Asignatura: <%=sesionProfesor.getAsignatura()%> </p>
+                    <a href="./AsignaturaProfesor.jsp?nombre=<%=sesionProfesor.getAsignatura()%>">
+                        <img class="image-center" src="../Images/CHJavascript.JPG" alt="<%= sesionProfesor.getAsignatura()%>"/>
                     </a>
                 </div>
                 <div class="col">
