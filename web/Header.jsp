@@ -100,7 +100,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="FrontServlet?command=LogoutCommand"><i class="fas fa-sign-out-alt"></i></a>          
+            <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet?command=LogoutCommand"><i class="fas fa-sign-out-alt"></i></a>          
         </li>
 
         <%}%>
