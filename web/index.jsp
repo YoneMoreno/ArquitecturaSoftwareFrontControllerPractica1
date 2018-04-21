@@ -25,6 +25,8 @@ observe social media links/icons.
     Estadisticas estadisticasIndex = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
 
     estadisticasIndex.nuevaVisitaIndex();
+
+
 %>
 
 <html>
@@ -42,6 +44,7 @@ observe social media links/icons.
     <body>
         <div class="container">
             <div class="jumbotron">
+                <%if (session.getAttribute("profesor") != null) {%>
                 <h1>Bienvenido a CursosApp, elija una opción del panel para comenzar:</h1>
                 <div>
                     <details>
@@ -151,6 +154,7 @@ observe social media links/icons.
                             <input type="hidden" name="command" value="AlumnosCommand"/>
                         </form>
                     </details>
+                    <%}%>
                     <h4>Asignaturas impartidas en la escuela:</h4>
                     <div id="demo" class="carousel slide" data-ride="carousel" style="width: 25%; height: 25%">
                         <!-- Indicators -->
