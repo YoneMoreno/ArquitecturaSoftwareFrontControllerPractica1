@@ -4,6 +4,8 @@
     Author     : YonePC
 --%>
 
+<%@page import="org.Profesor_1"%>
+<%@page import="jpa.Profesor_1Facade"%>
 <%@page import="beans.Estadisticas"%>
 <%@page import="beans.SingletonFuncionLog"%>
 <%@page import="javax.naming.InitialContext"%>
@@ -72,17 +74,26 @@
         <li class="nav-item">
             <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/Chat.jsp"><i class="fas fa-comments"></i></a>
         </li>
-      <li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/ProfesorRegistro.jsp"><i class="fas fa-user-plus"></i></a>
         </li>
-         <li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/Login.jsp"><i class="fas fa-sign-in-alt"></i></a>
         </li>
 
-            <form class="form-inline" style="margin-left: 20em">
-                <input class="mr-sm-2" type="search" placeholder="Escribe para buscar" aria-labels="search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Busca</button>
-            </form>
+        <%if (session.getAttribute("profesor") != null) {
+                Profesor_1 profesor = (Profesor_1) session.getAttribute("profesor");
+        %>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-graduation-cap"></i>
+                <%= profesor.getNombre()%></a>            
+        </li>
+        <%}%>
+
+        <form class="form-inline" style="margin-left: 20em">
+            <input class="mr-sm-2" type="search" placeholder="Escribe para buscar" aria-labels="search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Busca</button>
+        </form>
 </nav>
 
 </head>
