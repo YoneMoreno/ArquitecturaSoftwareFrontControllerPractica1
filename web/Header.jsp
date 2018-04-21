@@ -88,6 +88,9 @@
             <a class="nav-link" href="#"><i class="fas fa-graduation-cap"></i>
                 <%= profesor.getNombre()%></a>            
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/Login.jsp"><i class="fas fa-sign-out-alt"></i>          
+        </li>
         <%}%>
 
         <form class="form-inline" style="margin-left: 20em">
