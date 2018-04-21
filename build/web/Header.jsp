@@ -75,7 +75,9 @@
         <li class="nav-item">
             <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/Chat.jsp"><i class="fas fa-comments"></i></a>
         </li>
-
+      <li class="nav-item">
+            <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/ProfesorRegistro.jsp"><i class="fas fa-user-plus"></i></a>
+        </li>
 
             <form class="form-inline" style="margin-left: 40em">
                 <input class="mr-sm-2" type="search" placeholder="Escribe para buscar" aria-labels="search">
