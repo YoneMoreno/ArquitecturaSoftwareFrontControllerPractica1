@@ -8,8 +8,9 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
-import jpa.Profesor_1Facade;
-import org.Profesor_1;
+import jpa.ProfesorFacade;
+import org.Profesor;
+
 
 /**
  *
@@ -18,11 +19,11 @@ import org.Profesor_1;
 @WebServlet(name = "LoginCommand", urlPatterns = {"/LoginCommand"})
 public class LoginCommand extends FrontCommand {
 
-    Profesor_1Facade profesorFacade;
+    ProfesorFacade profesorFacade;
 
     public LoginCommand() {
         try {
-            this.profesorFacade = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Profesor_1Facade");
+            this.profesorFacade = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/ProfesorFacade");
         } catch (NamingException ex) {
             Logger.getLogger(LoginCommand.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -31,11 +32,11 @@ public class LoginCommand extends FrontCommand {
     @Override
     public void process(HttpServletRequest request) {
         try {
-            List<Profesor_1> profesores = profesorFacade.findAll();
+            List<Profesor> profesores = profesorFacade.findAll();
             String name = request.getParameter("username");
             String password = request.getParameter("password");
 
-            for (Profesor_1 profesor : profesores) {
+            for (Profesor profesor : profesores) {
                 if (profesor.getNombre().equals(name)
                         && profesor.getContrasena().equals(password)) {
                     session.setAttribute("profesor", profesor);

@@ -1,5 +1,8 @@
 
 
+<%@page import="jpa.AsignaturaFacade"%>
+<%@page import="org.Asignatura"%>
+<%@page import="jpa.CursoFacade"%>
 <%-- 
 
 CourseInfo.jsp aims to fetch all database's courses, make a list from them, and show them
@@ -16,8 +19,6 @@ which he has created
 --%>
 
 <%@page import="java.util.List"%>
-<%@page import="org.Curso_1"%>
-<%@page import="jpa.Curso_1Facade"%>
 <%@page import="java.util.regex.Matcher"%>
 <%@page import="java.util.regex.Pattern"%>
 <%@page import="beans.SingletonFuncionLog"%>
@@ -41,7 +42,8 @@ which he has created
 
     estadisticasCourseInfo.nuevaVisitaCourseInfo();
 
-    Curso_1Facade cursoFacade = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Curso_1Facade");
+    CursoFacade cursoFacade = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/CursoFacade");
+    AsignaturaFacade asignaturaFacade = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/AsignaturaFacade");
 
 %>
 
@@ -73,7 +75,7 @@ which he has created
                 
                 //We load all the courses which have been created in Database
                 
-                List<Curso_1> cursosPersisted = cursoFacade.findAll();
+                List<Curso> cursosPersisted = cursoFacade.findAll();
 
                 Iterator i = cursosPersisted.iterator();
 
@@ -81,13 +83,13 @@ which he has created
 
                 while (i.hasNext()) {
 
-                    Curso_1 cursoActual = (Curso_1) i.next();
+                    Curso cursoActual = (Curso) i.next();
+                    Asignatura asignaturaActual = asignaturaFacade.find(cursoActual.getIdAsignatura().getId());
 
             %>
             <tr>
                 <td><%= cursoActual.getTitulo()%></td>
-                <td><%= cursoActual.getAutor()%></td>
-                <td><%= cursoActual.getAsignatura()%></td>
+                <td><%= asignaturaActual.getNombre()%></td>
                 <td><%= cursoActual.getDuracion()%></td>
                 <%
 

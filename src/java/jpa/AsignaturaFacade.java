@@ -5,18 +5,17 @@
  */
 package jpa;
 
-import frontController.AbstractFacade;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import org.Profesor_1;
+import org.Asignatura;
 
 /**
  *
  * @author YonePC
  */
 @Stateless
-public class Profesor_1Facade extends AbstractFacade<Profesor_1> {
+public class AsignaturaFacade extends AbstractFacade<Asignatura> {
 
     @PersistenceContext(unitName = "ASAPLICACIONCURSOSPRACTICA1PU")
     private EntityManager em;
@@ -26,8 +25,8 @@ public class Profesor_1Facade extends AbstractFacade<Profesor_1> {
         return em;
     }
 
-    public Profesor_1Facade() {
-        super(Profesor_1.class);
+    public AsignaturaFacade() {
+        super(Asignatura.class);
     }
     
 }

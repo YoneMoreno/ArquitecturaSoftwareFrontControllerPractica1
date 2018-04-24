@@ -25,7 +25,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import jpa.Curso_1Facade;
+import jpa.CursoFacade;
 
 /**
  *
@@ -35,7 +35,7 @@ import jpa.Curso_1Facade;
 public class FrontServlet extends HttpServlet {
 
     @EJB
-    private Curso_1Facade curso_1Facade;
+    private CursoFacade cursoFacade;
 
 
     
@@ -141,25 +141,18 @@ public class FrontServlet extends HttpServlet {
     private Curso courseHelper(HttpServletRequest request) throws NamingException {
         this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
         singletonFuncionLog5.funcionLog("FrontServlet", "courseHelper");
-        Curso curso;
-        curso = new Curso(request.getParameter("titulo"),
-                request.getParameter("autor"),
-                request.getParameter("asignatura"),
-                request.getParameter("duracion"),
-                request.getParameter("video"),
-                request.getParameter("imagen"));
 
-        Curso_1 cursoToPersist = new Curso_1();
+
+        Curso cursoToPersist = new Curso();
         cursoToPersist.setTitulo(request.getParameter("titulo"));
-        cursoToPersist.setAutor(request.getParameter("autor"));
-        cursoToPersist.setAsignatura(request.getParameter("asignatura"));
         cursoToPersist.setDuracion(Integer.parseInt(request.getParameter("duracion")));
         cursoToPersist.setVideo(request.getParameter("video"));
         cursoToPersist.setImagen(request.getParameter("imagen"));
         
-        curso_1Facade.create(cursoToPersist);
+        cursoFacade.create(cursoToPersist);
         
-        return curso;
+        return cursoToPersist;
+        
     }
 
     private Evaluacion evaluacionHelper(HttpServletRequest request) throws NamingException {

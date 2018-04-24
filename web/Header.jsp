@@ -4,8 +4,8 @@
     Author     : YonePC
 --%>
 
-<%@page import="org.Profesor_1"%>
-<%@page import="jpa.Profesor_1Facade"%>
+<%@page import="org.Profesor"%>
+<%@page import="jpa.ProfesorFacade"%>
 <%@page import="beans.Estadisticas"%>
 <%@page import="beans.SingletonFuncionLog"%>
 <%@page import="javax.naming.InitialContext"%>
@@ -69,7 +69,7 @@
         <%}%>
 
         <%if (session.getAttribute("profesor") != null) {
-                Profesor_1 myProfesor = (Profesor_1) session.getAttribute("profesor");
+                Profesor myProfesor = (Profesor) session.getAttribute("profesor");
         %>
 
 
@@ -77,7 +77,7 @@
             <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/CourseInfo.jsp">Lista de cursos</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/Profesor.jsp"><i class="fas fa-user-circle"></i></a>
+            <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/ProfesorVista.jsp"><i class="fas fa-user-circle"></i></a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/VerSingletonLog.jsp"><i class="fas fa-history"></i></a>

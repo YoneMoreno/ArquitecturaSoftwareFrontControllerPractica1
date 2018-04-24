@@ -8,13 +8,14 @@ It is made by name, subject, pupils' assessments made to this teacher, email, ph
 
 --%>
 
+<%@page import="org.Asignatura"%>
+<%@page import="jpa.AsignaturaFacade"%>
 <%@page import="beans.SingletonFuncionLog"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="org.Curso"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="javax.naming.InitialContext"%>
-<%@page import="beans.Profesor"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -28,7 +29,11 @@ It is made by name, subject, pupils' assessments made to this teacher, email, ph
 
     estadisticasProfesor.nuevaVisitaProfesor();
 
-    Profesor_1 sesionProfesor = (Profesor_1) session.getAttribute("profesor");
+    Profesor sesionProfesor = (Profesor) session.getAttribute("profesor");
+    
+    AsignaturaFacade asignaturaFacade = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/AsignaturaFacade");
+    Asignatura asignatura = asignaturaFacade.find(sesionProfesor.getIdAsignatura());
+    String nombreAsignatura = asignatura.getNombre();
 %>
 
 <html>
@@ -48,9 +53,9 @@ It is made by name, subject, pupils' assessments made to this teacher, email, ph
                     </div>
                 </div>
                 <div class="col">
-                    <p class="lead">Asignatura: <%=sesionProfesor.getAsignatura()%> </p>
-                    <a href="./AsignaturaProfesor.jsp?nombre=<%=sesionProfesor.getAsignatura()%>">
-                        <img class="image-center" src="../Images/CHJavascript.JPG" alt="<%= sesionProfesor.getAsignatura()%>"/>
+                    <p class="lead">Asignatura: <%=nombreAsignatura%> </p>
+                    <a href="./AsignaturaProfesor.jsp?nombre=<%=nombreAsignatura%>">
+                        <img class="image-center" src="../Images/CHJavascript.JPG" alt="<%= nombreAsignatura%>"/>
                     </a>
                 </div>
                 <div class="col">

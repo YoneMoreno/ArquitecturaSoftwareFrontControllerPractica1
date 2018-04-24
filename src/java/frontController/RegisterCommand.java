@@ -5,11 +5,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
-import jpa.Profesor_1Facade;
-import org.Profesor_1;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
-import javax.servlet.ServletException;
+import jpa.ProfesorFacade;
+import org.Profesor;
 
 /**
  *
@@ -18,11 +17,11 @@ import javax.servlet.ServletException;
 @WebServlet(name = "RegisterCommand", urlPatterns = {"/RegisterCommand"})
 public class RegisterCommand extends FrontCommand {
 
-    Profesor_1Facade profesor_1Facade;
+    ProfesorFacade profesorFacade;
 
     public RegisterCommand() {
         try {
-            this.profesor_1Facade = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Profesor_1Facade");
+            this.profesorFacade = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/ProfesorFacade");
         } catch (NamingException ex) {
             Logger.getLogger(RegisterCommand.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -32,16 +31,14 @@ public class RegisterCommand extends FrontCommand {
     public void process(HttpServletRequest request) {
 
         try {
-            Profesor_1 profesor = new Profesor_1();
+            Profesor profesor = new Profesor();
             profesor.setNombre(request.getParameter("username"));
             profesor.setContrasena(request.getParameter("password"));
-            profesor.setAsignatura(request.getParameter("subject"));
-            profesor.setValoracion(0);
             profesor.setCorreo(request.getParameter("email"));
-            profesor.setTelefono(Integer.parseInt(request.getParameter("phone")));
+            profesor.setTelefono((request.getParameter("phone")));
             profesor.setDespacho(request.getParameter("office"));
             
-            profesor_1Facade.create(profesor);
+            profesorFacade.create(profesor);
             
             response.sendRedirect("index.jsp");
         } catch (IOException ex) {
