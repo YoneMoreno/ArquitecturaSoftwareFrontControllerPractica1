@@ -14,6 +14,7 @@ import frontController.UnknownCommand;
 import frontController.FrontCommand;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.EJB;
@@ -25,6 +26,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import jpa.AsignaturaFacade;
 import jpa.CursoFacade;
 
 /**
@@ -37,11 +39,9 @@ public class FrontServlet extends HttpServlet {
     @EJB
     private CursoFacade cursoFacade;
 
-
-    
-
     SingletonFuncionLog singletonFuncionLog5;
     Estadisticas estadisticas;
+    AsignaturaFacade asignaturaFacade;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -51,6 +51,7 @@ public class FrontServlet extends HttpServlet {
 
             this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
             this.estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+            this.asignaturaFacade = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/AsignaturaFacade");
 
             estadisticas.nuevaVisitaFrontServlet();
 
@@ -142,17 +143,22 @@ public class FrontServlet extends HttpServlet {
         this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
         singletonFuncionLog5.funcionLog("FrontServlet", "courseHelper");
 
-
         Curso cursoToPersist = new Curso();
         cursoToPersist.setTitulo(request.getParameter("titulo"));
         cursoToPersist.setDuracion(Integer.parseInt(request.getParameter("duracion")));
         cursoToPersist.setVideo(request.getParameter("video"));
         cursoToPersist.setImagen(request.getParameter("imagen"));
-        
+
+        Asignatura asignaturaToPersist = new Asignatura();
+        asignaturaToPersist.setNombre(request.getParameter("asignatura"));
+        asignaturaFacade.create(asignaturaToPersist);
+
+        cursoToPersist.setIdAsignatura(asignaturaToPersist);
+
         cursoFacade.create(cursoToPersist);
-        
+
         return cursoToPersist;
-        
+
     }
 
     private Evaluacion evaluacionHelper(HttpServletRequest request) throws NamingException {
