@@ -30,10 +30,14 @@ It is made by name, subject, pupils' assessments made to this teacher, email, ph
     estadisticasProfesor.nuevaVisitaProfesor();
 
     Profesor sesionProfesor = (Profesor) session.getAttribute("profesor");
-    
+
     AsignaturaFacade asignaturaFacade = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/AsignaturaFacade");
-    Asignatura asignatura = asignaturaFacade.find(sesionProfesor.getIdAsignatura());
-    String nombreAsignatura = asignatura.getNombre();
+
+    String nombreAsignatura = null;
+    if (sesionProfesor.getIdAsignatura() != null) {
+        Asignatura asignatura = asignaturaFacade.find(sesionProfesor.getIdAsignatura());
+        nombreAsignatura = asignatura.getNombre();
+    }
 %>
 
 <html>
@@ -53,10 +57,12 @@ It is made by name, subject, pupils' assessments made to this teacher, email, ph
                     </div>
                 </div>
                 <div class="col">
+                    <% if (nombreAsignatura != null) {%>
                     <p class="lead">Asignatura: <%=nombreAsignatura%> </p>
                     <a href="./AsignaturaProfesor.jsp?nombre=<%=nombreAsignatura%>">
                         <img class="image-center" src="../Images/CHJavascript.JPG" alt="<%= nombreAsignatura%>"/>
                     </a>
+                    <%}%>
                 </div>
                 <div class="col">
                     <div>

@@ -77,7 +77,7 @@
             <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/CourseInfo.jsp">Lista de cursos</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/ProfesorVista.jsp"><i class="fas fa-user-circle"></i></a>
+            <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/Profesor.jsp"><i class="fas fa-user-circle"></i></a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/VerSingletonLog.jsp"><i class="fas fa-history"></i></a>
