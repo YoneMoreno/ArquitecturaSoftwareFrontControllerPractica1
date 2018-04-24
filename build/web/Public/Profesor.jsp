@@ -35,7 +35,7 @@ It is made by name, subject, pupils' assessments made to this teacher, email, ph
 
     String nombreAsignatura = null;
     if (sesionProfesor.getIdAsignatura() != null) {
-        Asignatura asignatura = asignaturaFacade.find(sesionProfesor.getIdAsignatura());
+        Asignatura asignatura = asignaturaFacade.find(sesionProfesor.getIdAsignatura().getId());
         nombreAsignatura = asignatura.getNombre();
     }
 %>
