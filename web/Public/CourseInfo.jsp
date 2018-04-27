@@ -128,6 +128,9 @@ which he has created
                         </ul>
                     </div>
                 </td>
+                
+                <td><i class="fas fa-trash-alt fa-3x"></i></td>   
+            
 
             </tr>
 
