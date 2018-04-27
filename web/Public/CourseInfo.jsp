@@ -73,7 +73,7 @@ which he has created
                 
                 //We load all the courses which have been created in Database
                 
-                List<Curso_1> cursosPersisted = cursoFacade.findAll();
+                List<Curso_1> cursosPersisted = cursoFacade.findAllCourses();
 
                 Iterator i = cursosPersisted.iterator();
 
