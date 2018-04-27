@@ -69,10 +69,8 @@ which he has created
                 <th>Imagen</th>
             </tr>
 
-            <%                
-                
+            <%
                 //We load all the courses which have been created in Database
-                
                 List<Curso_1> cursosPersisted = cursoFacade.findAllCourses();
 
                 Iterator i = cursosPersisted.iterator();
@@ -92,7 +90,6 @@ which he has created
                 <%
 
                     //We look for mp4 videos and use a custom javascript UI
-                    
                     String pattern = "https://.*mp4";
                     Pattern r = Pattern.compile(pattern);
                     Matcher m = r.matcher(cursoActual.getVideo());
@@ -104,7 +101,7 @@ which he has created
                 <td><a href="./VideoMP4.jsp?video=<%=cursoActual.getVideo()%>">Video</a></td>
 
                 <% } else {
-                
+
                     //If the video is not mp4 we suppose it is an embedded YouTube video
 
                 %>
@@ -128,9 +125,12 @@ which he has created
                         </ul>
                     </div>
                 </td>
-                
-                <td><i class="fas fa-trash-alt fa-3x"></i></td>   
-            
+                <td>
+                    <a href="../FrontServlet?command=DeleteCourseCommand&id=<%=cursoActual.getIdCurso()%>">
+                        <i class="fas fa-trash-alt fa-3x"></i> 
+                    </a>
+                </td>  
+
 
             </tr>
 

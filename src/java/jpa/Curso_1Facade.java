@@ -54,4 +54,10 @@ public class Curso_1Facade extends AbstractFacade<Curso_1> {
             + " video, imagen) VALUES (NULL, ?, ?,"
             + " ?, ?, ?, ?)";
     
+    public void deleteCourse(int id){
+        Query delete = em.createNativeQuery("DELETE FROM curso WHERE idCurso = ?");
+        delete.setParameter(1, id);
+        delete.executeUpdate();
+    }
+    
 }
