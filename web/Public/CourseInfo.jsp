@@ -59,7 +59,7 @@ which he has created
         <link href="highlight.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <form action="../FrontServlet" class="form-inline">
+        <form action="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet" class="form-inline">
             <input type="hidden" name="command" value="SearchCommand">
             <input class="mr-sm-2" name="search" type="search" placeholder="Escribe para buscar" aria-labels="search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Busca</button>
@@ -76,6 +76,7 @@ which he has created
 
             <%
                 //We load all the courses which have been created in Database
+                List<Curso_1> search = (List<Curso_1>) request.getAttribute("cursosSearch");
                 List<Curso_1> cursosPersisted = cursoFacade.findAllCourses();
 
                 Iterator i = cursosPersisted.iterator();
@@ -85,8 +86,8 @@ which he has created
                 while (i.hasNext()) {
 
                     Curso_1 cursoActual = (Curso_1) i.next();
-                    System.out.println(cursoActual.getTitulo());
-
+                    if (search != null) {
+                        if (search.contains(cursoActual)) {
             %>
             <tr>
                 <td><%= cursoActual.getTitulo()%></td>
@@ -146,6 +147,8 @@ which he has created
             </tr>
 
             <%
+                        }
+                    }
                     current++;
 
                 }

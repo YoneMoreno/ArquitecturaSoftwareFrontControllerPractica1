@@ -33,7 +33,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Curso_1.findByDuracion", query = "SELECT c FROM Curso_1 c WHERE c.duracion = :duracion")
     , @NamedQuery(name = "Curso_1.findByVideo", query = "SELECT c FROM Curso_1 c WHERE c.video = :video")
     , @NamedQuery(name = "Curso_1.findByImagen", query = "SELECT c FROM Curso_1 c WHERE c.imagen = :imagen")
-    , @NamedQuery(name = "Curso_1.findBySearch", query = "SELECT c FROM Curso_1 c WHERE c.titulo LIKE :titulo")})
+    , @NamedQuery(name = "Curso_1.findBySearch", query = "SELECT c FROM Curso_1 c WHERE c.titulo LIKE :titulo ORDER BY c.titulo")})
 public class Curso_1 implements Serializable {
 
     @Basic(optional = false)

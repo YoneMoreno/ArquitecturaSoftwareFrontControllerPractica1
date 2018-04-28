@@ -24,14 +24,15 @@ public class SearchCommand extends FrontCommand {
 
     @Override
     public void process(HttpServletRequest request) {
-        if(request.getParameter("search")!=null){
+        if (request.getParameter("search") != null) {
             try {
-                Curso_1Facade cursoFacade =
-                        InitialContext.
+                Curso_1Facade cursoFacade
+                        = InitialContext.
                                 doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Curso_1Facade");
-                List<Curso_1> cursos = 
-                        cursoFacade.findAllCourseWhichContain(request.getParameter("search"));
-                request.setAttribute("cursosSearch", cursos);
+                List<Curso_1> cursosSearch
+                        = cursoFacade
+                                .findAllCourseWhichContain("%" + request.getParameter("search") + "%");
+                request.setAttribute("cursosSearch", cursosSearch);
                 try {
                     forward("/Public/CourseInfo.jsp");
                 } catch (ServletException ex) {
@@ -44,5 +45,5 @@ public class SearchCommand extends FrontCommand {
             }
         }
     }
-    
+
 }
