@@ -63,7 +63,7 @@ public class Curso_1Facade extends AbstractFacade<Curso_1> {
     }
 
     public void updateCourse(String titulo, String autor, String asignatura,
-            int duracion,String video, String imagen, int id) {
+            int duracion, String video, String imagen, int id) {
         System.out.println("UPDATE");
         System.out.println(id);
         Query update = em.createNativeQuery("UPDATE curso SET titulo = ?,"
@@ -80,6 +80,12 @@ public class Curso_1Facade extends AbstractFacade<Curso_1> {
         update.setParameter(6, imagen);
         update.setParameter(7, id);
         update.executeUpdate();
+    }
+
+    public List<Curso_1> findAllCourseWhichContain(String search) {
+        return em.createNamedQuery("Curso_1.findBySearch")
+                .setParameter("titulo", search)
+                .getResultList();
     }
 
 }

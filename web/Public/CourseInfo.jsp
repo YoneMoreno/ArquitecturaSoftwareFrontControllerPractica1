@@ -59,8 +59,9 @@ which he has created
         <link href="highlight.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <form class="form-inline">
-            <input class="mr-sm-2" type="search" placeholder="Escribe para buscar" aria-labels="search">
+        <form action="../FrontServlet" class="form-inline">
+            <input type="hidden" name="command" value="SearchCommand">
+            <input class="mr-sm-2" name="search" type="search" placeholder="Escribe para buscar" aria-labels="search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Busca</button>
         </form>
         <table class="table table-striped table-hover">

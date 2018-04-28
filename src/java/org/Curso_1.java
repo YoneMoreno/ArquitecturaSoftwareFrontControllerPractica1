@@ -32,7 +32,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Curso_1.findByAutor", query = "SELECT c FROM Curso_1 c WHERE c.autor = :autor")
     , @NamedQuery(name = "Curso_1.findByDuracion", query = "SELECT c FROM Curso_1 c WHERE c.duracion = :duracion")
     , @NamedQuery(name = "Curso_1.findByVideo", query = "SELECT c FROM Curso_1 c WHERE c.video = :video")
-    , @NamedQuery(name = "Curso_1.findByImagen", query = "SELECT c FROM Curso_1 c WHERE c.imagen = :imagen")})
+    , @NamedQuery(name = "Curso_1.findByImagen", query = "SELECT c FROM Curso_1 c WHERE c.imagen = :imagen")
+    , @NamedQuery(name = "Curso_1.findBySearch", query = "SELECT c FROM Curso_1 c WHERE c.titulo LIKE :titulo")})
 public class Curso_1 implements Serializable {
 
     @Basic(optional = false)
@@ -77,8 +78,8 @@ public class Curso_1 implements Serializable {
         this.imagen = imagen;
     }
 
-    public Curso_1(Integer idCurso, String titulo, String autor,String asignatura, int duracion, String video, String imagen) {
-        
+    public Curso_1(Integer idCurso, String titulo, String autor, String asignatura, int duracion, String video, String imagen) {
+
         this.idCurso = idCurso;
         this.titulo = titulo;
         this.autor = autor;
@@ -87,8 +88,6 @@ public class Curso_1 implements Serializable {
         this.video = video;
         this.imagen = imagen;
     }
-    
-    
 
     public Integer getIdCurso() {
         return idCurso;
@@ -170,5 +169,5 @@ public class Curso_1 implements Serializable {
     public void setAsignatura(String asignatura) {
         this.asignatura = asignatura;
     }
-    
+
 }
