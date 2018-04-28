@@ -15,9 +15,7 @@
     </head>
     <body>
         <%
-            if (request.getAttribute("curso") != null) {
-                Curso_1 curso = (Curso_1) request.getAttribute("curso");
-
+            Curso_1 curso = (Curso_1) request.getAttribute("curso");
         %>
         <form action="FrontServlet" method="POST">
             <h2 style="font-weight: 700">Titulo:</h2>
@@ -46,9 +44,10 @@
             <input style="width:100%" type="url" name="imagen" pattern="https?://.+" title="imagen"
                    value="<%= curso.getImagen()%>">
 
-            <input type="hidden" name="command" value="CourseInfoCommand">
-            <input type="submit" value="Crear curso" onclick="alert('El curso se ha creado');">
+            <input type="hidden" name="command" value="UpdateCourseCommand">
+            <input type="hidden" name="idCursoActualizado" value="<%= curso.getIdCurso()%>">
+            <input type="submit" value="Actualizar curso" onclick="alert('El curso se ha actualizado');">
         </form>
-        <%}%>
+            
     </body>
 </html>

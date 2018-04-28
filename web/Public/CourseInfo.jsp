@@ -80,6 +80,7 @@ which he has created
                 while (i.hasNext()) {
 
                     Curso_1 cursoActual = (Curso_1) i.next();
+                    System.out.println(cursoActual.getTitulo());
 
             %>
             <tr>

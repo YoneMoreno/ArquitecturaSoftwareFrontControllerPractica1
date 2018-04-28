@@ -77,6 +77,19 @@ public class Curso_1 implements Serializable {
         this.imagen = imagen;
     }
 
+    public Curso_1(Integer idCurso, String titulo, String autor,String asignatura, int duracion, String video, String imagen) {
+        
+        this.idCurso = idCurso;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.asignatura = asignatura;
+        this.duracion = duracion;
+        this.video = video;
+        this.imagen = imagen;
+    }
+    
+    
+
     public Integer getIdCurso() {
         return idCurso;
     }

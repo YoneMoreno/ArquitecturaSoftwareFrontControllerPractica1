@@ -37,9 +37,6 @@ public class FrontServlet extends HttpServlet {
     @EJB
     private Curso_1Facade curso_1Facade;
 
-
-    
-
     SingletonFuncionLog singletonFuncionLog5;
     Estadisticas estadisticas;
 
@@ -95,7 +92,9 @@ public class FrontServlet extends HttpServlet {
 
             addToSession(curso, session);
         } else if (isCourseCreatedWithRequiredParams(request)) {
-            courseHelper(request);
+            if (request.getParameter("idCursoActualizado") == null) {
+                courseHelper(request);
+            }
         }
     }
 
@@ -145,7 +144,7 @@ public class FrontServlet extends HttpServlet {
                 request.getParameter("asignatura"),
                 Integer.parseInt(request.getParameter("duracion")),
                 request.getParameter("video"),
-                request.getParameter("imagen"));        
+                request.getParameter("imagen"));
     }
 
     private Evaluacion evaluacionHelper(HttpServletRequest request) throws NamingException {
