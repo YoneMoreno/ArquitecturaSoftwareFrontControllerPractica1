@@ -130,6 +130,11 @@ which he has created
                         <i class="fas fa-trash-alt fa-3x"></i> 
                     </a>
                 </td>  
+                <td>
+                    <a href="../FrontServlet?command=UpdateCourseCommand&id=<%=cursoActual.getIdCurso()%>">
+                        <i class="fas fa-pencil-alt fa-3x"></i> 
+                    </a>
+                </td> 
 
 
             </tr>
