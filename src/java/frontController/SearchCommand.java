@@ -26,6 +26,7 @@ public class SearchCommand extends FrontCommand {
     public void process(HttpServletRequest request) {
 
         final String search = request.getParameter("search");
+
         if (search != null) {
             try {
 
@@ -40,6 +41,7 @@ public class SearchCommand extends FrontCommand {
                 List<Curso_1> cursosSearch
                         = cursoFacade
                                 .findAllCourseWhichContain(contains + search + contains);
+
                 request.setAttribute("cursosSearch", cursosSearch);
                 try {
                     forward("/Public/CourseInfo.jsp");
