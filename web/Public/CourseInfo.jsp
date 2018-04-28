@@ -58,7 +58,11 @@ which he has created
         --%>
         <link href="highlight.css" rel="stylesheet" type="text/css"/>
     </head>
-    <body> 
+    <body>
+        <form class="form-inline">
+            <input class="mr-sm-2" type="search" placeholder="Escribe para buscar" aria-labels="search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Busca</button>
+        </form>
         <table class="table table-striped table-hover">
             <tr>
                 <th>Titulo</th>
@@ -147,6 +151,8 @@ which he has created
 
             %>
         </table>
+
+
 
         <script src="highlighter.js" type="text/javascript"></script>
     </body> 
