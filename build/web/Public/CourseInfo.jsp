@@ -92,7 +92,13 @@ which he has created
             <%@include file="./tableRow.jsp" %>
 
             <%
-                        }
+                    }
+                }
+                if (search == null) {
+            %>
+            <%@include file="./tableRow.jsp"%>
+
+            <%
                     }
                     current++;
 
