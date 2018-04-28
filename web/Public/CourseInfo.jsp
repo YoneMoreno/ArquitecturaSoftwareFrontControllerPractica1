@@ -133,12 +133,12 @@ which he has created
                     </div>
                 </td>
                 <td>
-                    <a href="../FrontServlet?command=DeleteCourseCommand&id=<%=cursoActual.getIdCurso()%>">
+                    <a href="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet?command=DeleteCourseCommand&id=<%=cursoActual.getIdCurso()%>">
                         <i class="fas fa-trash-alt fa-3x"></i> 
                     </a>
                 </td>  
                 <td>
-                    <a href="../FrontServlet?command=UpdateCourseCommand&id=<%=cursoActual.getIdCurso()%>">
+                    <a href="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet?command=UpdateCourseCommand&id=<%=cursoActual.getIdCurso()%>">
                         <i class="fas fa-pencil-alt fa-3x"></i> 
                     </a>
                 </td> 
