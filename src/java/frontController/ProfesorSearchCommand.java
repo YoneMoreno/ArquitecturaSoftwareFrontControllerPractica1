@@ -29,10 +29,15 @@ public class ProfesorSearchCommand extends FrontCommand {
                     = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Profesor_1Facade");
             List<Profesor_1> allProfesorsBySearch
                     = profesorFacade.findAllProfesorsBySearch(request.getParameter("search"));
-            System.out.println("Numero de profesores por search: " + allProfesorsBySearch.size());
+            //System.out.println("Numero de profesores por search: " + allProfesorsBySearch.size());
             request.setAttribute("allProfesorsBySearch", allProfesorsBySearch);
+
+            List<Profesor_1> allProfesors
+                    = profesorFacade.findAllWithCriteria();
+            request.setAttribute("allProfesors", allProfesors);
+
             try {
-                forward("/Public/allProfesorsBySearch.jsp");
+                forward("/Public/ListaProfesores.jsp");
             } catch (ServletException ex) {
                 Logger.getLogger(ProfesorSearchCommand.class.getName()).log(Level.SEVERE, null, ex);
             } catch (IOException ex) {

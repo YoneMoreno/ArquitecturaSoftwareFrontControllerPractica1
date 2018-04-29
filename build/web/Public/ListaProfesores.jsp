@@ -25,10 +25,24 @@
         <div class="row">
             <%
                 List<Profesor_1> allProfesors = (List<Profesor_1>) request.getAttribute("allProfesors");
+                List<Profesor_1> allProfesorsBySearch = (List<Profesor_1>) request.getAttribute("allProfesorsBySearch");
+                //System.out.println("Numero de profesores encontrados en ListaProfesores.jsp: " + allProfesorsBySearch.size());
                 for (Profesor_1 profesor : allProfesors) {
+                    if (allProfesorsBySearch != null) {
+                        if (allProfesorsBySearch.contains(profesor)) {
             %>
             <%@include file="./TarjetaProfesor.jsp" %>
-            <%}%>
+            <%          }
+
+            } else if (allProfesorsBySearch == null) {
+            %>
+            <%@include file="./TarjetaProfesor.jsp" %>
+
+
+            <%
+                    }
+                }
+            %>
         </div>
     </body>
     <%@include file="../Footer.jsp" %>
