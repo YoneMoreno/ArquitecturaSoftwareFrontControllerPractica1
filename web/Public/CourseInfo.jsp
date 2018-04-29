@@ -59,11 +59,19 @@ which he has created
         <link href="highlight.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <form action="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet" class="form-inline">
-            <input type="hidden" name="command" value="SearchCommand">
-            <input class="mr-sm-2" name="search" type="search" placeholder="Escribe para buscar" aria-labels="search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Busca</button>
-        </form>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <form action="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet" class="form-inline">
+                    <input type="hidden" name="command" value="SearchCommand">
+                    <input class="mr-sm-2" name="search" type="search" placeholder="Escribe para buscar" aria-labels="search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Busca</button>
+                </form>        
+            </div>
+            <div class="col-md-6">
+                <i class="fas fa-caret-left fa-3x"></i>
+                <i class="fas fa-caret-right fa-3x"></i>
+            </div>
+        </div>
         <table class="table table-striped table-hover">
             <tr>
                 <th>Titulo</th>
