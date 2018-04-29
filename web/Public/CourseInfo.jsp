@@ -64,15 +64,21 @@ which he has created
                 <div class="col-md-4">
                     <input type="hidden" name="command" value="SearchCommand">
                     <input class="mr-sm-2" name="search" type="search" placeholder="Escribe para buscar" aria-labels="search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Busca</button>
                 </div>
                 <div class="col-md-4">
-                    <input type="number" min="1" max="5" name="numberOfCoursesToDisplay">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Filtrar</button>
-                    <a href=""><i class="fas fa-caret-left fa-2x"></i></a>
-                    <a href=""><i class="fas fa-caret-right fa-2x"></i></a>
-                    
+                    <input size="100" type="number" min="1" max="5" name="numberOfCoursesToDisplay"  placeholder="Numero maximo" required/>
+                    <a href="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet?command=SearchCommand&search=<%= request.getParameter("search") != null ? request.getParameter("search") : ""%>&numberOfCoursesToDisplay=<%= (Integer.parseInt(request.getParameter("numberOfCoursesToDisplay")) - 1) >= 1 ? (Integer.parseInt(request.getParameter("numberOfCoursesToDisplay")) - 1) : 1%>">
+                        <i class="fas fa-caret-left fa-2x"></i></a>
+                    <a href="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet?command=SearchCommand&search=<%= request.getParameter("search") != null ? request.getParameter("search") : ""%>&numberOfCoursesToDisplay=<%= Integer.parseInt(request.getParameter("numberOfCoursesToDisplay")) + 1%>">
+                        <i class="fas fa-caret-right fa-2x"></i></a>
+
                 </div>
+                <div class="col-md-4">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Filtrar
+                    </button>
+                </div>
+
+
             </div>
         </form>        
         <table class="table table-striped table-hover">

@@ -74,7 +74,7 @@
 
 
         <li class="nav-item">
-            <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet?command=SearchCommand&search=">Lista de cursos</a>
+            <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet?command=SearchCommand&search=&numberOfCoursesToDisplay=3">Lista de cursos</a>
 
         </li>
         <li class="nav-item">
