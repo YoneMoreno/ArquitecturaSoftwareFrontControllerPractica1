@@ -92,6 +92,9 @@
         <li class="nav-item">
             <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/Chat.jsp"><i class="fas fa-comments"></i></a>
         </li>
+        <li class="nav-item">
+            <a href="/ASPLICACIONCURSOSPRACTICA1/Public/ListaProfesores.jsp" class="nav-link"><i class="fas fa-users"></i></a>
+        </li>
 
 
 
