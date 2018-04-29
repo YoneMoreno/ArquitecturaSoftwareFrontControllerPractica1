@@ -82,9 +82,10 @@ public class Curso_1Facade extends AbstractFacade<Curso_1> {
         update.executeUpdate();
     }
 
-    public List<Curso_1> findAllCourseWhichContain(String search) {
+    public List<Curso_1> findAllCourseWhichContain(String search, int numberOfCoursesToDisplay) {
         return em.createNamedQuery("Curso_1.findBySearch")
                 .setParameter("titulo", search)
+                .setMaxResults(numberOfCoursesToDisplay)
                 .getResultList();
     }
 

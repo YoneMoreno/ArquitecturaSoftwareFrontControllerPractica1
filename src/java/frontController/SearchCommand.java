@@ -6,6 +6,7 @@
 package frontController;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -27,6 +28,13 @@ public class SearchCommand extends FrontCommand {
 
         final String search = request.getParameter("search");
 
+        int numberOfCoursesToDisplay = 0;
+        if (request.getParameter("numberOfCoursesToDisplay") != null
+                && !request.getParameter("numberOfCoursesToDisplay").isEmpty()) {
+            numberOfCoursesToDisplay
+                    = Integer.parseInt(request.getParameter("numberOfCoursesToDisplay"));
+        }
+
         if (search != null) {
             try {
 
@@ -40,7 +48,8 @@ public class SearchCommand extends FrontCommand {
 
                 List<Curso_1> cursosSearch
                         = cursoFacade
-                                .findAllCourseWhichContain(contains + search + contains);
+                                .findAllCourseWhichContain(contains + search + contains,
+                                        numberOfCoursesToDisplay);
 
                 request.setAttribute("cursosSearch", cursosSearch);
                 try {
