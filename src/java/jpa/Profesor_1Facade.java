@@ -13,6 +13,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import org.Profesor_1;
 
@@ -43,6 +44,18 @@ public class Profesor_1Facade extends AbstractFacade<Profesor_1> {
         TypedQuery<Profesor_1> query = em.createQuery(criteriaQuery);
         List<Profesor_1> allProfesors = query.getResultList();
         return allProfesors;
+    }
+
+    public List<Profesor_1> findAllProfesorsBySearch(String search) {
+        CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder();
+        CriteriaQuery<Profesor_1> createQuery = criteriaBuilder.createQuery(Profesor_1.class);
+        Root<Profesor_1> profesor = createQuery.from(Profesor_1.class);
+        Predicate predicate = criteriaBuilder.like(profesor.get("nombre"), "%" + search + "%");
+        createQuery.where(predicate);
+        createQuery.select(profesor);
+        TypedQuery query = em.createQuery(createQuery);
+        List<Profesor_1> result = query.getResultList();
+        return result;
     }
 
 }
