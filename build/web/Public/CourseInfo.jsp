@@ -69,6 +69,9 @@ which he has created
                 <div class="col-md-4">
                     <input type="number" min="1" max="5" name="numberOfCoursesToDisplay">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Filtrar</button>
+                    <a href=""><i class="fas fa-caret-left fa-2x"></i></a>
+                    <a href=""><i class="fas fa-caret-right fa-2x"></i></a>
+                    
                 </div>
             </div>
         </form>        
