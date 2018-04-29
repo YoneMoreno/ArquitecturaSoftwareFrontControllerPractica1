@@ -51,11 +51,16 @@ public class Profesor_1Facade extends AbstractFacade<Profesor_1> {
         CriteriaQuery<Profesor_1> createQuery = criteriaBuilder.createQuery(Profesor_1.class);
         Root<Profesor_1> profesor = createQuery.from(Profesor_1.class);
         Predicate predicate = criteriaBuilder.like(profesor.get("nombre"), "%" + search + "%");
+        
         createQuery.where(predicate);
-        createQuery.select(profesor);
+        createQuery.select(profesor)
+                .orderBy(criteriaBuilder.asc(profesor.get("nombre")),
+                        criteriaBuilder.desc(profesor.get("asignatura")));
+        
         TypedQuery query = em.createQuery(createQuery);
         List<Profesor_1> result = query.getResultList();
-        return result;
+        
+        return (List<Profesor_1>) result;
     }
 
 }
