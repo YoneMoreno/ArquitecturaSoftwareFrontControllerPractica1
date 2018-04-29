@@ -14,6 +14,14 @@
         <title>Lista de profesores</title>
     </head>
     <body>
+
+        <form action="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet" class="form-inline">
+            <input type="hidden" name="command" value="ProfesorSearchCommand">
+            <input class="mr-sm-2" name="search" type="search" placeholder="Escribe para buscar"
+                   aria-labels="search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Busca</button>
+        </form>
+
         <div class="row">
             <%
                 List<Profesor_1> allProfesors = (List<Profesor_1>) request.getAttribute("allProfesors");
