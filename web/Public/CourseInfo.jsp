@@ -42,7 +42,9 @@ which he has created
     estadisticasCourseInfo.nuevaVisitaCourseInfo();
 
     Curso_1Facade cursoFacade = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Curso_1Facade");
-
+    if(request.getParameter("numberOfCoursesToDisplay") != null){
+        session.setAttribute("numberOfCoursesToDisplay", Integer.parseInt(request.getParameter("numberOfCoursesToDisplay")));
+    }
 %>
 
 <html> 
@@ -67,9 +69,9 @@ which he has created
                 </div>
                 <div class="col-md-4">
                     <input size="100" type="number" min="1" max="5" name="numberOfCoursesToDisplay"  placeholder="Numero maximo" required/>
-                    <a href="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet?command=SearchCommand&search=<%= request.getParameter("search") != null ? request.getParameter("search") : ""%>&numberOfCoursesToDisplay=<%= (Integer.parseInt(request.getParameter("numberOfCoursesToDisplay")) - 1) >= 1 ? (Integer.parseInt(request.getParameter("numberOfCoursesToDisplay")) - 1) : 1%>">
+                    <a href="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet?command=SearchCommand&search=<%= request.getParameter("search") != null ? request.getParameter("search") : ""%>&numberOfCoursesToDisplay=<%= (int)session.getAttribute("numberOfCoursesToDisplay") - 1 >= 1 ? (int)session.getAttribute("numberOfCoursesToDisplay") - 1 : 1%>">
                         <i class="fas fa-caret-left fa-2x"></i></a>
-                    <a href="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet?command=SearchCommand&search=<%= request.getParameter("search") != null ? request.getParameter("search") : ""%>&numberOfCoursesToDisplay=<%= Integer.parseInt(request.getParameter("numberOfCoursesToDisplay")) + 1%>">
+                    <a href="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet?command=SearchCommand&search=<%= request.getParameter("search") != null ? request.getParameter("search") : ""%>&numberOfCoursesToDisplay=<%= (int)session.getAttribute("numberOfCoursesToDisplay") + 1%>">
                         <i class="fas fa-caret-right fa-2x"></i></a>
 
                 </div>
