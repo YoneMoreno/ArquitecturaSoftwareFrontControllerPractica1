@@ -46,7 +46,7 @@
 
             <input type="hidden" name="command" value="UpdateCourseCommand">
             <input type="hidden" name="idCursoActualizado" value="<%= curso.getIdCurso()%>">
-            <input type="submit" value="Actualizar curso" onclick="alert('El curso se ha actualizado');">
+            <input type="submit" value="Actualizar curso" onclick="alert('El curso se ha actualizado')";>
         </form>
             
     </body>
