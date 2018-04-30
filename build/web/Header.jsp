@@ -12,15 +12,15 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
-    SingletonFuncionLog singletonFuncionLog4 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
+    SingletonFuncionLog singletonFuncionLog9 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
 
-    singletonFuncionLog4.funcionLog("Header", "processRequest");
+    singletonFuncionLog9.funcionLog("Header", "processRequest");
 
-    Estadisticas estadisticas = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
+    Estadisticas estadisticas22 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
 
     session = request.getSession(true);
     if (session.isNew()) {
-        estadisticas.cuentaNuevaSesion();
+        estadisticas22.cuentaNuevaSesion();
     }
 
     int accesos;

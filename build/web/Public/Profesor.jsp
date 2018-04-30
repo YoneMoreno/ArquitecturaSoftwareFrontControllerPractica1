@@ -18,6 +18,7 @@ It is made by name, subject, pupils' assessments made to this teacher, email, ph
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
+<%@include file="../Header.jsp" %>
 
 <%
     SingletonFuncionLog singletonFuncionLog = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
@@ -28,11 +29,11 @@ It is made by name, subject, pupils' assessments made to this teacher, email, ph
 
     estadisticasProfesor.nuevaVisitaProfesor();
 
-    Profesor_1 sesionProfesor = (Profesor_1) session.getAttribute("profesor");
+
 %>
 
 <html>
-    <%@include file="../Header.jsp" %>
+
 
     <title>Profesor</title>
 

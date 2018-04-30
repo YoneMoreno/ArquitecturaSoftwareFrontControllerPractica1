@@ -1,3 +1,9 @@
+<%
+    Profesor_1 sesionProfesor = (Profesor_1) session.getAttribute("profesor");
+
+
+%>
+
 <body>
     <div class="container">
         <div class="row">
