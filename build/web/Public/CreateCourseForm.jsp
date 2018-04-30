@@ -25,7 +25,7 @@
         <h2 style="font-weight:700">Enlace a la imagen del curso:</h2>
         <input style="width:100%" type="url" name="imagen" pattern="https?://.+" title="imagen">
 
-        <input type="hidden" name="command" value="CourseInfoCommand">
+        <input type="hidden" name="command" value="CreateCourseCommand">
         <input type="submit" value="Crear curso" onclick="alert('El curso se ha creado');">
     </form>
 </details>

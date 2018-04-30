@@ -58,8 +58,6 @@ public class FrontServlet extends HttpServlet {
             Curso curso = getCourseFromSession(session);
             Evaluacion evaluacion = getEvaluacionFromSession(session);
 
-            setCourseInSession(curso, session, request);
-
             setEvaluacionInSession(evaluacion, session, request);
 
             FrontCommand command = getCommand(request);
@@ -83,19 +81,6 @@ public class FrontServlet extends HttpServlet {
         singletonFuncionLog5.funcionLog("FrontServlet", "getCourseFromSession");
         Curso curso = (Curso) session.getAttribute("curso");
         return curso;
-    }
-
-    private void setCourseInSession(Curso curso, HttpSession session, HttpServletRequest request) throws NamingException {
-        this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
-        singletonFuncionLog5.funcionLog("FrontServlet", "setCourseInSession");
-        if (curso != null) {
-
-            addToSession(curso, session);
-        } else if (isCourseCreatedWithRequiredParams(request)) {
-            if (request.getParameter("idCursoActualizado") == null) {
-                courseHelper(request);
-            }
-        }
     }
 
     private void setEvaluacionInSession(Evaluacion evaluacion, HttpSession session, HttpServletRequest request) throws NamingException {
@@ -134,17 +119,6 @@ public class FrontServlet extends HttpServlet {
         }
         cursos.add(curso);
 
-    }
-
-    private void courseHelper(HttpServletRequest request) throws NamingException {
-        this.singletonFuncionLog5 = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/SingletonFuncionLog");
-        singletonFuncionLog5.funcionLog("FrontServlet", "courseHelper");
-        curso_1Facade.createCourse(request.getParameter("titulo"),
-                request.getParameter("autor"),
-                request.getParameter("asignatura"),
-                Integer.parseInt(request.getParameter("duracion")),
-                request.getParameter("video"),
-                request.getParameter("imagen"));
     }
 
     private Evaluacion evaluacionHelper(HttpServletRequest request) throws NamingException {
