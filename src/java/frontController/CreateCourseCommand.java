@@ -30,12 +30,19 @@ public class CreateCourseCommand extends FrontCommand {
             } catch (NamingException ex) {
                 Logger.getLogger(CreateCourseCommand.class.getName()).log(Level.SEVERE, null, ex);
             }
-            curso_1Facade.createCourse(request.getParameter("titulo"),
-                    request.getParameter("autor"),
-                    request.getParameter("asignatura"),
-                    Integer.parseInt(request.getParameter("duracion")),
-                    request.getParameter("video"),
-                    request.getParameter("imagen"));
+
+            final String titulo = request.getParameter("titulo");
+            final String autor = request.getParameter("autor");
+            final String asignatura = request.getParameter("asignatura");
+            final int duracion = Integer.parseInt(request.getParameter("duracion"));
+            String video = request.getParameter("video");
+            String imagen = request.getParameter("imagen");
+
+            imagen = putDefaultImage(imagen);
+
+            video = putDefaultVideo(video);
+
+            curso_1Facade.createCourse(titulo, autor, asignatura, duracion, video, imagen);
 
             forward("/Public/CourseInfo.jsp");
         } catch (ServletException ex) {
@@ -43,6 +50,20 @@ public class CreateCourseCommand extends FrontCommand {
         } catch (IOException ex) {
             Logger.getLogger(CreateCourseCommand.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    private String putDefaultVideo(String video) {
+        if (video == null || video.isEmpty()) {
+            video = "https://player.vimeo.com/external/194837908.sd.mp4?s=c350076905b78c67f74d7ee39fdb4fef01d12420&profile_id=164";
+        }
+        return video;
+    }
+
+    private String putDefaultImage(String imagen) {
+        if (imagen == null || imagen.isEmpty()) {
+            imagen = "http://2.bp.blogspot.com/-KRqoq8kBqzs/T2x_qB8zu5I/AAAAAAAAGR0/Mu0RWv9CbWc/s1600/libro.jpg";
+        }
+        return imagen;
     }
 
 }
