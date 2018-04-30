@@ -48,82 +48,8 @@ observe social media links/icons.
                 <h1>Bienvenido a CursosApp, elija una opción del panel para comenzar:</h1>
                 <div>
                     <%@ include file="/Public/CreateCourseForm.jsp"%>
-                    <details>
-                        <summary>
-                            Crear cuestionario
-                        </summary>
-                        <form action="FrontServlet">
-                            <h2 >
-                                Pregunta 1:
-                            </h2>
-                            <textarea style="width:100%" name="pregunta1" rows="4" cols="20">
-                            </textarea>
-                            <input  type="submit" value="Crear cuestionario">
-                            <h3>
-                                Respuesta 1:
-                            </h3>
-                            <input style="width:100%"  type="text" name="respuestaTexto11" value="" />
-                            <h4>
-                                ¿Es correcta?:
-                            </h4>
-                            <input type="checkbox" name="respuestaVerdad11" value="cierta" />
-                            <h3>
-                                Respuesta 2:
-                            </h3>
-                            <input style="width:100%" type="text" name="respuestaTexto12" value="" />
-                            <h4>
-                                ¿Es correcta?:
-                            </h4>
-                            <input type="checkbox" name="respuestaVerdad12" value="cierta" />
-                            <h3>
-                                Respuesta 3:
-                            </h3>
-                            <input style="width:100%" type="text" name="respuestaTexto13" value="" />
-                            <h4>
-                                ¿Es correcta?:
-                            </h4>
-                            <input type="hidden" name="command" value="CuestionarioCommand"/>
-                            <input type="checkbox" name="respuestaVerdad13" value="cierta" />
-                        </form>
-                    </details>
-                    <details>
-                        <summary>
-                            Crear encuesta
-                        </summary>
-
-                        <form action="FrontServlet">
-                            <h2>
-                                Cuestion 1:
-                            </h2>
-                            <textarea style="width:100%" name="cuestion1" rows="4" cols="20">
-                            </textarea>
-                            <input type="submit" value="Crear encuesta">
-                            <h3>
-                                Los alumnos podran votar mediante las siguientes respuestas:
-                            </h3>
-                            <div style="display: flex">
-                                <h4>0</h4><input type="radio" name="encuesta1" value="0" disabled />
-                                <h4>1</h4><input type="radio" name="encuesta1" value="1" disabled/>
-                                <h4>2</h4><input type="radio" name="encuesta1" value="2" disabled/>
-                                <h4>3</h4><input type="radio" name="encuesta1" value="3" disabled/>
-                                <h4>4</h4><input type="radio" name="encuesta1" value="4" disabled/>
-                                <h4>5</h4><input type="radio" name="encuesta1" value="5" disabled/>
-                                <h4>6</h4><input type="radio" name="encuesta1" value="6" disabled/>
-                                <h4>7</h4><input type="radio" name="encuesta1" value="7" disabled/>
-                                <h4>8</h4><input type="radio" name="encuesta1" value="8" disabled/>
-                                <h4>9</h4><input type="radio" name="encuesta1" value="9" disabled/>
-                                <h4>10</h4><input type="radio" name="encuesta1" value="10" disabled />
-                                <input type="hidden" name="command" value="EncuestaCommand"/>
-                            </div>
-                        </form>
-                    </details>
-                    <details>
-                        <summary>Ver lista de alumnos</summary>
-                        <form action="FrontServlet">
-                            <input type="submit" value="Ver mis alummnos"/>
-                            <input type="hidden" name="command" value="AlumnosCommand"/>
-                        </form>
-                    </details>
+                    <%@ include file="/Public/CreateCuestionarioForm.jsp"%>
+                    <%@ include file="/Public/CreateEncuestaForm.jsp"%>
                     <%}%>
                     <h4>Asignaturas impartidas en la escuela:</h4>
                     <div id="demo" class="carousel slide" data-ride="carousel" style="width: 25%; height: 25%">
