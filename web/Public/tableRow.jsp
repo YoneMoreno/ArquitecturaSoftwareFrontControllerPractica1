@@ -14,7 +14,7 @@
 
     %>
 
-    <td><a href="./VideoMP4.jsp?video=<%=cursoActual.getVideo()%>">Video</a></td>
+    <td><a href="Public/VideoMP4.jsp?video=<%=cursoActual.getVideo()%>">Video</a></td>
 
     <% } else {
 
@@ -22,7 +22,7 @@
 
     %>
 
-    <td><a href="./Video.jsp?video=<%=cursoActual.getVideo()%>">Video</a></td>
+    <td><a href="Public/Video.jsp?video=<%=cursoActual.getVideo()%>">Video</a></td>
 
     <% }%>
 
