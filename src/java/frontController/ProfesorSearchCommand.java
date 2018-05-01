@@ -27,6 +27,32 @@ public class ProfesorSearchCommand extends FrontCommand {
         try {
             Profesor_1Facade profesorFacade
                     = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Profesor_1Facade");
+            
+            final boolean pagina = request.getParameter("pagina") != null;
+
+            if (pagina) {
+                
+                int defaultNumberOfProfesorByPage = 3;
+                int[] range = new int[2];
+                
+                range[0] = (Integer.parseInt(request.getParameter("pagina")) - 1)
+                        * defaultNumberOfProfesorByPage;
+                
+                range[1] = Integer.parseInt(request.getParameter("pagina"))
+                        * defaultNumberOfProfesorByPage;
+                
+                
+                List<Profesor_1> profesorByPage = profesorFacade.findRange(range);
+                request.setAttribute("profesorByPage",profesorByPage);
+                try {
+                    forward("/Public/ListaProfesores.jsp");
+                } catch (ServletException ex) {
+                    Logger.getLogger(ProfesorSearchCommand.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (IOException ex) {
+                    Logger.getLogger(ProfesorSearchCommand.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+
             List<Profesor_1> allProfesorsBySearch
                     = profesorFacade.findAllProfesorsBySearch(request.getParameter("search"));
             //System.out.println("Numero de profesores por search: " + allProfesorsBySearch.size());
