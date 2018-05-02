@@ -61,29 +61,35 @@ which he has created
         <link href="highlight.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <form action="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet" class="form-inline">
-            <div class="row mt-5">
-                <div class="col-md-4">
-                    <input type="hidden" name="command" value="SearchCommand">
-                    <input class="mr-sm-2" name="search" type="search" placeholder="Escribe para buscar" aria-labels="search"
-                           value="<%=request.getParameter("search")!=null ? request.getParameter("search") : ""%>">
+        <div class="container">
+            <form action="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet" class="form-inline">
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <input type="hidden" name="command" value="SearchCommand">
+                        <h6 for="search">Buscar cursos por titulo</h6>
+                            <input  name="search" type="search" placeholder="Escribe" aria-labels="search"
+                                    value="<%=request.getParameter("search") != null ? request.getParameter("search") : ""%>">
+                            <div class="col-md-3">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar
+                                </button>
+                            </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Numero maximo de cursos a mostrar</h6>
+                        <input type="number" min="1" max="5" name="numberOfCoursesToDisplay"  placeholder="Numero maximo" value="<%=request.getParameter("numberOfCoursesToDisplay") != null ? request.getParameter("numberOfCoursesToDisplay") : "3"%>"/>
+                        <a href="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet?command=SearchCommand&search=<%= request.getParameter("search") != null ? request.getParameter("search") : ""%>&numberOfCoursesToDisplay=<%= (int) session.getAttribute("numberOfCoursesToDisplay") - 1 >= 1 ? (int) session.getAttribute("numberOfCoursesToDisplay") - 1 : 1%>">
+                            <i class="fas fa-caret-left fa-2x"></i></a>
+                        <a href="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet?command=SearchCommand&search=<%= request.getParameter("search") != null ? request.getParameter("search") : ""%>&numberOfCoursesToDisplay=<%= (int) session.getAttribute("numberOfCoursesToDisplay") + 1%>">
+                            <i class="fas fa-caret-right fa-2x"></i></a>
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Filtrar
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <input size="100" type="number" min="1" max="5" name="numberOfCoursesToDisplay"  placeholder="Numero maximo" value="<%=request.getParameter("numberOfCoursesToDisplay") != null ? request.getParameter("numberOfCoursesToDisplay") : "3"%>"/>
-                    <a href="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet?command=SearchCommand&search=<%= request.getParameter("search") != null ? request.getParameter("search") : ""%>&numberOfCoursesToDisplay=<%= (int) session.getAttribute("numberOfCoursesToDisplay") - 1 >= 1 ? (int) session.getAttribute("numberOfCoursesToDisplay") - 1 : 1%>">
-                        <i class="fas fa-caret-left fa-2x"></i></a>
-                    <a href="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet?command=SearchCommand&search=<%= request.getParameter("search") != null ? request.getParameter("search") : ""%>&numberOfCoursesToDisplay=<%= (int) session.getAttribute("numberOfCoursesToDisplay") + 1%>">
-                        <i class="fas fa-caret-right fa-2x"></i></a>
+            </form>        
+        </div>
 
-                </div>
-                <div class="col-md-4">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Filtrar
-                    </button>
-                </div>
-
-
-            </div>
-        </form>        
         <table class="table table-striped table-hover">
             <tr>
                 <th>Titulo</th>
