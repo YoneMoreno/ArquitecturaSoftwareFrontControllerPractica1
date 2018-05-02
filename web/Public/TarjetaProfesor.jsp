@@ -6,7 +6,7 @@
         <div class="card-body">
             <ul class="card-text">
                 <li class="card-text">
-                    <i class="fas fa-envelope-square"></i> Correo: <%= profesor.getCorreo()%> <a href="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet?command=SendMessageCommand"><i class="fas fa-envelope-open"></i></a>
+                    <i class="fas fa-envelope-square"></i> Correo: <%= profesor.getCorreo()%> <a href="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet?command=ShowMessageFormCommand&idReceiver=<%=profesor.getIdProfesor()%>"><i class="fas fa-envelope-open"></i></a>
                 </li>
                 <li class="card-text">
                     <i class="fas fa-phone"></i> Telefono: <%= profesor.getTelefono()%>
