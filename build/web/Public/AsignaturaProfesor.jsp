@@ -24,9 +24,10 @@ topics into the teacher's subject. In addition we display the List of topics.
     </head>
     <body>
 
-        <% 
-            if (request.getParameter("nombre") != null && !request.getParameter("nombre").isEmpty()) {
-                AsignaturaProfesor asignatura = new AsignaturaProfesor(request.getParameter("nombre"));
+        <%
+            final String nombre = request.getParameter("nombre");
+            if (nombre != null && !nombre.isEmpty()) {
+                AsignaturaProfesor asignatura = new AsignaturaProfesor(nombre);
                 session.setAttribute("asignaturaProfesor", asignatura);
             }
         %>
