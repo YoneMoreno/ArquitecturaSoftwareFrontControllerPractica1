@@ -6,7 +6,9 @@
 package org;
 
 import java.io.Serializable;
+import java.util.Collection;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,8 +16,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -35,6 +39,11 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Profesor_1.findByTelefono", query = "SELECT p FROM Profesor_1 p WHERE p.telefono = :telefono")
     , @NamedQuery(name = "Profesor_1.findByDespacho", query = "SELECT p FROM Profesor_1 p WHERE p.despacho = :despacho")})
 public class Profesor_1 implements Serializable {
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idReceiver")
+    private Collection<Messages> messagesCollection;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idSender")
+    private Collection<Messages> messagesCollection1;
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -169,6 +178,24 @@ public class Profesor_1 implements Serializable {
     @Override
     public String toString() {
         return "org.Profesor_1[ idProfesor=" + idProfesor + " ]";
+    }
+
+    @XmlTransient
+    public Collection<Messages> getMessagesCollection() {
+        return messagesCollection;
+    }
+
+    public void setMessagesCollection(Collection<Messages> messagesCollection) {
+        this.messagesCollection = messagesCollection;
+    }
+
+    @XmlTransient
+    public Collection<Messages> getMessagesCollection1() {
+        return messagesCollection1;
+    }
+
+    public void setMessagesCollection1(Collection<Messages> messagesCollection1) {
+        this.messagesCollection1 = messagesCollection1;
     }
     
 }
