@@ -43,6 +43,16 @@ It is made by name, subject, pupils' assessments made to this teacher, email, ph
                 <div class="list-group" id="list-tab" role="tablist">
                     <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="profile">Mis datos</a>
                     <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Editar mi perfil</a>
+                    <div class="btn-group">
+                        <button type="button" class="list-group-item list-group-item-action">Mensajes</button>
+                        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="FrontServlet?command=SeeMessagesCommand&type=received">Recibidos</a>
+                            <a class="dropdown-item" href="FrontServlet?command=SeeMessagesCommand&type=sent">Enviados</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-10 mt-0 mb-4">
