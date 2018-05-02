@@ -72,12 +72,13 @@ By commentary, and Pass/Not Pass
                     int current = 0;
                     while (i.hasNext()) {
                         Evaluacion evaluacionActual = (Evaluacion) i.next();
-                        if(evaluacionActual==null) continue;
+                        if (evaluacionActual == null) {
+                            continue;
+                        }
 
             %>
             <tr>
-                <%                    
-                    String nota = evaluacionActual.getEvaluacion();
+                <%                    String nota = evaluacionActual.getEvaluacion();
                     int evaluacionInt = -1;
                     String pattern = "-?\\d+";
                     if (isEvaluacionNota(nota)) {
@@ -90,11 +91,7 @@ By commentary, and Pass/Not Pass
 
 
                 <%
-                } else if (evaluacionActual.getEvaluacion().equals("A")
-                        || evaluacionActual.getEvaluacion().equals("B")
-                        || evaluacionActual.getEvaluacion().equals("C")
-                        || evaluacionActual.getEvaluacion().equals("D")
-                        || evaluacionActual.getEvaluacion().equals("E")) {
+                } else if (isLetraNota(evaluacionActual)) {
 
 
                 %>
@@ -133,9 +130,16 @@ By commentary, and Pass/Not Pass
 
 
 <%!
+    public boolean isEvaluacionNota(String nota) {
+        return nota.matches("-?\\d+");
+    }
 
-public boolean isEvaluacionNota(String nota){
-    return nota.matches("-?\\d+");
-}
+    public boolean isLetraNota(Evaluacion evaluacionActual) {
+        return evaluacionActual.getEvaluacion().equals("A")
+                || evaluacionActual.getEvaluacion().equals("B")
+                || evaluacionActual.getEvaluacion().equals("C")
+                || evaluacionActual.getEvaluacion().equals("D")
+                || evaluacionActual.getEvaluacion().equals("E");
+    }
 
 %>
