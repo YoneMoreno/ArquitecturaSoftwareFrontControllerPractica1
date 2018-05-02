@@ -80,7 +80,7 @@ By commentary, and Pass/Not Pass
                     String nota = evaluacionActual.getEvaluacion();
                     int evaluacionInt = -1;
                     String pattern = "-?\\d+";
-                    if (nota.matches("-?\\d+")) {
+                    if (isEvaluacionNota(nota)) {
                         evaluacionInt = Integer.parseInt(nota);
                 %>
                 <td><%= evaluacionActual.getEvaluacionAlumno()%></td>
@@ -130,3 +130,12 @@ By commentary, and Pass/Not Pass
 <%@include file="Footer.jsp" %>
 
 </html>
+
+
+<%!
+
+public boolean isEvaluacionNota(String nota){
+    return nota.matches("-?\\d+");
+}
+
+%>
