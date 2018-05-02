@@ -14,7 +14,9 @@ import javax.naming.NamingException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import jpa.MessagesFacade;
+import jpa.Profesor_1Facade;
 import org.Messages;
+import org.Profesor_1;
 
 /**
  *
@@ -26,9 +28,10 @@ public class SeeMessagesCommand extends FrontCommand {
     public void process(HttpServletRequest request) {
         try {
             MessagesFacade messagesFacade = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/MessagesFacade");
-            List<Messages> messages = messagesFacade.findAll();
-            System.out.println(messages.size());
-            request.setAttribute("messages",messages);
+            Profesor_1 profesor = (Profesor_1) session.getAttribute("profesor");
+            List<Messages> messages = (List<Messages>) messagesFacade.findAllById(profesor,
+                    request.getParameter("type"));
+            request.setAttribute("messages", messages);
             try {
                 forward("/Public/received.jsp");
             } catch (ServletException ex) {

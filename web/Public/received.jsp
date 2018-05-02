@@ -30,7 +30,7 @@
                 <td><%= sender.getCorreo()%></td>
                 <td><%= message.getSubject()%></td>
                 <td><%= message.getDate()%></td>
-                <td><a href="messageDetail.jsp?id=<%=message.getId()%>"><i class="fas fa-eye"></i></a></td>
+                <td><a href="Public/messageDetail.jsp?id=<%=message.getId()%>"><i class="fas fa-eye"></i></a></td>
             </tr>
             <%
                 }
