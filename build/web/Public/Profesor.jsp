@@ -49,8 +49,8 @@ It is made by name, subject, pupils' assessments made to this teacher, email, ph
                             <span class="sr-only">Toggle Dropdown</span>
                         </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="FrontServlet?command=SeeMessagesCommand&type=received">Recibidos</a>
-                            <a class="dropdown-item" href="FrontServlet?command=SeeMessagesCommand&type=sent">Enviados</a>
+                            <a class="dropdown-item" href="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet?command=SeeMessagesCommand&type=received">Recibidos</a>
+                            <a class="dropdown-item" href="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet?command=SeeMessagesCommand&type=sent">Enviados</a>
                         </div>
                     </div>
                 </div>
@@ -66,6 +66,7 @@ It is made by name, subject, pupils' assessments made to this teacher, email, ph
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 
