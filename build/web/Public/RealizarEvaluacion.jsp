@@ -38,9 +38,17 @@ Plase note that this RealizarEvaluacion.jsp expects two parameters in the reques
         <title>Realizar Evaluación</title>
     </head>
     <body>
-        <%            
-            if (request.getParameter("name").toString().equals("command")) {
-                if (request.getParameter("value").toString().equals("numero")) {
+
+        <!%
+
+
+        %>
+
+        <%
+            final String name = request.getParameter("name");
+            final String value = request.getParameter("value");
+            if (name.equals("command")) {
+                if (value.equals("numero")) {
 
 
         %>
@@ -66,7 +74,7 @@ Plase note that this RealizarEvaluacion.jsp expects two parameters in the reques
             <input type="submit" value="Enviar evaluacion">
             <input type="hidden" name="command" value="EvaluacionCommand"/>
         </form>
-        <%  } else if (request.getParameter("value").toString().equals("letra")) {
+        <%  } else if (value.equals("letra")) {
 
         %>
         <form action="../FrontServlet">
@@ -85,7 +93,7 @@ Plase note that this RealizarEvaluacion.jsp expects two parameters in the reques
             <input type="submit" value="Enviar evaluacion">
             <input type="hidden" name="command" value="EvaluacionCommand"/>
         </form>
-        <%                } else if (request.getParameter("value").toString().equals("comentario")) {
+        <%                } else if (value.equals("comentario")) {
         %>
         <form action="../FrontServlet">
             <h2>Nombre del alumno: </h2>

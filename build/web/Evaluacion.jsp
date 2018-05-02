@@ -42,7 +42,7 @@ By commentary, and Pass/Not Pass
     Estadisticas estadisticasEvaluacion = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/Estadisticas");
 
     estadisticasEvaluacion.nuevaVisitaEvaluacion();
-    
+
 %>
 
 <html>
@@ -67,14 +67,17 @@ By commentary, and Pass/Not Pass
         <tbody>
             <%                if (session.getAttribute("evaluaciones") != null) {
                     ArrayList evaluaciones = (ArrayList) session.getAttribute("evaluaciones");
+                    //System.out.println(evaluaciones);
                     Iterator i = evaluaciones.iterator();
                     int current = 0;
                     while (i.hasNext()) {
                         Evaluacion evaluacionActual = (Evaluacion) i.next();
+                        if(evaluacionActual==null) continue;
 
             %>
             <tr>
-                <%                    String nota = evaluacionActual.getEvaluacion();
+                <%                    
+                    String nota = evaluacionActual.getEvaluacion();
                     int evaluacionInt = -1;
                     String pattern = "-?\\d+";
                     if (nota.matches("-?\\d+")) {
