@@ -3,11 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="OwnEJBProjects">
-            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/frontController/AbstractFacade.java</file>
-            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/frontController/ListarProfesoresCommand.java</file>
-            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/web/Public/ListaProfesores.jsp</file>
-            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/frontController/ProfesorSearchCommand.java</file>
-            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/web/Public/Profesor.jsp</file>
+            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/jpa/Curso_1Facade.java</file>
+            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/jpa/Evaluacion_1Facade.java</file>
+            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/jpa/MessagesFacade.java</file>
+            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/jpa/TemaFacade.java</file>
+            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/jpa/EncuestaFacade.java</file>
+            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/jpa/CuestionarioFacade.java</file>
+            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/jpa/AsignaturaFacade.java</file>
+            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/jpa/BibliotecaFacade.java</file>
+            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/jpa/ValoracionFacade.java</file>
+            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/jpa/AbstractFacade.java</file>
+            <file>file:/C:/Users/YonePC/Videos/ASAPLICACIONCURSOSPRACTICA1/src/java/jpa/Profesor_1Facade.java</file>
         </group>
     </open-files>
 </project-private>

@@ -31,6 +31,7 @@
                 <td><%= message.getSubject()%></td>
                 <td><%= message.getDate()%></td>
                 <td><a href="Public/messageDetail.jsp?id=<%=message.getId()%>"><i class="fas fa-eye"></i></a></td>
+                <td><a href="Public/SendMessageForm.jsp?id=<%=message.getId()%>"><i class="fas fa-pen-square"></i></a></td>
             </tr>
             <%
                 }
