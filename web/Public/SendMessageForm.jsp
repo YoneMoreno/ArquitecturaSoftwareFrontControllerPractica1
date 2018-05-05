@@ -49,7 +49,9 @@
                                   required>
                             <%=message.getMessage().trim()%>
                         </textarea>
-                        <input type="hidden" name="idReceiver" value="<%= request.getParameter("idReceiver")%>">
+                        <input type="hidden" name="idReceiver" value="<%= message.getIdReceiver().getIdProfesor()%>">
+                        <input type="hidden" name="type" value="edit">
+                        <input type="hidden" name="idMessage" value="<%=message.getId()%>">
                         <button type="submit" class="btn btn-primary btn-block">Editar</button>
                     </div>
                     <%} else {%>

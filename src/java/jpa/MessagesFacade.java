@@ -10,6 +10,9 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaUpdate;
+import javax.persistence.criteria.Root;
 import org.Messages;
 import org.Profesor_1;
 
@@ -43,6 +46,20 @@ public class MessagesFacade extends AbstractFacade<Messages> {
             query.setParameter("idSender", id);
         }
         return query.getResultList();
+    }
+
+    public void update(int idMessage, String subject, String message) {
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        
+        CriteriaUpdate<Messages> update = cb.createCriteriaUpdate(Messages.class);
+        
+        Root<Messages> root = update.from(Messages.class);
+        
+        update.set("subject", subject);
+        update.set("message", message);
+        update.where(cb.equal(root.get("id"), idMessage));
+        
+        em.createQuery(update).executeUpdate();
     }
 
 }

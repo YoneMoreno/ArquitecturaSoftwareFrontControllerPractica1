@@ -35,14 +35,24 @@ public class SendMessageCommand extends FrontCommand {
                 Profesor_1 receiver = profesorFacade.find(Integer.parseInt(request.getParameter("idReceiver")));
                 Profesor_1 profesor = (Profesor_1) session.getAttribute("profesor");
 
-                Messages message = new Messages();
-                message.setIdReceiver(receiver);
-                message.setIdSender(profesor);
-                message.setSubject(request.getParameter("subject"));
-                message.setMessage(request.getParameter("message"));
-                message.setDate(new Date());
-                System.out.println(message);
-                messagesFacade.create(message);
+                if (request.getParameter("type").equals("edit")) {
+                    System.out.println("SendMessageCommand::Editar mensaje");
+                    messagesFacade.update(Integer.parseInt(request.getParameter("idMessage")),
+                            request.getParameter("subject"),
+                            request.getParameter("message"));
+                    forward("/Public/Profesor.jsp");
+
+                } else {
+
+                    Messages message = new Messages();
+                    message.setIdReceiver(receiver);
+                    message.setIdSender(profesor);
+                    message.setSubject(request.getParameter("subject"));
+                    message.setMessage(request.getParameter("message"));
+                    message.setDate(new Date());
+                    System.out.println(message);
+                    messagesFacade.create(message);
+                }
 
             } catch (NamingException ex) {
                 Logger.getLogger(SendMessageCommand.class.getName()).log(Level.SEVERE, null, ex);
