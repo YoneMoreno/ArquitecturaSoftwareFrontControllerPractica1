@@ -11,6 +11,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaDelete;
 import javax.persistence.criteria.CriteriaUpdate;
 import javax.persistence.criteria.Root;
 import org.Messages;
@@ -50,16 +51,28 @@ public class MessagesFacade extends AbstractFacade<Messages> {
 
     public void update(int idMessage, String subject, String message) {
         CriteriaBuilder cb = em.getCriteriaBuilder();
-        
+
         CriteriaUpdate<Messages> update = cb.createCriteriaUpdate(Messages.class);
-        
+
         Root<Messages> root = update.from(Messages.class);
-        
+
         update.set("subject", subject);
         update.set("message", message);
         update.where(cb.equal(root.get("id"), idMessage));
-        
+
         em.createQuery(update).executeUpdate();
+    }
+
+    public void delete(int id) {
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+
+        CriteriaDelete<Messages> delete = cb.createCriteriaDelete(Messages.class);
+
+        Root<Messages> root = delete.from(Messages.class);
+
+        delete.where(cb.equal(root.get("id"), id));
+
+        em.createQuery(delete).executeUpdate();
     }
 
 }
