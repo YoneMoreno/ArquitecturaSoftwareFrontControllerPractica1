@@ -4,6 +4,8 @@
     Author     : YonePC
 --%>
 
+<%@page import="org.Messages"%>
+<%@page import="jpa.MessagesFacade"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,13 +16,57 @@
     <body>
         <%@include file="../Header.jsp" %>
 
+        <%
+            String id = request.getParameter("id");
+            Messages message = null;
+            if (id != null) {
+                MessagesFacade messagesFacade
+                        = InitialContext.doLookup("java:global/ASAPLICACIONCURSOSPRACTICA1/MessagesFacade");
+                message = messagesFacade.find(Integer.parseInt(id));
+            }
+
+
+        %>
+
         <div class="container mt-5">
             <form action="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet?command=SendMessageCommand" method="POST" >
                 <div class="form-group">
-                    <input  class="form-control" id="subject" name="subject" placeholder="Escribe el asunto" required></input>
-                </div>
-                <div class="form-group">
-                    <textarea rows="4" type="text" class="form-control" id="message" name="message" aria-describedby="message" placeholder="Escribe un mensaje" required></textarea>
+                    <%                        if (message != null) {
+                    %>
+                    <input  class="form-control"
+                            id="subject" name="subject"
+                            placeholder="Escribe el asunto"ç
+                            required
+                            value="<%=message.getSubject()%>">
+                    </input>
+                    <div class="form-group">
+                        <textarea rows="4"
+                                  type="text" 
+                                  class="form-control"
+                                  id="message"
+                                  name="message"
+                                  aria-describedby="message"
+                                  required>
+                            <%=message.getMessage().trim()%>
+                        </textarea>
+                    </div>
+                    <%} else {%>
+                    <input  class="form-control"
+                            id="subject" name="subject"
+                            placeholder="Escribe el asunto"
+                            required>
+                    </input>
+                    <div class="form-group">
+                        <textarea rows="4"
+                                  type="text"
+                                  class="form-control"
+                                  id="message" name="message"
+                                  aria-describedby="message"
+                                  placeholder="Escribe un mensaje"
+                                  required>
+                        </textarea>
+                    </div>
+                    <%}%>
                 </div>
 
                 <input type="hidden" name="idReceiver" value="<%= request.getParameter("idReceiver")%>">

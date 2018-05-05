@@ -96,7 +96,7 @@
             <a class="nav-link" href="/ASAPLICACIONCURSOSPRACTICA1/Public/Chat.jsp"><i class="fas fa-comments"></i></a>
         </li>
         <li class="nav-item">
-            <a href="FrontServlet?command=ListarProfesoresCommand" 
+            <a href="/ASAPLICACIONCURSOSPRACTICA1/FrontServlet?command=ListarProfesoresCommand" 
                class="nav-link"><i class="fas fa-users"></i></a>
         </li>
 
