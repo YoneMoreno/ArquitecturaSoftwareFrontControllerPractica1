@@ -49,6 +49,8 @@
                                   required>
                             <%=message.getMessage().trim()%>
                         </textarea>
+                        <input type="hidden" name="idReceiver" value="<%= request.getParameter("idReceiver")%>">
+                        <button type="submit" class="btn btn-primary btn-block">Editar</button>
                     </div>
                     <%} else {%>
                     <input  class="form-control"
@@ -66,11 +68,12 @@
                                   required>
                         </textarea>
                     </div>
+                    <input type="hidden" name="idReceiver" value="<%= request.getParameter("idReceiver")%>">
+                    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
                     <%}%>
                 </div>
 
-                <input type="hidden" name="idReceiver" value="<%= request.getParameter("idReceiver")%>">
-                <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+
             </form>
         </div>
     </body>
